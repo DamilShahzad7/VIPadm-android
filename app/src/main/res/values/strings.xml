@@ -1,0 +1,191 @@
+<resources>
+    <!--vipadm1234-->
+    <string name="ble_not_supported">BLE is not supported</string>
+    <string name="label_data">Data:</string>
+    <string name="label_device_address">Device address:</string>
+    <string name="label_state">State:</string>
+    <string name="no_data">No data</string>
+    <string name="connected">Connected</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="title_devices">BLE Device Scan</string>
+    <string name="error_bluetooth_not_supported">Bluetooth not supported.</string>
+    <string name="unknown_device">Unknown device</string>
+    <string name="unknown_characteristic">Unknown characteristic</string>
+    <string name="unknown_service">Unknown service</string>
+    <string name="title">The door opener you always bring with you</string>
+    <string name="url">www.VIPdoor.eu</string>
+    <string name="version">18/07/2024 &amp; V: 2.42</string>
+    <string name="ver">V: 2.42</string>
+    <string name="app_name">VIPadm</string>
+    <string name="otperror">Enter valid otp</string>
+    <string name="started">Declare area emptied</string>
+    <string name="notclear">Area not cleared yet</string>
+    <string name="entermessage">Enter message</string>
+    <string name="declarearea">Declare area emptied</string>
+    <string name="site">www.vipadm.com</string>
+    <string name="undo">Undo the clearance</string>
+
+    <string name="apifor">AIzaSyBgcLK4fHV740iurTP7eLUBO-fktuoNENw</string>
+
+    <!--<string name="places2">AIzaSyB4WHmtK8r1IsNDYbiwXrxhNktqxqfUv_I</string>-->
+    <!--<string name="geocode">AIzaSyB1z_2KWIGXmBeEilbB3_q4WdSllxP0xa4</string>-->
+
+    <!--<string name="geocode2">AIzaSyB1z_2KWIGXmBeEilbB3_q4WdSllxP0xa4</string>-->
+    <!--<string name="placesdebug">AIzaSyB1z_2KWIGXmBeEilbB3_q4WdSllxP0xa4</string>-->
+    <string name="api">AIzaSyAGEshpsTpysTFpulRN12g0Z5zzPEQ7OYA</string>
+
+    <string name="otpmessage">OTP has now been sent by SMS</string>
+    <string name="someerror">Some error occurred, Please try again later</string>
+    <string name="dailyquota">Google api quota daily limit exceeded</string>
+    <string name="entername">Please enter name</string>
+    <string name="entersurname">Please enter surname</string>
+    <string name="enterphone">Please enter phone number or email</string>
+    <string name="enteremail">Please enter email</string>
+
+    <string name="ordertext">Ordren må være inn senest kl 13:00 dagen før møtet starter</string>
+    <string name="emailtext">If only the e-mail address is registered the participant will receive an invitation by e-mail instead of sms</string>
+    <string name="tvbook">Your meeting has successfully been booked</string>
+    <string name="sms">SMS invitation will be sent to:</string>
+    <string name="contactmessage">You will now be able to add participants to your meeting from the company staff, your contacts, your former visitors or manually. They will receive an invitation by sms 24 hour before the meeting.</string>
+    <string name="entercode">Please enter country code</string>
+    <string name="addparticipant"><![CDATA[You will now be able to add participants to your meeting from the company staff, your contacts, your former visitors or manually. They will receive an invitation by <b>SMS 24 hour</b> before the meeting.]]></string>
+    <string name="selectReason">Select reason for leave</string>
+    <string name="selectenddate">Select leave end date</string>
+    <string name="selectstartdate">Select leave start date</string>
+    <string name="nointernet">Please connect to network</string>
+    <string name="participant_exist">Participant already added</string>
+    <string name="delete_leave">Are you sure do you want to delete?</string>
+    <string name="delete_meeting">Are you sure do you want to delete?</string>
+    <string name="add_participant">Please add participants</string>
+
+    <!--<string-array name="sort_area_company">-->
+        <!--<item>Company</item>-->
+        <!--<item>Area</item>-->
+    <!--</string-array>-->
+
+    <string-array name="sort_area_company">
+        <!--<item>""</item>-->
+        <item>Company</item>
+        <item>Area</item>
+    </string-array>
+
+    <string-array name="minute">
+
+
+        <item>00</item>
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+        <item>52</item>
+        <item>53</item>
+        <item>54</item>
+        <item>55</item>
+        <item>56</item>
+        <item>57</item>
+        <item>58</item>
+        <item>59</item>
+        <item>60</item>
+
+    </string-array>
+
+    <string name="no_geocoder_available">No geocoder available</string>
+
+    <string name="fetch_address">Fetch address</string>
+
+    <string name="address_found">Address found</string>
+
+    <string name="no_address_found">Sorry, no address found</string>
+    <string name="no_location_data_provided">No location data provided</string>
+    <string name="service_not_available">Sorry, the service is not available</string>
+    <string name="invalid_lat_long_used">Invalid latitude or longitude used</string>
+
+
+    <string name="permission_rationale">Location permission is needed for core functionality</string>
+    <string name="permission_denied_explanation">Permission was denied, but is needed for core
+        functionality.</string>
+    <string name="settings">Settings</string>
+    <string name="noroom">Belonging city specific Rooms not available  \n Please contact administrator!</string>
+    <string name="nocity">Your location has no rooms \n please use Invite Guests.</string>
+    <string name="bookmessage"><![CDATA[Please press <<Book>> to confirm the details below. \n If not please go back to edit]]></string>
+    <string name="nolocation">Current location not found</string>
+    <string name="nolocation2">Finding your location, Please wait...</string>
+    <string name="add">Do you want to save and use current location?</string>
+    <string name="normal">Normal situation.\nNo evacuation activated.</string>
+    <string name="notinbuilding">You are not in the buiding.</string>
+    <string name="linear">android.support.v7.widget.LinearLayoutManager</string>
+    <string name="otpnotmatch">OTP do not match</string>
+    <string name="nocityexist">Please select location to use Invite guests.</string>
+    <string name="delete_mettingmessage">Meeting deleted successfully.</string>
+    <string name="let">Let the evacuation administrator know when you have evacuated your area?</string>
+
+    <string name="yesno">(Indicate to the evacuation administor if you are able to perform the evacuation of your area)</string>
+
+    <string name="empty_cityname">City name not found.</string>
+    <string name="excelerror">Please check your excel format.</string>
+    <string name="permissionlocation">Please enable location permission.</string>
+    <string name="permission_contact">Please enable permission to read contacts</string>
+    <string name="empty_contacts">Empty contacts found</string>
+    <string name="error_client">Client details are not available,Please contact admin</string>
+    <string name="empty_leaves">No records found.</string>
+    <string name="areyou">Are you in the building?</string>
+    <string name="channel">default</string>
+    <string name="channel_description">vipadm meetings</string>
+    <string name="error_nocity">No city found</string>
+    <string name="prepare">Prepare for open..</string>
+
+    <string name="access_check_in">CheckIn</string>
+    <string name="access_check_out">CheckOut</string>
+    <string name="security_instruction">Security instruction</string>
+    <string name="new_location">New Location</string>
+    <string-array name="work_status">
+        <item>Work from home</item>
+        <item>Check-in (from office)</item>
+    </string-array>
+</resources>

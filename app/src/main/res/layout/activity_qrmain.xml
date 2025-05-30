@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D3CDC6">
+
+    <TextView
+        android:id="@+id/vipaccess"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="VIPaccess"
+        android:textColor="#333333"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/bltext"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vipaccess"
+        android:layout_marginTop="-18dp"
+        android:gravity="center"
+        android:text="The door opener you always carry along"
+
+
+        android:textColor="#333333"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/enteredit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bltext"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/round"
+        android:gravity="center"
+        android:hint="Enter Email ID"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:singleLine="true"
+
+        android:textColorHint="#ACA9A8" />
+
+    <TextView
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/enteredit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+
+        android:text="NEXT"
+        android:textColor="#333333"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/website"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        android:layout_centerHorizontal="true"
+        android:text="www.VIPadm.com"
+        android:textColor="#333333"
+        android:textSize="14sp" />
+
+
+</RelativeLayout>

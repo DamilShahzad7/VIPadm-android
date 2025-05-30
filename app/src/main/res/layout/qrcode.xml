@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    android:background="@color/bg">
+
+    <FrameLayout
+        android:id="@+id/fltoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:paddingTop="@dimen/paddingTop"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivback"
+            android:layout_width="@dimen/back50"
+            android:layout_height="@dimen/back50"
+            android:layout_gravity="center|start"
+            android:background="?android:selectableItemBackground"
+            android:gravity="center"
+            android:visibility="visible"
+            android:padding="@dimen/paddingback"
+            android:scaleType="centerCrop"
+            app:srcCompat="@mipmap/icon_back" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/vipaccess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Access"
+            android:layout_gravity="center"
+            android:textColor="@color/md_white_1000"
+            android:textSize="30sp"
+            app:fontFamily="@font/avenirlight"
+            app:layout_heightPercent="7%"
+            app:layout_marginTopPercent="5%"
+            app:layout_widthPercent="100%" />
+    </FrameLayout>
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/iv_logo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/fltoolbar"
+        android:layout_centerInParent="true"
+        app:actualImageScaleType="fitXY"
+        app:layout_heightPercent="8%"
+        android:layout_marginBottom="25dp"
+        app:layout_widthPercent="30%" />
+    <TextView
+        android:id="@+id/bltext"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/fltoolbar"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="Scan your QR-code"
+        android:textColor="@color/md_white_1000"
+        android:textSize="15sp"
+        android:visibility="gone"
+        app:fontFamily="@font/avregular"
+        app:layout_heightPercent="3%"
+        app:layout_widthPercent="100%" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/profilebr"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/iv_logo"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_marginTopPercent="2%"
+            android:layout_height="wrap_content">
+            <FrameLayout
+                android:id="@+id/flimage_profile"
+                android:layout_width="match_parent"
+                android:background="@drawable/btrectbarcode"
+                android:layout_height="match_parent"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1">
+                <vip.com.vipmeetings.utilities.RoundedSideCornersImageView
+                    android:id="@+id/iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/profile"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center"
+                    app:cornerRadius="15dp"
+                    android:layout_weight="1"
+                    />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/flimage"
+                android:layout_width="match_parent"
+                android:background="@drawable/btrectbarcode"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1">
+
+                <vip.com.vipmeetings.utilities.RoundedSideCornersImageView
+                    android:id="@+id/img_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    app:cornerRadius="15dp" />
+            </FrameLayout>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/md_white_1000"
+            android:textSize="14sp"
+            android:layout_marginLeft="20dp"
+            android:text="name"
+            android:lines="3"
+            app:fontFamily="@font/avregular"
+            />
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/llname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profilebr"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        app:layout_widthPercent="100%">
+
+
+
+        <TextView
+            android:id="@+id/mblno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:alpha="0.5"
+            app:fontFamily="@font/avregular"
+            android:gravity="center"
+            android:textColor="@color/md_white_1000"
+            android:textSize="10sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/inOutTime"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text=""
+            android:textAlignment="gravity"
+            android:textColor="@color/md_white_1000"
+            android:textSize="13sp"
+            app:fontFamily="@font/avregular" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_gravity="center"
+            android:paddingLeft="65dp"
+            android:id="@+id/tiaccess"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingRight="65dp"
+            android:gravity="center"
+            app:layout_constraintVertical_bias="0.2"
+           >
+
+            <vip.com.vipmeetings.utilities.CustomMaterialAutoCompleteTextView
+                android:id="@+id/checkAccess"
+                android:layout_width="match_parent"
+                android:textAlignment="center"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:text="CheckIn"
+                android:textSize="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/transprant_rect"
+                app:fontFamily="@font/avregular"
+                android:textColor="@color/md_white_1000"
+                android:layout_height="match_parent"
+                android:inputType="none"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout
+            android:id="@+id/llsetpin"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/setPin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:gravity="center"
+                app:fontFamily="@font/avregular"
+                android:text="Update PIN"
+                android:textAlignment="center"
+                android:textColor="@color/md_white_1000"
+                android:textSize="15sp"
+                 />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_setPin"
+                android:layout_width="80dp"
+                android:textColor="@color/md_black_1000"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:layout_gravity="center"
+                android:background="@drawable/rect_bookspecific"
+                android:gravity="center">
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/insideUsersCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            app:fontFamily="@font/avregular"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:text="People Include:  "
+            android:textAlignment="center"
+            android:textColor="@color/md_white_1000"
+            android:textSize="15sp"
+             />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnEvacuation"
+            android:layout_width="match_parent"
+            android:background="@drawable/btrectred"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_below="@+id/insideUsersCount"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:fontFamily="@font/avregular"
+            android:textAllCaps="false"
+            android:textColor="@color/md_white_1000"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_height="wrap_content">
+
+        </androidx.appcompat.widget.AppCompatButton>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_widthPercent="28%"
+        android:visibility="gone"
+        android:background="#374755"
+        android:layout_below="@+id/llname"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        app:layout_heightPercent="16%"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivbluno"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/llname"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        app:layout_heightPercent="13%"
+        android:visibility="gone"
+        app:layout_widthPercent="37%"
+        app:srcCompat="@drawable/gate"
+        app:tint="@color/md_white_1000" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvgate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivbluno"
+        android:layout_gravity="center"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="Gate Opener"
+        android:textColor="@color/md_white_1000"
+        android:textSize="12sp"
+        app:fontFamily="@font/avenirmedium" />
+
+
+    <ImageView
+        android:id="@+id/cmpimg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/llname"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_heightPercent="8%"
+        app:layout_widthPercent="37%" />
+
+    <TextView
+        android:id="@+id/website"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="@string/site"
+        android:textColor="@color/md_white_1000"
+        android:textSize="14sp"
+        app:fontFamily="@font/avregular"
+        app:layout_heightPercent="5%"
+        app:layout_marginBottomPercent="1%"
+        app:layout_widthPercent="100%" />
+
+
+
+
+
+    </androidx.percentlayout.widget.PercentRelativeLayout>

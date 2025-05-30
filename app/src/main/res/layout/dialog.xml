@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/round">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="VIPadmaccess"
+        android:textColor="#000"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/tvmessage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:gravity="center"
+        android:text="Invalid email ID"
+        android:textColor="#000"
+        android:textSize="15dp" />
+
+    <View
+        android:id="@+id/v1"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tvmessage"
+        android:layout_marginTop="50dp"
+        android:background="#000000" />
+
+    <TextView
+        android:id="@+id/declineButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvmessage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:padding="16dp"
+        android:text="Ok"
+        android:textColor="#0000FF"
+        android:textSize="20dp" />
+
+</RelativeLayout>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/appbg"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:textColor="@color/md_white_1000"
+        app:fontFamily="@font/avenirlight"
+        android:typeface="normal"
+        android:text="Door Opener"
+        android:textSize="35sp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivrefresh"
+        android:src="@drawable/reload"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="12dp"
+        android:tint="@android:color/white"
+        android:layout_marginEnd="12dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivback"
+        app:tint="@color/md_white_1000"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:rotation="180"
+        app:srcCompat="@drawable/rotateicon_back"
+        android:layout_width="25dp"
+        android:layout_height="25dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvnext"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:gravity="center"
+        android:textColor="@color/md_white_1000"
+        app:fontFamily="@font/avenirlight"
+        android:layout_toRightOf="@+id/ivback"
+        android:text="Back"
+        android:textSize="14sp" />
+
+
+    <ProgressBar
+        android:id="@+id/pb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.ProgressBar.Small"
+        android:layout_centerInParent="true" />
+
+
+    <TextView
+        android:id="@+id/tvtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvname"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:text="@string/title"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvupdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvtitle"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:text="UPDATING PERSONAL INFORMATION"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+
+
+
+
+
+    <TextView
+        android:id="@+id/tvconnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvupdate"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="4dp"
+        android:visibility="gone"
+        android:layout_marginRight="4dp"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvname1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvconnect"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvmessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvname1"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="Your access request has been approved. \n The door opener will be ready once you\n approach the door."
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:visibility="invisible" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btconnect"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/rectcurve"
+        android:gravity="center"
+        android:textColor="@color/md_white_1000"
+        android:layout_below="@+id/tvmessage"
+        tools:visibility="visible"
+        android:visibility="gone"
+        android:text="RECONNECT" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvprepare"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/md_white_1000"
+        android:layout_below="@+id/tvmessage"
+        app:fontFamily="@font/avenirlight"
+        android:text="@string/prepare"
+        android:textSize="24sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvuid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:textColor="@color/md_white_1000"
+        android:layout_below="@+id/tvprepare"
+        app:fontFamily="@font/avenirlight"
+        android:text=""
+        android:textSize="12sp" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="75dp"
+        android:id="@+id/ivcenter"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        app:srcCompat="@drawable/vipdoor2"
+        app:tint="@color/md_white_1000"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/tvprepare"
+        android:layout_height="75dp"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="75dp"
+        android:id="@+id/ivleft"
+        android:layout_alignParentBottom="true"
+        app:srcCompat="@drawable/vipdoor1"
+        app:tint="@color/md_white_1000"
+        android:layout_toLeftOf="@+id/ivcenter"
+        android:layout_below="@+id/tvprepare"
+        android:layout_height="75dp"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="75dp"
+        android:id="@+id/ivright"
+        app:srcCompat="@drawable/vipdoor3"
+        android:layout_alignParentBottom="true"
+        app:tint="@color/md_white_1000"
+        android:layout_toRightOf="@+id/ivcenter"
+        android:layout_below="@+id/tvprepare"
+        android:layout_height="75dp"/>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvurl"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_marginRight="12dp"
+        android:layout_marginEnd="12dp"
+        app:fontFamily="@font/avenirlight"
+        android:layout_alignParentRight="true"
+        android:text="@string/ver"
+        android:textColor="@android:color/white"
+        android:textSize="10sp" />
+
+</RelativeLayout>

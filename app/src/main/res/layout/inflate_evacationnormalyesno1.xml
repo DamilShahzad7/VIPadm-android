@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/bg"
+    android:layout_alignParentTop="true"
+    android:layout_gravity="center|top"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:gravity="center|end|top"
+        android:singleLine="true"
+        android:layout_marginRight="4dp"
+        android:layout_marginEnd="4dp"
+        android:textColor="@color/md_white_1000"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivspinner"
+        app:layout_constraintRight_toLeftOf="@+id/ivspinner"
+        tools:text="sdsfesfefd"
+        tools:textColor="@color/md_white_1000" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivspinner"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginBottom="10dp"
+        android:rotation="90"
+        app:layout_constraintTop_toTopOf="@+id/text1"
+        app:layout_constraintBottom_toBottomOf="@+id/text1"
+        app:layout_constraintRight_toRightOf="parent"
+        android:src="@drawable/right_arrow2"
+        android:tint="@color/md_white_1000" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

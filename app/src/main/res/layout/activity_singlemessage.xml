@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+
+    <FrameLayout
+        android:id="@+id/fltoolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:paddingTop="@dimen/paddingtop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/ivback"
+            android:layout_width="@dimen/back50"
+            android:layout_height="@dimen/back50"
+            android:layout_gravity="center|start"
+            android:padding="@dimen/paddingback"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_back" />
+
+
+        <ImageView
+            android:id="@+id/ivplus"
+            android:layout_width="@dimen/back50"
+            android:layout_height="@dimen/back50"
+            android:layout_gravity="center|end"
+            android:padding="@dimen/paddingback"
+            android:scaleType="centerCrop"
+            android:src="@android:drawable/ic_input_add"
+            android:tint="@color/md_white_1000" />
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llsearch"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/gradient_tv_nocorenr"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fltoolbar">
+
+
+        <EditText
+            android:id="@+id/etsearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/etsearchrect"
+            android:drawableEnd="@drawable/places_ic_search2"
+            android:drawableRight="@drawable/places_ic_search2"
+            android:gravity="center|start"
+            android:hint="Search for area"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:lines="1"
+            android:maxLines="1"
+            android:paddingLeft="20dp"
+            android:paddingStart="20dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/md_white_1000"
+            android:textColorHint="@color/md_white_1000"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvmessagehistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="9dp"
+        android:paddingStart="12dp"
+        android:paddingLeft="12dp"
+        android:text="Message History"
+        android:textColor="@color/md_white_1000"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/llsearch" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvmessages"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvmessagehistory"
+        tools:itemCount="10"
+        tools:listitem="@layout/inflate_singlemessage" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

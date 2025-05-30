@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llclick"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="?selectableItemBackground"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    tools:background="@color/bg">
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/ivimage"
+        android:layout_width="@dimen/ivwidth"
+        android:layout_height="@dimen/ivwidth"
+        app:actualImageResource="@drawable/profile"
+        app:failureImage="@drawable/profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:placeholderImage="@drawable/profile"
+        app:roundAsCircle="true" />
+
+    <ImageView
+        android:id="@+id/ivcount_image"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        app:layout_constraintCircle="@+id/ivimage"
+        app:layout_constraintCircleAngle="135"
+        app:layout_constraintCircleRadius="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/ivimage" />
+
+
+    <LinearLayout
+        android:id="@+id/llmessage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center|top"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/ivimage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/ivimage"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivimage"
+        app:layout_constraintTop_toTopOf="@+id/ivimage">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tvareaname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|top"
+                android:layout_weight="1"
+                android:gravity="center|start|top"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/md_white_1000"
+                android:textSize="16sp"
+                tools:text="xcxc" />
+
+
+            <TextView
+                android:id="@+id/tvtime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end|top"
+                android:layout_weight="0.6"
+                android:alpha="0.5"
+                android:ellipsize="end"
+                android:gravity="center|end|top"
+                android:textColor="@color/md_white_1000"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:text="2918888888888888888" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvlastmessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|start|bottom"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:alpha="0.5"
+        android:ellipsize="end"
+        android:gravity="center|bottom|start"
+        android:lines="1"
+        android:maxLines="1"
+        android:textColor="@color/md_white_1000"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivimage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/ivimage"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivimage"
+        tools:text="cvcvcvcvcvvcvvccvvcxvcvcvcv" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

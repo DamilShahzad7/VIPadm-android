@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    tools:background="@color/bg">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvarea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:maxLines="1"
+        android:padding="12dp"
+        android:textColor="@color/md_white_1000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="ssfsfsafsafsafsa" />
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/ivimage"
+        android:layout_width="@dimen/ivwidth100"
+        android:layout_height="@dimen/ivwidth100"
+        android:scaleType="centerCrop"
+        app:actualImageResource="@mipmap/ic_profile"
+        app:actualImageScaleType="focusCrop"
+        app:failureImage="@mipmap/ic_profile"
+        app:failureImageScaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvarea"
+        app:placeholderImage="@mipmap/ic_profile"
+        app:placeholderImageScaleType="centerCrop"
+        app:roundAsCircle="true" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivcount_image"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintCircle="@+id/ivimage"
+        app:layout_constraintCircleAngle="135"
+        app:layout_constraintCircleRadius="42dp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivcount_image_actual"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:gravity="center"
+        app:layout_constraintCircle="@+id/ivimage"
+        app:layout_constraintCircleAngle="135"
+        app:layout_constraintCircleRadius="50dp" />
+
+
+    <LinearLayout
+        android:id="@+id/llright"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/ivimage">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvtype"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:ellipsize="end"
+            android:gravity="center|start"
+            android:maxLines="1"
+            android:text="CUREENT RESPONSIBLE"
+            android:textColor="@color/md_white_1000"
+            android:textSize="13sp"
+            app:fontFamily="@font/medium"
+            tools:text="ssfsfsafsafsafsa" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:gravity="center|start"
+            android:maxLines="1"
+            android:textColor="@color/md_white_1000"
+            android:textSize="14sp"
+            app:fontFamily="@font/demiboldfont"
+            tools:text="ssfsfsafsafsafsa" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvmobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:gravity="center|start"
+            android:maxLength="15"
+            android:maxLines="1"
+            android:textColor="@color/md_white_1000"
+            android:textSize="13sp"
+            app:fontFamily="@font/avregularfont"
+            tools:text="ssfsfsafsafsafsa" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:gravity="center|start"
+            android:maxLines="1"
+            android:textColor="@color/md_white_1000"
+            android:textSize="12sp"
+            app:fontFamily="@font/avregularfont"
+            tools:text="ssfsfsafsafsafsa" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvstatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:gravity="center|start"
+            android:maxLines="1"
+            android:textColor="@color/color_yellow"
+            android:textSize="10sp"
+            app:fontFamily="@font/avregularfont"
+            tools:text="ssfsfsafsafsafsa" />
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/ivmessage"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/unread"
+        app:layout_constraintBottom_toBottomOf="@+id/llright"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/llright"
+        app:layout_goneMarginRight="12dp" />
+
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/linedp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/md_white_1000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llright" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvcount"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="@color/md_white_1000"
+        android:textSize="11sp"
+        android:visibility="gone"
+        app:fontFamily="@font/avregularfont"
+        app:layout_constraintCircle="@+id/ivmessage"
+        app:layout_constraintCircleAngle="45"
+        app:layout_constraintCircleRadius="18dp" />
+
+    <ImageView
+        android:id="@+id/ivcount"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintCircle="@+id/ivmessage"
+        app:layout_constraintCircleAngle="135"
+        app:layout_constraintCircleRadius="18dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

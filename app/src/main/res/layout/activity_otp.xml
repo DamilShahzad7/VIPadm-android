@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true">
+
+
+    <TextView
+        android:id="@+id/tvback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:background="?selectableItemBackground"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="BACK"
+        android:textSize="16sp" />
+
+
+    <TextView
+        android:id="@+id/tvtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textSize="40sp"
+        app:layout_marginTopPercent="20%" />
+
+    <LinearLayout
+        android:id="@+id/llotp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvtitle"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        app:layout_marginLeftPercent="3%"
+        app:layout_marginRightPercent="3%"
+        app:layout_marginTopPercent="8%">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OTP : "
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+
+        <EditText
+            android:id="@+id/etotp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:gravity="center|start"
+            android:hint="Enter OTP"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:lines="1"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvnext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llotp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="Done"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_marginTopPercent="8%" />
+
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:text="@string/site"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:textColor="@color/md_black_1000"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+
+
+</androidx.percentlayout.widget.PercentRelativeLayout>

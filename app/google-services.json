@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "168059826772",
+    "firebase_url": "https://rock-perception-188207.firebaseio.com",
+    "project_id": "rock-perception-188207",
+    "storage_bucket": "rock-perception-188207.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:168059826772:android:64f588f6373aeded",
+        "android_client_info": {
+          "package_name": "vip.com.vipmeetings"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "168059826772-ugq54l582gsbljbbf7bscbitegfv69q0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAV1KLspzs6cbDpkzgBpLzrlwgkbSpZi7g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlclick"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginBottom="2dp"
+    android:layout_marginTop="2dp"
+    android:background="@drawable/underline"
+    android:gravity="center">
+
+
+    <ImageView
+        android:id="@+id/ivselect"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="6dp"
+        android:layout_marginStart="6dp"
+        android:src="@mipmap/ic_false" />
+
+
+    <LinearLayout
+        android:id="@+id/lltv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="4dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_marginStart="4dp"
+        android:layout_toEndOf="@+id/ivselect"
+        android:layout_toLeftOf="@+id/tvroomcount"
+        android:layout_toRightOf="@+id/ivselect"
+        android:layout_toStartOf="@id/tvroomcount"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvlocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:gravity="center|start|top"
+            android:lines="1"
+            android:maxLines="1"
+            tools:text="dfdfdfdfdfsd"
+            android:layout_marginBottom="4dp"
+            android:singleLine="true"
+            android:textColor="@color/md_black_1000"
+            android:textSize="13sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvidentity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:gravity="center|start"
+            android:lines="1"
+            tools:text="fddvdvfvxv"
+            tools:visibility="visible"
+            android:visibility="gone"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/md_black_1000"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/ivremove"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:src="@drawable/images" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvroomcount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:lines="1"
+        android:maxLines="1"
+        android:layout_marginRight="3dp"
+        android:layout_marginEnd="3dp"
+        android:textColor="@color/md_black_1000"
+        android:textSize="12sp"
+        tools:text="dsfsdfdsf" />
+
+
+</RelativeLayout>

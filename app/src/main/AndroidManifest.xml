@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="vip.com.vipmeetings">
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+
+    <uses-permission-sdk-23 android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <uses-permission-sdk-23 android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+
+    <uses-permission-sdk-23 android:name="android.permission.READ_CONTACTS" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission-sdk-23 android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission-sdk-23 android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <uses-feature android:name="android.hardware.bluetooth" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission-sdk-23 android:name="android.permission.BLUETOOTH"/>
+    <uses-permission-sdk-23 android:name="android.permission.BLUETOOTH_ADMIN"/>
+
+        <!-- RAPARTHY STARTS-->
+
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation"/>
+
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"
+        android:usesPermissionFlags="neverForLocation"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"  />
+        <!-- RAPARTHY ENDS-->
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+
+    <application
+        android:name="VIPmeetings"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <service
+            android:name=".bluno.BluetoothLeService"
+            android:enabled="true" />
+
+        <activity
+            android:name=".bluno.BlunoActivity"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="vip.com.vipmeetings.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/my_paths" />
+        </provider>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="f5a7d2b9b7df9f2cf8db3cffb80e502682aa4b7e" />
+
+        <activity
+            android:name=".SplashScreen"
+            android:launchMode="singleTop"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".LocationActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/LocationTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".AddOrderActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+
+        <activity
+            android:name=".SkipRoomActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".ConfirmationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".AddParticipantsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".EditContactActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".AddManuallyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+
+        <activity
+            android:name=".AddParticipants"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MessageTheme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme" />
+
+        <activity
+            android:name=".BookMeetingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MessageTheme"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+
+        <activity
+            android:name=".TimePickerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MessageTheme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".TimerPickerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MessageTheme"
+            android:windowSoftInputMode="stateHidden" />
+
+
+        <activity
+            android:name=".BookRoomActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MessageTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".MyMeetingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MessageTheme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".MyMeetingDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MessageTheme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".LeaveAddActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MessageTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".LeaveListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MessageTheme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".OrderFoodActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MessageTheme"
+            android:windowSoftInputMode="stateHidden" />
+
+
+        <activity
+            android:name=".RoomListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MessageTheme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".BookSpecificRoomActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".BookSpecificRoomDateTimeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".BookSpecificTimeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".BookSpecificTimerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".AddParticipantSplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MessageTheme"
+            android:windowSoftInputMode="stateHidden" />
+
+
+        <activity
+            android:name=".qrcode.QRMainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/MessageTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize">
+
+        </activity>
+        <activity
+            android:name=".qrcode.QRCode_generate"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/MessageThemeNew"
+            android:windowSoftInputMode="adjustPan|adjustResize">
+
+        </activity>
+
+
+        <activity
+            android:name=".evacuate.EvacuationListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MessageTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity
+            android:name=".evacuate.EvacuateAdminActivty"
+            android:screenOrientation="portrait"
+            android:theme="@style/EvaTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <activity
+            android:name=".evacuate.MessageSingleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MessageTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity
+            android:name=".evacuate.EvacuationMessagesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MessageTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name=".NormalUserEvacuateActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".evacuate.EvacuationNormalList"
+            android:screenOrientation="portrait"
+            android:theme="@style/MessageTheme" />
+
+        <activity
+            android:name=".evacuate.EvacuationNormal2"
+            android:screenOrientation="portrait"
+            android:theme="@style/EvaTheme" />
+
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/api" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_stat_vipadm_app___android_status_bar___4" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/bg" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/channel" />
+
+
+        <meta-data
+            android:name="firebase_messaging_auto_init_enabled"
+            android:value="false" />
+        <meta-data
+            android:name="firebase_analytics_collection_enabled"
+            android:value="true" />
+
+        <service
+            android:name=".service.PushService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <service
+            android:name=".fcm.SendDeviceTokenService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+
+        <service
+            android:name=".FetchAddressIntentService"
+            android:enabled="true" />
+
+        <service
+            android:name=".BroadcastService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <service
+            android:name=".ContactService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+
+        <service android:name=".fcm.MyFirebaseMessagingService" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!--<receiver android:name=".SMSBroadCastReceiver" android:exported="true">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED"/>-->
+        <!--</intent-filter>-->
+        <!--</receiver>-->
+
+        <!--<receiver android:name=".MainBaseActivity$TimerBroadcastReceiver">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="vip.com.vipmeetings.Timer"/>-->
+        <!--</intent-filter>-->
+        <!--</receiver>-->
+
+
+    </application>
+
+</manifest>

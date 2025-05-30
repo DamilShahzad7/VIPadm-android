@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/bg"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+
+    <RelativeLayout
+        android:id="@+id/rltoolbar"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/ivback"
+            android:layout_width="@dimen/back50"
+            android:layout_height="@dimen/back50"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:padding="@dimen/paddingback"
+            android:rotation="180"
+            android:scaleType="centerInside"
+            android:src="@drawable/rotateicon_back"
+            android:tint="@color/md_white_1000" />
+
+
+        <TextView
+            android:id="@+id/tvstartend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_toLeftOf="@+id/spsort"
+            android:layout_toRightOf="@+id/ivback"
+            android:gravity="center"
+            android:textColor="@color/md_white_1000"
+            android:textSize="13sp"
+            tools:text="sddfdfd" />
+
+
+        <TextView
+            android:id="@+id/tvtimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvstartend"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_toLeftOf="@+id/spsort"
+            android:layout_toRightOf="@+id/ivback"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            tools:text="zcxczxcxc" />
+
+
+        <vip.com.vipmeetings.view.MySpinner
+            android:id="@+id/spsort"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/paddingback"
+            android:layout_marginEnd="@dimen/paddingback"
+            android:background="@drawable/ic_filter"
+            android:dropDownVerticalOffset="55dp"
+            android:gravity="center" />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llsearch"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/gradient_tv_nocorenr"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rltoolbar">
+
+
+        <EditText
+            android:id="@+id/etsearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/paddingback"
+            android:layout_marginRight="@dimen/paddingback"
+            android:background="@drawable/etsearchrect"
+            android:drawableEnd="@drawable/places_ic_search2"
+            android:drawableRight="@drawable/places_ic_search2"
+            android:gravity="center|start"
+            android:hint="Search for area, company or responsible"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:lines="1"
+            android:paddingEnd="10dp"
+            android:paddingLeft="20dp"
+            android:paddingStart="20dp"
+            android:paddingTop="3dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/md_white_1000"
+            android:textColorHint="@color/md_white_1000"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="center|start"
+        android:padding="4dp"
+        android:text="Sort by :"
+        android:textAllCaps="true"
+        android:textColor="@color/md_white_1000"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/rvevacuation"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llsearch" />
+
+
+    <TextView
+        android:id="@+id/tvlocationname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="@dimen/paddingback"
+        android:layout_marginRight="@dimen/paddingback"
+        android:layout_marginBottom="4dp"
+        android:gravity="center|start"
+        android:textColor="@color/md_white_1000"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/rvevacuation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llsearch"
+        tools:text="Oslo" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvevacuation"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/paddingback"
+        android:layout_marginRight="@dimen/paddingback"
+        android:layout_marginBottom="@dimen/paddingback"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:paddingTop="0dp"
+        android:paddingBottom="65dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/tvstartendevacuation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvlocationname"
+        tools:itemcount="10"
+        tools:listitem="@layout/inflate_evacuationlist" />
+
+    <TextView
+        android:id="@+id/tvstartendevacuation"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/gradient_tv_nocorenr"
+        android:gravity="center"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Start Evacuation" />
+
+    <ImageView
+        android:id="@+id/ivmessage"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/unread"
+        app:layout_constraintBottom_toTopOf="@+id/tvstartendevacuation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_goneMarginRight="12dp" />
+
+
+    <ImageView
+        android:id="@+id/ivcount"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center"
+        android:visibility="visible"
+        app:layout_constraintCircle="@+id/ivmessage"
+        app:layout_constraintCircleAngle="45"
+        app:layout_constraintCircleRadius="22dp"
+        tools:src="@drawable/circlered" />
+
+    <TextView
+        android:id="@+id/tvcount"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:lines="1"
+        android:maxLines="1"
+        android:textColor="@android:color/white"
+        android:textSize="10sp"
+        app:layout_constraintCircle="@+id/ivmessage"
+        app:layout_constraintCircleAngle="45"
+        app:layout_constraintCircleRadius="22dp"
+        tools:text="100" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

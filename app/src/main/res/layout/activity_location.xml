@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:fitsSystemWindows="true">
+
+    <FrameLayout
+        android:id="@+id/cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/greylocation">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/greylocation"
+            android:layout_margin="12dp"
+            app:cardBackgroundColor="@color/md_white_1000"
+            app:cardCornerRadius="6dp">
+
+            <fragment
+                android:id="@+id/place_autocomplete_fragment"
+                android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="#FFFFFF" />
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/llloc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cv"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:paddingRight="@dimen/paddingback">
+
+        <ImageView
+            android:id="@+id/ivleft"
+            android:layout_width="@dimen/back50"
+            android:layout_height="@dimen/back50"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:clickable="true"
+            android:padding="@dimen/paddingback"
+            android:rotation="180"
+            android:src="@drawable/rotateicon_back"
+            android:tint="@color/md_white_1000"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvcurrentloc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:background="@drawable/rect_no"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:paddingTop="6dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="6dp"
+            android:text="Current Location"
+            android:textColor="@color/md_white_1000"
+            android:textSize="13sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvnext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_toLeftOf="@+id/ivright"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="Next"
+            android:textColor="@color/md_white_1000"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/ivright"
+            android:layout_width="@dimen/back36"
+            android:layout_height="@dimen/back50"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:clickable="true"
+            android:src="@drawable/rotateicon_back"
+            android:tint="@color/md_white_1000" />
+
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rvlocation"
+        android:layout_below="@id/llloc">
+
+        <fragment
+            android:id="@+id/map_fragment"
+            class="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <ImageView
+            android:id="@+id/ivdirection"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center|top|end"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:src="@drawable/direction" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvlocation"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:background="@color/md_white_1000"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemcount="3"
+            tools:listitem="@layout/location_inflate"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvremove"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center|start"
+            android:background="@color/appbg"
+            android:clickable="true"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:paddingLeft="12dp"
+            android:gravity="center|start"
+            android:text="REMOVE UUID"
+            android:textColor="@color/md_white_1000"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

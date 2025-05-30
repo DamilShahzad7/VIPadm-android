@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:background="@color/bg">
+
+
+    <TextView
+        android:id="@+id/tvfuture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:fontFamily="@font/medium"
+        android:text="Future Leaves"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+
+
+    <RelativeLayout
+
+        android:id="@+id/llupdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/md_white_1000"
+        android:orientation="vertical"
+        android:paddingLeft="4dp"
+        android:paddingTop="4dp"
+        android:paddingRight="6dp"
+        android:paddingBottom="6dp">
+
+
+        <TextView
+            android:id="@+id/tvreason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="2dp"
+            android:layout_toLeftOf="@+id/btedit"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+
+        <LinearLayout
+            android:id="@+id/lldelete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvreason"
+            android:layout_toLeftOf="@+id/btedit"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvdate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btedit"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:layout_toLeftOf="@+id/btdelete"
+            android:src="@drawable/iconedit" />
+
+
+        <ImageView
+            android:id="@+id/btdelete"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:src="@drawable/icondelete"
+            android:textSize="13sp" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/lldelete"
+            android:background="@color/grey"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>

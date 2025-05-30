@@ -1,0 +1,605 @@
+05-22 20:06:58.769  1000   579  7278 E ActivityManager: ANR in vip.com.vipmeetings
+05-22 20:06:58.769  1000   579  7278 E ActivityManager: PID: 7126
+05-22 20:06:58.769  1000   579  7278 E ActivityManager: Reason: No response to onStartJob
+05-22 20:06:58.769  1000   579  7278 E ActivityManager: ErrorId: 57f6251e-2616-4b69-907f-1c058b0b85fd
+05-22 20:06:58.769  1000   579  7278 E ActivityManager: Frozen: false
+05-22 20:06:58.769  1000   579  7278 E ActivityManager: Load: 2.15 / 1.43 / 2.65
+05-22 20:06:58.769  1000   579  7278 E ActivityManager: ----- Output from /proc/pressure/memory -----
+05-22 20:06:58.769  1000   579  7278 E ActivityManager: some avg10=0.85 avg60=0.31 avg300=0.25 total=29296949
+05-22 20:06:58.769  1000   579  7278 E ActivityManager: full avg10=0.40 avg60=0.14 avg300=0.05 total=6890833
+05-22 20:06:58.769  1000   579  7278 E ActivityManager: ----- End output from /proc/pressure/memory -----
+05-22 20:06:58.769  1000   579  7278 E ActivityManager: ----- Output from /proc/pressure/cpu -----
+05-22 20:06:58.769  1000   579  7278 E ActivityManager: some avg10=17.52 avg60=6.36 avg300=3.82 total=226323711
+05-22 20:06:58.769  1000   579  7278 E ActivityManager: full avg10=0.00 avg60=0.00 avg300=0.00 total=0
+05-22 20:06:58.769  1000   579  7278 E ActivityManager: ----- End output from /proc/pressure/cpu -----
+05-22 20:06:58.769  1000   579  7278 E ActivityManager: ----- Output from /proc/pressure/io -----
+05-22 20:06:58.769  1000   579  7278 E ActivityManager: some avg10=0.94 avg60=0.31 avg300=0.19 total=20228792
+05-22 20:06:58.769  1000   579  7278 E ActivityManager: full avg10=0.19 avg60=0.05 avg300=0.01 total=3797072
+05-22 20:06:58.769  1000   579  7278 E ActivityManager: ----- End output from /proc/pressure/io -----
+05-22 20:06:58.769  1000   579  7278 E ActivityManager: 
+05-22 20:06:58.769  1000   579  7278 E ActivityManager: CPU usage from 127459ms to -3ms ago (2025-05-22 20:04:48.111 to 2025-05-22 20:06:55.573):
+05-22 20:06:58.769  1000   579  7278 E ActivityManager:   41% 810/com.android.systemui: 24% user + 17% kernel / faults: 586182 minor 93 major
+05-22 20:06:58.769  1000   579  7278 E ActivityManager:   11% 374/android.hardware.sensors-service.multihal: 5.8% user + 5.7% kernel
+05-22 20:06:58.769  1000   579  7278 E ActivityManager:   5.8% 417/surfaceflinger: 2.7% user + 3.1% kernel / faults: 126 minor 77 major
+05-22 20:06:58.769  1000   579  7278 E ActivityManager:   5.2% 579/system_server: 2.7% user + 2.4% kernel / faults: 15130 minor 178 major
+05-22 20:06:58.769  1000   579  7278 E ActivityManager:   1.7% 385/android.hardware.graphics.composer3-service.ranchu: 0.8% user + 0.8% kernel / faults: 78 major
+05-22 20:06:58.769  1000   579  7278 E ActivityManager:   1% 6995/kworker/2:0-virtio_vsock: 0% user + 1% kernel
+05-22 20:06:58.769  1000   579  7278 E ActivityManager:   0.7% 6616/adbd: 0.2% user + 0.4% kernel / faults: 12916 minor
+05-22 20:06:58.769  1000   579  7278 E ActivityManager:   0.6% 4250/com.google.android.gms: 0.3% user + 0.3% kernel / faults: 3053 minor 3782 major
+05-22 20:06:58.769  1000   579  7278 E ActivityManager:   0.6% 1489/com.google.android.apps.wellbeing: 0.2% user + 0.3% kernel / faults: 5162 minor 3552 major
+05-22 20:06:58.769  1000   579  7278 E ActivityManager:   0% 5248/com.google.android.permissioncontroller: 0% user + 0% kernel / faults: 1525 minor 724 major
+05-22 20:06:58.769  1000   579  7278 E ActivityManager: 17% TOTAL: 8.5% user + 6.8% kernel + 0% iowait + 1.8% irq + 0% softirq
+05-22 20:06:58.769  1000   579  7278 E ActivityManager: CPU usage from 72ms to 812ms later (2025-05-22 20:06:55.642 to 2025-05-22 20:06:56.382):
+05-22 20:06:58.769  1000   579  7278 E ActivityManager:   62% 579/system_server: 33% user + 29% kernel / faults: 376 minor 11 major
+05-22 20:06:58.769  1000   579  7278 E ActivityManager:     60% 7279/AnrAuxiliaryTas: 31% user + 29% kernel
+05-22 20:06:58.769  1000   579  7278 E ActivityManager:     3.4% 579/system_server: 1.7% user + 1.7% kernel
+05-22 20:06:58.769  1000   579  7278 E ActivityManager:   52% 810/com.android.systemui: 29% user + 22% kernel / faults: 2663 minor
+05-22 20:06:58.769  1000   579  7278 E ActivityManager:     40% 810/ndroid.systemui: 26% user + 14% kernel
+05-22 20:06:58.769  1000   579  7278 E ActivityManager:     5.2% 825/HeapTaskDaemon: 3.5% user + 1.7% kernel
+05-22 20:06:58.769  1000   579  7278 E ActivityManager:     3.5% 824/Jit thread pool: 1.7% user + 1.7% kernel
+05-22 20:06:58.769  1000   579  7278 E ActivityManager:     3.5% 900/SysUiBg: 0% user + 3.5% kernel
+05-22 20:06:58.769  1000   579  7278 E ActivityManager:   89% 7126/vip.com.vipmeetings: 43% user + 46% kernel / faults: 26282 minor 12 major
+05-22 20:06:58.769  1000   579  7278 E ActivityManager:     89% 7150/Signal Catcher: 43% user + 46% kernel
+05-22 20:06:58.769  1000   579  7278 E ActivityManager:   14% 374/android.hardware.sensors-service.multihal: 8.3% user + 6.6% kernel
+05-22 20:06:58.769  1000   579  7278 E ActivityManager:     13% 411/android.hardwar: 6.6% user + 6.6% kernel
+05-22 20:06:58.769  1000   579  7278 E ActivityManager:   5% 417/surfaceflinger: 3.3% user + 1.6% kernel
+05-22 20:06:58.769  1000   579  7278 E ActivityManager:     3.3% 524/TimerDispatch: 3.3% user + 0% kernel
+05-22 20:06:58.769  1000   579  7278 E ActivityManager:     1.6% 526/app: 0% user + 1.6% kernel
+05-22 20:06:58.769  1000   579  7278 E ActivityManager:   3.3% 408/audioserver: 1.6% user + 1.6% kernel
+05-22 20:06:58.769  1000   579  7278 E ActivityManager:     3.3% 540/AudioOut_D: 1.6% user + 1.6% kernel
+05-22 20:06:58.769  1000   579  7278 E ActivityManager:   1.3% 14/rcu_preempt: 0% user + 1.3% kernel
+05-22 20:06:58.769  1000   579  7278 E ActivityManager:   1.6% 361/android.hardware.audio.service: 0% user + 1.6% kernel
+05-22 20:06:58.769  1000   579  7278 E ActivityManager:     3.2% 6500/HwBinder:361_2: 1.6% user + 1.6% kernel
+05-22 20:06:58.769  1000   579  7278 E ActivityManager:   3.5% 7074/kworker/2:2-virtio_vsock: 0% user + 3.5% kernel
+05-22 20:06:58.769  1000   579  7278 E ActivityManager: 63% TOTAL: 26% user + 26% kernel + 4.8% iowait + 4.8% irq + 0.3% softirq
+05-22 20:06:58.778  1000   579  7278 D ActivityManager: Completed ANR of vip.com.vipmeetings in 3208ms, latency 1ms
+05-22 20:06:58.800  1000   579  7285 I DropBoxManagerService: add tag=data_app_anr isTagEnabled=true flags=0x6
+05-22 20:06:58.819  1000   579   606 D CoreBackPreview: Window{a09ac75 u0 Application Not Responding: vip.com.vipmeetings}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.WindowOnBackInvokedDispatcher$OnBackInvokedCallbackWrapper@8354a62, mPriority=0, mIsAnimationCallback=false}
+05-22 20:06:58.831  1000   579  4827 E OpenGLRenderer: Unable to match the desired swap behavior.
+05-22 20:06:59.281 10128  1351  1351 W SystemServiceRegistry: No service published for: persistent_data_block
+05-22 20:06:59.884 10128  4250  4250 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.measurement.START pkg=com.google.android.gms }
+05-22 20:06:59.890  1002  6725  6783 D BtGatt.ScanManager: uid 10128 isForeground true scanMode -1
+05-22 20:07:00.041 10126  1542  1759 I AiAiEcho: Predicting[0]: 
+05-22 20:07:00.042 10126  1542  1759 I AiAiEcho: EchoTargets: 
+05-22 20:07:00.042 10126  1542  1759 I AiAiEcho: Filtered by AiAi flag check: 
+05-22 20:07:00.043 10126  1542  1759 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+05-22 20:07:00.043 10163   810   902 D EGL_emulation: app_time_stats: avg=4460.85ms min=4460.85ms max=4460.85ms count=1
+05-22 20:07:00.046 10126  1542  1759 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+05-22 20:07:00.060 10163   810   810 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+05-22 20:07:00.793 10158  1064  1064 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=322.96484, y[0]=1373.9502, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1377200, downTime=1377200, deviceId=4, source=0x5002, displayId=0, eventId=270268846 }
+05-22 20:07:00.794  1000   579   606 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+05-22 20:07:00.902 10158  1064  1064 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=322.96484, y[0]=1373.9502, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1377272, downTime=1377200, deviceId=4, source=0x5002, displayId=0, eventId=374273421 }
+05-22 20:07:00.923  1000   579  4827 D EGL_emulation: app_time_stats: avg=156.77ms min=2.65ms max=1833.76ms count=12
+05-22 20:07:00.945  1041   408   433 D audioserver: FGS Logger Transaction failed
+05-22 20:07:00.945  1041   408   433 D audioserver: -129
+05-22 20:07:01.021  1000   579   606 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@197f52d
+05-22 20:07:01.022  1000   579   606 D CoreBackPreview: Window{a09ac75 u0 Application Not Responding: vip.com.vipmeetings}: Setting back callback null
+05-22 20:07:01.026  1041   408   540 D AudioFlinger: mixer(0x77381f823930) throttle end: throttle time(36)
+05-22 20:07:01.038  1000   579  4827 D OpenGLRenderer: endAllActiveAnimators on 0x7b1ff5af5410 (RippleDrawable) with handle 0x7b21b5c626e0
+05-22 20:07:01.042  1000   579   606 W InputManager-JNI: Input channel object 'a09ac75 Application Not Responding: vip.com.vipmeetings (client)' was disposed without first being removed with the input manager!
+05-22 20:07:01.057  1000   579   608 V WindowManager: Unknown focus tokens, dropping reportFocusChanged
+05-22 20:07:01.091  1000   579  2161 I ImeTracker: vip.com.vipmeetings:fb2f8ea5: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_SAME_WINDOW_FOCUSED_WITHOUT_EDITOR
+05-22 20:07:01.092  1000   579  2161 I ImeTracker: vip.com.vipmeetings:fb2f8ea5: onCancelled at PHASE_SERVER_SHOULD_HIDE
+05-22 20:07:01.094 10142  1468  1468 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+05-22 20:07:01.097 10142  1468  1468 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+05-22 20:07:01.104 10142  1468  1468 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=vip.com.vipmeetings fieldId=0 fieldName=null extras=null}, false)
+05-22 20:07:01.105 10142  1468  1468 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+05-22 20:07:01.106 10142  1468  1468 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+05-22 20:07:01.187  1041   408   540 D audioserver: FGS Logger Transaction failed
+05-22 20:07:01.187  1041   408   540 D audioserver: -129
+05-22 20:07:03.235 10163   810   810 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+05-22 20:07:04.072  1041   361  6500 D android.hardware.audio@7.1-impl.ranchu: threadLoop: entering standby, frames: 595136
+05-22 20:07:05.452  wifi   795   795 I wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS 
+05-22 20:07:05.567 10163   810   810 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+05-22 20:07:06.358  1000   579  2044 W ProcessStats: Tracking association SourceState{6cda3e com.google.android.gms/10128 Service #7362} whose proc state 8 is better than process ProcessState{b3ba9b7 com.google.android.adservices.api/10178 pkg=com.google.android.adservices.api} proc state 14 (254 skipped)
+05-22 20:07:11.881  1000   579   675 D ActivityManager: freezing 5248 com.google.android.permissioncontroller
+05-22 20:07:13.641  wifi   795   795 I wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS 
+05-22 20:07:15.567 10163   810   810 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+05-22 20:07:16.377  1000   579   675 D ActivityManager: freezing 4250 com.google.android.gms
+05-22 20:07:16.381  1000   579   675 D ActivityManager: freezing 1931 com.google.android.adservices.api
+05-22 20:07:21.578  wifi   795   795 I wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS 
+05-22 20:07:24.366  1000   579   675 D ActivityManager: freezing 1489 com.google.android.apps.wellbeing
+05-22 20:07:25.568 10163   810   810 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+05-22 20:07:25.729  1000   579   732 D ConnectivityService: releasing NetworkRequest [ REQUEST id=168, [ Transports: CELLULAR Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED Uid: 10131 RequestorUid: 10131 RequestorPkg: com.google.android.googlequicksearchbox UnderlyingNetworks: Null] ] (release request)
+05-22 20:07:25.733  1000   579   732 I ConnectivityService: Update capabilities for net 101 : -FOREGROUND
+05-22 20:07:25.742  root   355   402 I netd    : networkSetPermissionForNetwork(101, 1) <8.34ms>
+05-22 20:07:29.513  wifi   795   795 I wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS 
+05-22 20:07:35.568 10163   810   810 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+05-22 20:07:35.572 10163   810   902 D EGL_emulation: app_time_stats: avg=35528.35ms min=35528.35ms max=35528.35ms count=1
+05-22 20:07:37.449  wifi   795   795 I wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS 
+05-22 20:07:40.200 10194  7126  7204 D TransportRuntime.CctTransportBackend: Making request to: https://firebaselogging-pa.googleapis.com/v1/firelog/legacy/batchlog
+05-22 20:07:40.206  root   355  7294 I resolv  : GetAddrInfoHandler::run: {102 102 102 983142 10194 0}
+05-22 20:07:40.207 10128  1351  6998 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.tapandpay.gcmtask.TapAndPayGcmTaskService started execution. cause:4 exec_start_elapsed_seconds: 1416 [CONTEXT service_id=218 ]
+05-22 20:07:40.208  root   355  7295 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+05-22 20:07:40.208  root   355  7296 I resolv  : res_nmkquery: (QUERY, IN, A)
+05-22 20:07:40.210 10128  1351  6998 V NFC     : this device does not have NFC support
+05-22 20:07:40.213 10128  1351  6998 W TapAndPay: NfcAdapter is null while obtaining CardEmulation instance. [CONTEXT service_id=79 ]
+05-22 20:07:40.213 10128  1351  6998 W TapAndPay: java.lang.NullPointerException: NfcAdapter is null
+05-22 20:07:40.213 10128  1351  6998 W TapAndPay: 	at android.nfc.cardemulation.CardEmulation.getInstance(CardEmulation.java:152)
+05-22 20:07:40.213 10128  1351  6998 W TapAndPay: 	at cdoy.<init>(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+05-22 20:07:40.213 10128  1351  6998 W TapAndPay: 	at com.google.android.gms.tapandpay.hce.task.TapAndPayAidRegistrationTaskOperation.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):5)
+05-22 20:07:40.213 10128  1351  6998 W TapAndPay: 	at com.google.android.gms.tapandpay.gcmtask.TapAndPayGcmTaskChimeraService.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):4)
+05-22 20:07:40.213 10128  1351  6998 W TapAndPay: 	at avzs.call(:com.google.android.gms@231818047@23.18.18 (190800-535401451):4)
+05-22 20:07:40.213 10128  1351  6998 W TapAndPay: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+05-22 20:07:40.213 10128  1351  6998 W TapAndPay: 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+05-22 20:07:40.213 10128  1351  6998 W TapAndPay: 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+05-22 20:07:40.213 10128  1351  6998 W TapAndPay: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+05-22 20:07:40.213 10128  1351  6998 W TapAndPay: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+05-22 20:07:40.213 10128  1351  6998 W TapAndPay: 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+05-22 20:07:40.213 10128  1351  6998 W TapAndPay: 	at java.lang.Thread.run(Thread.java:1012)
+05-22 20:07:40.225 10128  1351  7262 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.tapandpay.gcmtask.TapAndPayGcmTaskService finished executing. cause:4 result: 3 elapsed_millis: 34 uptime_millis: 34 exec_start_elapsed_seconds: 1416 [CONTEXT service_id=218 ]
+05-22 20:07:40.242  root   355  7295 I resolv  : res_nsend: used send_dg 163 terrno: 0
+05-22 20:07:40.242  root   355  7295 I resolv  : doQuery: rcode=0, ancount=4, return value=163
+05-22 20:07:40.243  root   355  7296 I resolv  : res_nsend: used send_dg 211 terrno: 0
+05-22 20:07:40.244  root   355  7296 I resolv  : doQuery: rcode=0, ancount=10, return value=211
+05-22 20:07:40.253 10194  7126  7204 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+05-22 20:07:40.322  1000   579  1751 D ActivityManager: sync unfroze 4250 com.google.android.gms for 6
+05-22 20:07:40.324  1000   579  1751 D ActivityManager: sync unfroze 1931 com.google.android.adservices.api for 6
+05-22 20:07:40.325  1000   579  1751 W ProcessStats: Tracking association SourceState{6cda3e com.google.android.gms/10128 ImpBg #7376} whose proc state 6 is better than process ProcessState{b3ba9b7 com.google.android.adservices.api/10178 pkg=com.google.android.adservices.api} proc state 14 (0 skipped)
+05-22 20:07:40.353 10128  1351  6998 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.checkin.EventLogService started execution. cause:5 exec_start_elapsed_seconds: 1416 [CONTEXT service_id=218 ]
+05-22 20:07:40.365 10128  4250  4340 I Checkin : [EventLogChimeraService] Opted in for usage reporting: false
+05-22 20:07:40.366 10128  4250  4340 I Checkin : [EventLogChimeraService] Aggregate from 1747925157169 (log), 1747925073379 (data)
+--------- beginning of kernel
+05-22 20:07:40.357  root     0     0 I logd    : logdr: UID=10128 GID=10128 PID=4250 n tail=0 logMask=4 pid=0 start=0ns deadline=0ns
+05-22 20:07:40.459  1000   579  1751 I DropBoxManagerService: add tag=event_data isTagEnabled=true flags=0x2
+05-22 20:07:40.464  1000   579  1751 D ActivityManager: sync unfroze 1591 com.google.process.gservices for 7
+05-22 20:07:40.483 10128  1351  7262 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.checkin.EventLogService finished executing. cause:5 result: 1 elapsed_millis: 221 uptime_millis: 221 exec_start_elapsed_seconds: 1416 [CONTEXT service_id=218 ]
+05-22 20:07:42.335 10163   810   810 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+05-22 20:07:42.726 10194  7126  7204 I TransportRuntime.CctTransportBackend: Status Code: 200
+05-22 20:07:42.727 10194  7126  7204 I TransportRuntime.CctTransportBackend: Content-Type: application/json; charset=UTF-8
+05-22 20:07:42.727 10194  7126  7204 I TransportRuntime.CctTransportBackend: Content-Encoding: gzip
+05-22 20:07:42.750 10194  7126  7126 D LeakCanary: Watching instance of com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService (com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService received Service#onDestroy() callback) with key 5c1704c1-a113-401a-91bc-6b7b773b198b
+05-22 20:07:45.570 10163   810   810 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+05-22 20:07:45.642  wifi   795   795 I wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS 
+05-22 20:07:51.369 10163   810   810 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+05-22 20:07:53.578  wifi   795   795 I wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS 
+05-22 20:07:55.569 10163   810   810 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+05-22 20:07:58.060  1000   579   675 D ActivityManager: freezing 4250 com.google.android.gms
+05-22 20:07:58.063  1000   579   675 D ActivityManager: freezing 1931 com.google.android.adservices.api
+05-22 20:08:00.041 10163   810   902 D EGL_emulation: app_time_stats: avg=24469.42ms min=24469.42ms max=24469.42ms count=1
+05-22 20:08:00.042 10126  1542  1759 I AiAiEcho: Predicting[0]: 
+05-22 20:08:00.043 10126  1542  1759 I AiAiEcho: EchoTargets: 
+05-22 20:08:00.043 10126  1542  1759 I AiAiEcho: Filtered by AiAi flag check: 
+05-22 20:08:00.043 10126  1542  1759 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+05-22 20:08:00.045 10126  1542  1759 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+05-22 20:08:00.053 10163   810   810 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+05-22 20:08:01.513  wifi   795   795 I wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS 
+05-22 20:08:05.571 10163   810   810 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+05-22 20:08:09.448  wifi   795   795 I wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS 
+05-22 20:08:15.575 10163   810   810 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+05-22 20:08:15.588 10163   810   902 D EGL_emulation: app_time_stats: avg=15546.44ms min=15546.44ms max=15546.44ms count=1
+05-22 20:08:17.641  wifi   795   795 I wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS 
+05-22 20:08:17.703  1000   579   723 E WifiStaIfaceAidlImpl: installApfPacketFilter failed with service-specific exception: android.os.ServiceSpecificException:  (code 4)
+05-22 20:08:18.438 10163   810   810 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+05-22 20:08:21.438 10163   810   810 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+05-22 20:08:25.573 10163   810   810 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+05-22 20:08:25.576  wifi   795   795 I wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS 
+05-22 20:08:33.512  wifi   795   795 I wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS 
+05-22 20:08:35.587 10163   810   810 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+05-22 20:08:41.449  wifi   795   795 I wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS 
+05-22 20:08:45.586 10163   810   810 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+05-22 20:08:49.641  wifi   795   795 I wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS 
+05-22 20:08:54.554 10163   810   810 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+05-22 20:08:55.586 10163   810   810 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+05-22 20:08:57.078 10128  1351  7262 I AlarmManager: setExactAndAllowWhileIdle [name: GCM_HB_ALARM type: 2 triggerAtMillis: 1553487]
+05-22 20:08:57.081 10128  1351  7262 E WakeLock: GCM_HB_ALARM release without a matched acquire!
+05-22 20:08:57.260 10128  1351  7303 I AlarmManager: setExactAndAllowWhileIdle [name: GCM_HB_ALARM type: 2 triggerAtMillis: 1663669]
+05-22 20:08:57.555 10163   810   810 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+05-22 20:08:57.577  wifi   795   795 I wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS 
+05-22 20:09:00.044 10126  1542  1759 I AiAiEcho: Predicting[0]: 
+05-22 20:09:00.045 10126  1542  1759 I AiAiEcho: EchoTargets: 
+05-22 20:09:00.045 10126  1542  1759 I AiAiEcho: Filtered by AiAi flag check: 
+05-22 20:09:00.045 10126  1542  1759 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+05-22 20:09:00.046 10163   810   902 D EGL_emulation: app_time_stats: avg=44457.13ms min=44457.13ms max=44457.13ms count=1
+05-22 20:09:00.047 10126  1542  1759 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+05-22 20:09:00.056 10163   810   810 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+05-22 20:09:00.570 10163   810   810 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+05-22 20:09:05.512  wifi   795   795 I wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS 
+05-22 20:09:05.586 10163   810   810 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+05-22 20:09:13.449  wifi   795   795 I wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS 
+05-22 20:09:15.587 10163   810   810 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+05-22 20:09:21.430  1000   579  1751 D WifiNl80211Manager: Scan result ready event
+--
+05-22 20:09:45.967 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:06:58.769   579-7278  ActivityManager         pid-579                              E  ANR in vip.com.vipmeetings
+05-22 20:09:45.967 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                     PID: 7126
+05-22 20:09:45.967 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                     Reason: No response to onStartJob
+05-22 20:09:45.967 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                     ErrorId: 57f6251e-2616-4b69-907f-1c058b0b85fd
+05-22 20:09:45.967 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                     Frozen: false
+05-22 20:09:45.967 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                     Load: 2.15 / 1.43 / 2.65
+05-22 20:09:45.967 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                     ----- Output from /proc/pressure/memory -----
+05-22 20:09:45.967 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                     some avg10=0.85 avg60=0.31 avg300=0.25 total=29296949
+05-22 20:09:45.967 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                     full avg10=0.40 avg60=0.14 avg300=0.05 total=6890833
+05-22 20:09:45.967 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                     ----- End output from /proc/pressure/memory -----
+05-22 20:09:45.967 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                     ----- Output from /proc/pressure/cpu -----
+05-22 20:09:45.967 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                     some avg10=17.52 avg60=6.36 avg300=3.82 total=226323711
+05-22 20:09:45.967 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                     full avg10=0.00 avg60=0.00 avg300=0.00 total=0
+05-22 20:09:45.967 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                     ----- End output from /proc/pressure/cpu -----
+05-22 20:09:45.967 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                     ----- Output from /proc/pressure/io -----
+05-22 20:09:45.967 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                     some avg10=0.94 avg60=0.31 avg300=0.19 total=20228792
+05-22 20:09:45.967 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                     full avg10=0.19 avg60=0.05 avg300=0.01 total=3797072
+05-22 20:09:45.967 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                     ----- End output from /proc/pressure/io -----
+05-22 20:09:45.967 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                     
+05-22 20:09:45.967 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                     CPU usage from 127459ms to -3ms ago (2025-05-22 20:04:48.111 to 2025-05-22 20:06:55.573):
+05-22 20:09:45.967 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                       41% 810/com.android.systemui: 24% user + 17% kernel / faults: 586182 minor 93 major
+05-22 20:09:45.967 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                       11% 374/android.hardware.sensors-service.multihal: 5.8% user + 5.7% kernel
+05-22 20:09:45.967 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                       5.8% 417/surfaceflinger: 2.7% user + 3.1% kernel / faults: 126 minor 77 major
+05-22 20:09:45.967 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                       5.2% 579/system_server: 2.7% user + 2.4% kernel / faults: 15130 minor 178 major
+05-22 20:09:45.967 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                       1.7% 385/android.hardware.graphics.composer3-service.ranchu: 0.8% user + 0.8% kernel / faults: 78 major
+05-22 20:09:45.967 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                       1% 6995/kworker/2:0-virtio_vsock: 0% user + 1% kernel
+05-22 20:09:45.967 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                       0.7% 6616/adbd: 0.2% user + 0.4% kernel / faults: 12916 minor
+05-22 20:09:45.967 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                       0.6% 4250/com.google.android.gms: 0.3% user + 0.3% kernel / faults: 3053 minor 3782 major
+05-22 20:09:45.967 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                       0.6% 1489/com.google.android.apps.wellbeing: 0.2% user + 0.3% kernel / faults: 5162 minor 3552 major
+05-22 20:09:45.967 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                       0% 5248/com.google.android.permissioncontroller: 0% user + 0% kernel / faults: 1525 minor 724 major
+05-22 20:09:45.967 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                     17% TOTAL: 8.5% user + 6.8% kernel + 0% iowait + 1.8% irq + 0% softirq
+05-22 20:09:45.967 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                     CPU usage from 72ms to 812ms later (2025-05-22 20:06:55.642 to 2025-05-22 20:06:56.382):
+05-22 20:09:45.968 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                       62% 579/system_server: 33% user + 29% kernel / faults: 376 minor 11 major
+05-22 20:09:45.968 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                         60% 7279/AnrAuxiliaryTas: 31% user + 29% kernel
+05-22 20:09:45.968 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                         3.4% 579/system_server: 1.7% user + 1.7% kernel
+05-22 20:09:45.968 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                       52% 810/com.android.systemui: 29% user + 22% kernel / faults: 2663 minor
+05-22 20:09:45.968 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                         40% 810/ndroid.systemui: 26% user + 14% kernel
+05-22 20:09:45.968 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                         5.2% 825/HeapTaskDaemon: 3.5% user + 1.7% kernel
+05-22 20:09:45.968 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                         3.5% 824/Jit thread pool: 1.7% user + 1.7% kernel
+05-22 20:09:45.968 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                         3.5% 900/SysUiBg: 0% user + 3.5% kernel
+05-22 20:09:45.968 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                       89% 7126/vip.com.vipmeetings: 43% user + 46% kernel / faults: 26282 minor 12 major
+05-22 20:09:45.968 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                         89% 7150/Signal Catcher: 43% user + 46% kernel
+05-22 20:09:45.968 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                       14% 374/android.hardware.sensors-service.multihal: 8.3% user + 6.6% kernel
+05-22 20:09:45.968 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                         13% 411/android.hardwar: 6.6% user + 6.6% kernel
+05-22 20:09:45.968 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                       5% 417/surfaceflinger: 3.3% user + 1.6% kernel
+05-22 20:09:45.968 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                         3.3% 524/TimerDispatch: 3.3% user + 0% kernel
+05-22 20:09:45.968 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                         1.6% 526/app: 0% user + 1.6% kernel
+05-22 20:09:45.968 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                       3.3% 408/audioserver: 1.6% user + 1.6% kernel
+05-22 20:09:45.968 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                         3.3% 540/AudioOut_D: 1.6% user + 1.6% kernel
+05-22 20:09:45.968 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                       1.3% 14/rcu_preempt: 0% user + 1.3% kernel
+05-22 20:09:45.968 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                       1.6% 361/android.hardware.audio.service: 0% user + 1.6% kernel
+05-22 20:09:45.968 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                         3.2% 6500/HwBinder:361_2: 1.6% user + 1.6% kernel
+05-22 20:09:45.968 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                       3.5% 7074/kworker/2:2-virtio_vsock: 0% user + 3.5% kernel
+05-22 20:09:45.968 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                     63% TOTAL: 26% user + 26% kernel + 4.8% iowait + 4.8% irq + 0.3% softirq
+05-22 20:09:45.968 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:06:58.778   579-7278  ActivityManager         pid-579                              D  Completed ANR of vip.com.vipmeetings in 3208ms, latency 1ms
+05-22 20:09:45.968 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:06:58.800   579-7285  DropBoxManagerService   pid-579                              I  add tag=data_app_anr isTagEnabled=true flags=0x6
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:06:58.819   579-606   CoreBackPreview         pid-579                              D  Window{a09ac75 u0 Application Not Responding: vip.com.vipmeetings}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.WindowOnBackInvokedDispatcher$OnBackInvokedCallbackWrapper@8354a62, mPriority=0, mIsAnimationCallback=false}
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:06:58.831   579-4827  OpenGLRenderer          pid-579                              E  Unable to match the desired swap behavior.
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:06:59.281  1351-1351  SystemServiceRegistry   pid-1351                             W  No service published for: persistent_data_block
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:06:59.884  4250-4250  BoundBrokerSvc          pid-4250                             D  onUnbind: Intent { act=com.google.android.gms.measurement.START pkg=com.google.android.gms }
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:06:59.890  6725-6783  BtGatt.ScanManager      pid-6725                             D  uid 10128 isForeground true scanMode -1
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:00.041  1542-1759  AiAiEcho                pid-1542                             I  Predicting[0]: 
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:00.042  1542-1759  AiAiEcho                pid-1542                             I  EchoTargets: 
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper:                                                                                                     Filtered by AiAi flag check: 
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:00.043  1542-1759  AiAiEcho                pid-1542                             I  Ranked targets strategy: SORT, count: 0, ranking metadata: 
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:00.043   810-902   EGL_emulation           pid-810                              D  app_time_stats: avg=4460.85ms min=4460.85ms max=4460.85ms count=1
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:00.046  1542-1759  AiAiEcho                pid-1542                             I  #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:00.060   810-810   PageIndicator           pid-810                              W  Total number of pages invalid: 0. Assuming 1 page.
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:00.793  1064-1064  TaplEvents              pid-1064                             D  TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=322.96484, y[0]=1373.9502, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1377200, downTime=1377200, deviceId=4, source=0x5002, displayId=0, eventId=270268846 }
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:00.794   579-606   AutofillManager         pid-579                              D  Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:00.902  1064-1064  TaplEvents              pid-1064                             D  TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=322.96484, y[0]=1373.9502, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1377272, downTime=1377200, deviceId=4, source=0x5002, displayId=0, eventId=374273421 }
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:00.923   579-4827  EGL_emulation           pid-579                              D  app_time_stats: avg=156.77ms min=2.65ms max=1833.76ms count=12
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:00.945   408-433   audioserver             pid-408                              D  FGS Logger Transaction failed
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:00.945   408-433   audioserver             pid-408                              D  -129
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:01.021   579-606   WindowOnBackDispatcher  pid-579                              W  sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@197f52d
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:01.022   579-606   CoreBackPreview         pid-579                              D  Window{a09ac75 u0 Application Not Responding: vip.com.vipmeetings}: Setting back callback null
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:01.026   408-540   AudioFlinger            pid-408                              D  mixer(0x77381f823930) throttle end: throttle time(36)
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:01.038   579-4827  OpenGLRenderer          pid-579                              D  endAllActiveAnimators on 0x7b1ff5af5410 (RippleDrawable) with handle 0x7b21b5c626e0
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:01.042   579-606   InputManager-JNI        pid-579                              W  Input channel object 'a09ac75 Application Not Responding: vip.com.vipmeetings (client)' was disposed without first being removed with the input manager!
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:01.057   579-608   WindowManager           pid-579                              V  Unknown focus tokens, dropping reportFocusChanged
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:01.091   579-2161  ImeTracker              pid-579                              I  vip.com.vipmeetings:fb2f8ea5: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_SAME_WINDOW_FOCUSED_WITHOUT_EDITOR
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:01.092   579-2161  ImeTracker              pid-579                              I  vip.com.vipmeetings:fb2f8ea5: onCancelled at PHASE_SERVER_SHOULD_HIDE
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:01.094  1468-1468  GoogleInpu...hodService pid-1468                             I  GoogleInputMethodService.onFinishInput():3227 
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:01.097  1468-1468  GoogleInpu...hodService pid-1468                             I  GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:01.104  1468-1468  GoogleInpu...hodService pid-1468                             I  GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=vip.com.vipmeetings fieldId=0 fieldName=null extras=null}, false)
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:01.105  1468-1468  GoogleInpu...hodService pid-1468                             I  GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:01.106  1468-1468  GoogleInpu...hodService pid-1468                             I  GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:01.187   408-540   audioserver             pid-408                              D  FGS Logger Transaction failed
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:01.187   408-540   audioserver             pid-408                              D  -129
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:03.235   810-810   StatusBarIconController pid-810                              D  ignoring old pipeline callback because the new wifi icon is enabled
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:04.072   361-6500  android.ha...mpl.ranchu pid-361                              D  threadLoop: entering standby, frames: 595136
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:05.452   795-795   wpa_supplicant          pid-795                              I  wlan0: CTRL-EVENT-BEACON-LOSS 
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:05.567   810-810   StatusBarIconController pid-810                              D  ignoring old pipeline callbacks, because the new mobile icons are enabled
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:06.358   579-2044  ProcessStats            pid-579                              W  Tracking association SourceState{6cda3e com.google.android.gms/10128 Service #7362} whose proc state 8 is better than process ProcessState{b3ba9b7 com.google.android.adservices.api/10178 pkg=com.google.android.adservices.api} proc state 14 (254 skipped)
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:11.881   579-675   ActivityManager         pid-579                              D  freezing 5248 com.google.android.permissioncontroller
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:13.641   795-795   wpa_supplicant          pid-795                              I  wlan0: CTRL-EVENT-BEACON-LOSS 
+05-22 20:09:45.969 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:15.567   810-810   StatusBarIconController pid-810                              D  ignoring old pipeline callbacks, because the new mobile icons are enabled
+05-22 20:09:45.970 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:16.377   579-675   ActivityManager         pid-579                              D  freezing 4250 com.google.android.gms
+05-22 20:09:45.970 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:16.381   579-675   ActivityManager         pid-579                              D  freezing 1931 com.google.android.adservices.api
+05-22 20:09:45.970 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:21.578   795-795   wpa_supplicant          pid-795                              I  wlan0: CTRL-EVENT-BEACON-LOSS 
+05-22 20:09:45.970 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:24.366   579-675   ActivityManager         pid-579                              D  freezing 1489 com.google.android.apps.wellbeing
+05-22 20:09:45.970 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:25.568   810-810   StatusBarIconController pid-810                              D  ignoring old pipeline callbacks, because the new mobile icons are enabled
+05-22 20:09:45.970 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:25.729   579-732   ConnectivityService     pid-579                              D  releasing NetworkRequest [ REQUEST id=168, [ Transports: CELLULAR Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED Uid: 10131 RequestorUid: 10131 RequestorPkg: com.google.android.googlequicksearchbox UnderlyingNetworks: Null] ] (release request)
+05-22 20:09:45.970 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:25.733   579-732   ConnectivityService     pid-579                              I  Update capabilities for net 101 : -FOREGROUND
+05-22 20:09:45.970 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:25.742   355-402   netd                    pid-355                              I  networkSetPermissionForNetwork(101, 1) <8.34ms>
+05-22 20:09:45.970 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:29.513   795-795   wpa_supplicant          pid-795                              I  wlan0: CTRL-EVENT-BEACON-LOSS 
+05-22 20:09:45.970 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:35.568   810-810   StatusBarIconController pid-810                              D  ignoring old pipeline callbacks, because the new mobile icons are enabled
+05-22 20:09:45.970 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:35.572   810-902   EGL_emulation           pid-810                              D  app_time_stats: avg=35528.35ms min=35528.35ms max=35528.35ms count=1
+05-22 20:09:45.970 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:37.449   795-795   wpa_supplicant          pid-795                              I  wlan0: CTRL-EVENT-BEACON-LOSS 
+05-22 20:09:45.970 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:40.200  7126-7204  TransportR...ortBackend vip.com.vipmeetings                  D  Making request to: https://firebaselogging-pa.googleapis.com/v1/firelog/legacy/batchlog
+05-22 20:09:45.970 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:40.206   355-7294  resolv                  pid-355                              I  GetAddrInfoHandler::run: {102 102 102 983142 10194 0}
+05-22 20:09:45.970 10142  1468  1468 W AutoPasteSuggestionHelper: 2025-05-22 20:07:40.207  1351-6998  NetworkScheduler.Stats  pid-1351                             I  Task com.google.android.gms/com.google.android.gms.tapandpay.gcmtask.TapAndPayGcmTaskService started execution. cause:4 exec_start_elapsed_seconds: 1416 [CONTEXT service_id=218 ], htmlText=, itemType=0, entityType=0, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581694, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=putmethod.latin, htmlText=, itemType=0, entityType=1, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581695, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=3, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581696, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=1468, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581697, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=512, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581698, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=1654, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581699, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=or.multidisplay, htmlText=, itemType=0, entityType=1, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581700, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=1021, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581701, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=m.android.phone, htmlText=, itemType=0, entityType=1, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581702, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=1007, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581703, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=com.android.se, htmlText=, itemType=0, entityType=1, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581704, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=938, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581705, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=rkstack.process, htmlText=, itemType=0, entityType=1, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581706, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=810, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581707, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=ndroid.systemui, htmlText=, itemType=0, entityType=1, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581708, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=447168
+05-22 20:09:45.971 10142  1468  1468 W AutoPasteSuggestionHelper: 2025, htmlText=, itemType=0, entityType=3, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581709, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=786534, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581710, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=6534 102 9831, htmlText=, itemType=0, entityType=3, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581711, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=983142, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581712, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=10128, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581713, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=65, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581714, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=0, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581715, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=53, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581716, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=vip.com.vipmeetings, htmlText=, itemType=0, entityType=1, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581717, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=7126, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581718, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=586182, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581719, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=93, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581720, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=126, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581721, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=77, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581722, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=15130, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581723, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=178, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581724, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=78, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581725, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=12916, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581726, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=3053, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581727, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=3782, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581728, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=5162, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581729, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=3552, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581730, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=1525, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581731, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=724, htmlText=, itemType=0, entityType=4, uri=, groupId=-1
+05-22 20:09:45.972 10142  1468  1468 W AutoPasteSuggestionHelper: , viewType=0}}, ClipItem{ id = 1747926581732, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=376, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581733, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=11, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581734, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=2663, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581735, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=26282, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581736, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=12, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581737, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=BtGatt.ScanManager, htmlText=, itemType=0, entityType=1, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581738, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=1, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581739, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=595136
+05-22 20:09:45.972 10142  1468  1468 W AutoPasteSuggestionHelper: 2025, htmlText=, itemType=0, entityType=3, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581740, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=com.google.android.gms/10128, htmlText=, itemType=0, entityType=1, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581741, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=8, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581742, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=com.google.android.adservices.api/10178, htmlText=, itemType=0, entityType=1, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581743, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=14, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581744, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=5248, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581745, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=com.google.android.permissioncontroller, htmlText=, itemType=0, entityType=1, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581746, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=4250, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581747, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=com.google.android.gms, htmlText=, itemType=0, entityType=1, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581748, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=1931, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581749, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=com.google.android.adservices.api, htmlText=, itemType=0, entityType=1, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581750, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=1489, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581751, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=com.google.android.apps.wellbeing, htmlText=, itemType=0, entityType=1, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581752, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=10131, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581753, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=com.google.android.googlequicksearchbox, htmlText=, itemType=0, entityType=1, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581754, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=101, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581755, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=https://firebaselogging-pa.googleapis.com/v1/firelog/legacy/batchlog, htmlText=, itemType=0, entityType=1, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581756, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=102 102 9831, htmlText=, itemType=0, entityType=3, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581757, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=10194, htmlText=, itemType=0, entityType=4, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581758, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=NetworkScheduler.Stats, htmlText=, itemType=0, entityType=1, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581759, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=com.google.android.gms/com.google.android.gms.tapandpay.gcmtask.TapAndPayGcmTaskService, htmlText=, itemType=0, entityType=1, uri=, groupId=-1, viewType=0}}, ClipItem{ id = 1747926581760, timestamp = 1747926581760, clipItemContent = ClipItemContent{text=1416, htmlText=, itemType=0, entityType=4, u
+05-22 20:09:45.972 10142  1468  1468 W AutoPasteSuggestionHelper: ri=, groupId=-1, viewType=0}}].
+05-22 20:09:45.989 10142  1468  1468 I CurrentMicStatusHolder: CurrentMicStatusHolder.onStartInputView():79 Current Mic status = {MicIconHidden-EmailInputType,}
+05-22 20:09:45.989 10142  1468  1468 I VoiceImeExtension: VoiceImeExtension.shouldStartVoiceInputAutomatically():383 No private IME option set to start voice input.
+05-22 20:09:45.995 10142  1468  1468 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+05-22 20:09:46.005  1000   579  2161 D CoreBackPreview: Window{10f62fc u0 vip.com.vipmeetings/vip.com.vipmeetings.MainActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@b3b6159, mPriority=0, mIsAnimationCallback=false}
+05-22 20:09:46.006 10194  7126  7126 D InsetsController: show(ime(), fromIme=true)
+05-22 20:09:46.006 10194  7126  7126 I ImeTracker: vip.com.vipmeetings:a0b9aa16: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+05-22 20:09:46.043 10128  4250  4250 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-22 20:09:46.046 10128  4250  4250 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-22 20:09:46.053 10142  1468  1468 I ShortcutsDataManager: AbstractContentDataManager.startImportContentTask():234 startImportContentTask()
+05-22 20:09:46.056 10142  1468  1468 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+05-22 20:09:46.057 10142  1468  1468 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+05-22 20:09:46.058 10142  1468  1468 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+05-22 20:09:46.061 10142  1468  2419 I Delight5Decoder: Delight5DecoderWrapper.setKeyboardLayout():457 setKeyboardLayout()
+05-22 20:09:46.065 10128  4250  4250 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-22 20:09:46.069 10142  1468  1852 I ShortcutsDataManager: AbstractContentDataManager$ImportContentTask.doInBackground():248 doInBackground()
+05-22 20:09:46.069 10142  1468  1852 I PersonalDictionaryDataHandler: PersonalDictionaryDataHandler.beginProcess():111 LanguageTags = [en-US]
+05-22 20:09:46.090  1000   579  2149 D ActivityManager: sync unfroze 6805 android.process.acore for 7
+05-22 20:09:46.093 10142  1468  1468 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():159 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+05-22 20:09:46.106 10128  4250  4250 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-22 20:09:46.106 10128  4250  4250 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-22 20:09:46.115 10128  4250  4250 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-22 20:09:46.144 10142  1468  1852 I ShortcutsDataManager: AbstractContentDataManager.importRecords():338 importRecords() : Success : Count = 0
+05-22 20:09:46.149 10142  1468  1852 I ShortcutsDataManager: AbstractContentDataManager.importContentData():288 importContentData() : Ending import process
+05-22 20:09:46.150 10142  1468  2419 I Delight5Decoder: Delight5DecoderWrapper.unloadLanguageModel():857 unloadLanguageModel() : 4, version [n/a]
+05-22 20:09:46.162 10142  1468  1852 I PersonalLanguageModelUpdater: PersonalLanguageModelUpdater$UpdateOperation.performInternal():162 run() : Added 0 words and 0 shortcuts
+05-22 20:09:46.162 10142  1468  1852 I DynamicLanguageModelOperation: DynamicLanguageModelOperation.perform():41 perform() : 4 : cje : Completed
+05-22 20:09:46.162 10142  1468  2419 I Delight5Decoder: Delight5DecoderWrapper.loadLanguageModel():649 loadLanguageModel() : 4, version [n/a]
+05-22 20:09:46.164 10142  1468  2419 I Delight5Decoder: Delight5DecoderWrapper.loadLanguageModel():690 Loaded dynamic LM 4.en
+05-22 20:09:46.165 10142  1468  1468 I ShortcutsDataManager: AbstractContentDataManager$ImportContentTask.onPostExecute():259 onPostExecute() : Result = [2,0]
+05-22 20:09:46.166 10142  1468  1468 I ShortcutsDataManager: ShortcutsDataManager.onImportFinished():80 onImportFinished() : Result = 2 : Count = 0
+05-22 20:09:46.640 10158  1064  1064 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=333.97363, y[0]=922.9248, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1543048, downTime=1543048, deviceId=4, source=0x5002, displayId=0, eventId=659251753 }
+05-22 20:09:46.739 10158  1064  1064 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=333.97363, y[0]=922.9248, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1543147, downTime=1543048, deviceId=4, source=0x5002, displayId=0, eventId=709092522 }
+05-22 20:09:46.746  1000   579  1859 I ImeTracker: vip.com.vipmeetings:ac0d832b: onRequestShow at ORIGIN_SERVER_START_INPUT reason ATTACH_NEW_INPUT
+05-22 20:09:46.747 10142  1468  1468 I GoogleInputMethodService: GoogleInputMethodService.onFinishInputView():2241 
+05-22 20:09:46.749 10142  1468  1468 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():159 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+05-22 20:09:46.749 10194  7126  7126 I ImeTracker: vip.com.vipmeetings:e5d6f6fd: onRequestShow at ORIGIN_CLIENT_SHOW_SOFT_INPUT reason SHOW_SOFT_INPUT
+05-22 20:09:46.749 10142  1468  1468 I InputBundle: InputBundle.consumeEvent():923 Skip consuming an event as keyboard status is 0
+05-22 20:09:46.749 10194  7126  7126 D InputMethodManager: showSoftInput() view=com.google.android.material.textfield.TextInputEditText{6b90c3b VFED..CL. .F.P..ID 0,47-994,165 #7f0a00f0 app:id/etclientid aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+05-22 20:09:46.750 10142  1468  1468 I KeyboardWrapper: KeyboardWrapper.consumeEvent():275 Skip consuming an event as current keyboard is deactivated (state=0, keyboard existence=true)
+05-22 20:09:46.750 10142  1468  1468 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.shutdown():77 shutdown()
+05-22 20:09:46.753 10142  1468  1571 I NebulaeTrainingCacheMetricsProcessor: NebulaeTrainingCacheMetricsProcessor.processEndSession():447 No input action collection in this session, skip logging.
+05-22 20:09:46.755 10142  1468  1468 I AndroidIME: AbstractIme.onDeactivate():207 LatinIme.onDeactivate()
+05-22 20:09:46.756 10142  1468  1468 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+05-22 20:09:46.757 10142  1468  2785 E native  : E0000 00:00:1747926586.757057    2785 keyboard.cc:27] Cannot create a keyboard with 0 valid keys
+05-22 20:09:46.758 10142  1468  1468 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+05-22 20:09:46.759 10142  1468  1468 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x1001(Normal) imeOptions=0x8000006 privateImeOptions=null actionName=DONE actionLabel=null actionId=0 initialSelStart=6 initialSelEnd=6 initialCapsMode=0x1000 hintText=non-empty label=null packageName=vip.com.vipmeetings fieldId=2131362032 fieldName=null extras=null}, false)
+05-22 20:09:46.759 10142  1468  1468 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+05-22 20:09:46.760 10142  1468  1468 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+05-22 20:09:46.762 10142  1468  1468 I GoogleInputMethodService: GoogleInputMethodService.onStartInputView():1995 onStartInputView(EditorInfo{inputType=0x1001(Normal) imeOptions=0x8000006 privateImeOptions=null actionName=DONE actionLabel=null actionId=0 initialSelStart=6 initialSelEnd=6 initialCapsMode=0x1000 hintText=non-empty label=null packageName=vip.com.vipmeetings fieldId=2131362032 fieldName=null extras=null}, false)
+05-22 20:09:46.764 10142  1468  1468 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+05-22 20:09:46.765 10142  1468  1468 W ModuleManager: ModuleManager.loadModule():450 Module erj is not available
+05-22 20:09:46.767 10142  1468  1468 I KeyboardViewUtil: KeyboardViewUtil.getKeyboardHeightRatio():189 systemKeyboardHeightRatio:1.000000; userKeyboardHeightRatio:1.000000.
+05-22 20:09:46.768 10142  1468  1468 I AndroidIME: AbstractIme.onActivate():86 LatinIme.onActivate() : EditorInfo = inputType=0x1001(Normal) imeOptions=0x8000006 privateImeOptions=null actionName=DONE actionLabel=null actionId=0 initialSelStart=6 initialSelEnd=6 initialCapsMode=0x1000 hintText=non-empty label=null packageName=vip.com.vipmeetings fieldId=2131362032 fieldName=null extras=null, IncognitoMode = false, DeviceLocked = false
+05-22 20:09:46.769 10142  1468  1468 I Delight5Facilitator: Delight5Facilitator.initializeForIme():777 initializeForIme() : Locale = [en_US], layout = qwerty
+05-22 20:09:46.770 10142  1468  1468 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.cancelShutdown():55 cancelShutdown()
+05-22 20:09:46.771 10142  1468  1468 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.syncLanguagePacks():67 syncLanguagePacks()
+05-22 20:09:46.773 10142  1468  1468 I LatinIme: LatinIme.updateEnableInlineSuggestionsOnDecoderSideFlags():1003 inline flag updated to:false
+05-22 20:09:46.774 10142  1468  6372 I SpeechFactory: SpeechRecognitionFactory.maybeScheduleAutoPackDownloadForFallback():205 maybeScheduleAutoPackDownloadForFallback()
+05-22 20:09:46.775 10142  1468  1571 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+05-22 20:09:46.778 10142  1468  6372 I FallbackOnDeviceRecognitionProvider: FallbackOnDeviceRecognitionProvider.maybeScheduleAutoPackDownload():195 maybeScheduleAutoPackDownload() for language tag en-US
+05-22 20:09:46.784 10142  1468  1468 I KeyboardWrapper: KeyboardWrapper.consumeEvent():275 Skip consuming an event as current keyboard is deactivated (state=0, keyboard existence=true)
+05-22 20:09:46.792 10142  1468  1468 I KeyboardViewUtil: KeyboardViewUtil.calculateMaxKeyboardBodyHeight():40 leave 354 height for app when screen height:2274, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1804
+05-22 20:09:46.793 10142  1468  1468 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+05-22 20:09:46.793 10142  1468  1468 I GoogleInputMethodService: GoogleInputMethodService.setKeyboardViewShown():3483 setKeyboardViewShown() : type = HEADER, shownType = SHOW_OPTIONAL
+05-22 20:09:46.794 10142  1468  1468 I GoogleInputMethodService: GoogleInputMethodService.setKeyboardViewShown():3530 setKeyboardViewShown() : shouldShow = true
+05-22 20:09:46.794 10142  1468  1468 I GoogleInputMethodService: GoogleInputMethodService.setKeyboardViewShown():3483 setKeyboardViewShown() : type = BODY, shownType = SHOW_MANDATORY
+05-22 20:09:46.795 10142  1468  1468 I GoogleInputMethodService: GoogleInputMethodService.setKeyboardViewShown():3530 setKeyboardViewShown() : shouldShow = true
+05-22 20:09:46.796 10142  1468  1468 I GoogleInputMethodService: GoogleInputMethodService.setKeyboardViewShown():3483 setKeyboardViewShown() : type = FLOATING_CANDIDATES, shownType = HIDE
+05-22 20:09:46.797 10194  7126  7126 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=ImeCallback=ImeOnBackInvokedCallback@82524764 Callback=android.window.IOnBackInvokedCallback$Stub$Proxy@a9ea58c
+05-22 20:09:46.798  1000   579  1747 D CoreBackPreview: Window{10f62fc u0 vip.com.vipmeetings/vip.com.vipmeetings.MainActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@aa14bfc, mPriority=0, mIsAnimationCallback=false}
+05-22 20:09:46.802  1000   579  1859 D CoreBackPreview: Window{e74adce u0 PopupWindow:600d019}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@cbc5285, mPriority=0, mIsAnimationCallback=false}
+05-22 20:09:46.802 10142  1468  1468 I GoogleInputMethodService: GoogleInputMethodService.setKeyboardViewShown():3530 setKeyboardViewShown() : shouldShow = false
+05-22 20:09:46.808 10142  1468  1468 I KeyboardViewUtil: KeyboardViewUtil.calculateMaxKeyboardBodyHeight():40 leave 354 height for app when screen height:2274, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1804
+05-22 20:09:46.811 10142  1468  1468 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+05-22 20:09:46.823 10194  7126  7212 E OpenGLRenderer: Unable to match the desired swap behavior.
+05-22 20:09:46.826 10142  1468  1468 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+05-22 20:09:46.827 10142  1468  1468 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+05-22 20:09:46.828 10142  1468  1468 I KeyboardModeManager: KeyboardModeManager.setInputView():364 setInputView() : supportsOneHandedMode=true
+05-22 20:09:46.830 10142  1468  1468 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+05-22 20:09:46.833 10142  1468  1468 I AndroidIME: KeyboardViewManager.updateKeyboardBodyViewHolderPaddingBottom():604 Set finalPaddingBottom = 0 while keyboardBottomGapFromScreen = 0; navigationHeight = 126
+05-22 20:09:46.834 10142  1468  1468 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+05-22 20:09:46.837 10142  1468  1468 I AndroidIME: KeyboardViewManager.updateKeyboardBodyViewHolderPaddingBottom():604 Set finalPaddingBottom = 0 while keyboardBottomGapFromScreen = 0; navigationHeight = 126
+05-22 20:09:46.838 10142  1468  1468 I KeyboardModeManager: KeyboardModeManager.setInputView():356 setInputView() : entry=hwn{languageTag=en-US, variant=qwerty, hasLocalizedResources=true, conditionCacheKey=_device=phone_device_size=default_enable_adaptive_text_editing=true_enable_inline_suggestions_on_client_side=false_enable_large_tablet_batch_1=false_enable_large_tablet_batch_2=false_enable_more_candidates_view_for_multilingual=false_enable_nav_redesign=false_enable_number_row=false_enable_preemptive_decode=true_enable_secondary_symbols=false_expressions=normal_four_or_more_letter_rows=false_keyboard_mode=normal_language=en-US_orientation=portrait_physical_keyboard=qwerty_show_secondary_digits=true_show_suggestions=true_split_with_duplicate_keys=true_variant=qwerty, imeDef.stringId=ime_english_united_states, imeDef.className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, imeDef.languageTag=en-US}
+05-22 20:09:46.895 10142  1468  1476 I putmethod.latin: JIT allocated 84KB for compiled code of boolean dsd.a(ikb, java.lang.Object[])
+05-22 20:09:46.897 10142  1468  1476 I putmethod.latin: Compiler allocated 4231KB to compile boolean dsd.a(ikb, java.lang.Object[])
+--
+05-22 22:51:44.123  1000   579  8794 E ActivityManager: ANR in vip.com.vipmeetings
+05-22 22:51:44.123  1000   579  8794 E ActivityManager: PID: 8696
+05-22 22:51:44.123  1000   579  8794 E ActivityManager: Reason: No response to onStartJob
+05-22 22:51:44.123  1000   579  8794 E ActivityManager: ErrorId: 214fc329-9b4b-4308-b218-6884d543398b
+05-22 22:51:44.123  1000   579  8794 E ActivityManager: Frozen: false
+05-22 22:51:44.123  1000   579  8794 E ActivityManager: Load: 1.56 / 0.89 / 0.62
+05-22 22:51:44.123  1000   579  8794 E ActivityManager: ----- Output from /proc/pressure/memory -----
+05-22 22:51:44.123  1000   579  8794 E ActivityManager: some avg10=1.11 avg60=0.79 avg300=0.28 total=33239854
+05-22 22:51:44.123  1000   579  8794 E ActivityManager: full avg10=0.68 avg60=0.29 avg300=0.08 total=7805721
+05-22 22:51:44.123  1000   579  8794 E ActivityManager: ----- End output from /proc/pressure/memory -----
+05-22 22:51:44.123  1000   579  8794 E ActivityManager: ----- Output from /proc/pressure/cpu -----
+05-22 22:51:44.123  1000   579  8794 E ActivityManager: some avg10=11.06 avg60=7.74 avg300=3.53 total=944357771
+05-22 22:51:44.123  1000   579  8794 E ActivityManager: full avg10=0.00 avg60=0.00 avg300=0.00 total=0
+05-22 22:51:44.123  1000   579  8794 E ActivityManager: ----- End output from /proc/pressure/cpu -----
+05-22 22:51:44.123  1000   579  8794 E ActivityManager: ----- Output from /proc/pressure/io -----
+05-22 22:51:44.123  1000   579  8794 E ActivityManager: some avg10=1.65 avg60=0.56 avg300=0.15 total=24726414
+05-22 22:51:44.123  1000   579  8794 E ActivityManager: full avg10=0.42 avg60=0.12 avg300=0.02 total=5251166
+05-22 22:51:44.123  1000   579  8794 E ActivityManager: ----- End output from /proc/pressure/io -----
+05-22 22:51:44.123  1000   579  8794 E ActivityManager: 
+05-22 22:51:44.123  1000   579  8794 E ActivityManager: CPU usage from 197708ms to -2ms ago (2025-05-22 22:46:05.571 to 2025-05-22 22:51:41.759):
+05-22 22:51:44.123  1000   579  8794 E ActivityManager:   40% 810/com.android.systemui: 23% user + 16% kernel / faults: 875226 minor 130 major
+05-22 22:51:44.123  1000   579  8794 E ActivityManager:   7% 417/surfaceflinger: 3.2% user + 3.8% kernel / faults: 159 minor 56 major
+05-22 22:51:44.123  1000   579  8794 E ActivityManager:   4.5% 579/system_server: 2.4% user + 2.1% kernel / faults: 13470 minor 284 major
+05-22 22:51:44.123  1000   579  8794 E ActivityManager:   2.2% 374/android.hardware.sensors-service.multihal: 0.9% user + 1.2% kernel
+05-22 22:51:44.123  1000   579  8794 E ActivityManager:   2.1% 385/android.hardware.graphics.composer3-service.ranchu: 0.9% user + 1.2% kernel / faults: 1 minor 118 major
+05-22 22:51:44.123  1000   579  8794 E ActivityManager:   1.8% 6616/adbd: 0.7% user + 1.1% kernel / faults: 15055 minor
+05-22 22:51:44.123  1000   579  8794 E ActivityManager:   0% 487/storaged: 0% user + 0% kernel / faults: 129404 minor
+05-22 22:51:44.123  1000   579  8794 E ActivityManager:   0% 8062/com.google.android.gms: 0% user + 0% kernel / faults: 9830 minor 4083 major
+05-22 22:51:44.123  1000   579  8794 E ActivityManager:   0.2% 41/kcompactd0: 0% user + 0.2% kernel
+05-22 22:51:44.123  1000   579  8794 E ActivityManager:   0.7% 156/logd: 0.3% user + 0.3% kernel / faults: 778 minor 16 major
+05-22 22:51:44.123  1000   579  8794 E ActivityManager: 18% TOTAL: 8.6% user + 7.7% kernel + 0% iowait + 1.8% irq + 0.1% softirq
+05-22 22:51:44.123  1000   579  8794 E ActivityManager: CPU usage from 57ms to 684ms later (2025-05-22 22:51:41.814 to 2025-05-22 22:51:42.441):
+05-22 22:51:44.123  1000   579  8794 E ActivityManager:   56% 579/system_server: 18% user + 37% kernel / faults: 383 minor
+05-22 22:51:44.123  1000   579  8794 E ActivityManager:     54% 8795/AnrAuxiliaryTas: 21% user + 33% kernel
+05-22 22:51:44.123  1000   579  8794 E ActivityManager:   91% 8696/vip.com.vipmeetings: 40% user + 51% kernel / faults: 26658 minor 22 major
+05-22 22:51:44.123  1000   579  8794 E ActivityManager:     91% 8706/Signal Catcher: 36% user + 55% kernel
+05-22 22:51:44.123  1000   579  8794 E ActivityManager:   32% 810/com.android.systemui: 19% user + 12% kernel / faults: 2164 minor
+05-22 22:51:44.123  1000   579  8794 E ActivityManager:     27% 810/ndroid.systemui: 15% user + 12% kernel
+05-22 22:51:44.123  1000   579  8794 E ActivityManager:     4.3% 825/HeapTaskDaemon: 2.1% user + 2.1% kernel
+05-22 22:51:44.123  1000   579  8794 E ActivityManager:     2.1% 900/SysUiBg: 2.1% user + 0% kernel
+05-22 22:51:44.123  1000   579  8794 E ActivityManager:   4% 417/surfaceflinger: 2% user + 2% kernel
+05-22 22:51:44.123  1000   579  8794 E ActivityManager:     2% 526/app: 2% user + 0% kernel
+05-22 22:51:44.123  1000   579  8794 E ActivityManager:   1.6% 33/ksoftirqd/3: 0% user + 1.6% kernel
+05-22 22:51:44.123  1000   579  8794 E ActivityManager:   1.7% 93/kworker/2:1H-kverityd: 0% user + 1.7% kernel
+05-22 22:51:44.123  1000   579  8794 E ActivityManager:   1.9% 374/android.hardware.sensors-service.multihal: 1.9% user + 0% kernel
+05-22 22:51:44.123  1000   579  8794 E ActivityManager:     1.9% 411/android.hardwar: 1.9% user + 0% kernel
+05-22 22:51:44.123  1000   579  8794 E ActivityManager: 54% TOTAL: 20% user + 23% kernel + 7.1% iowait + 3.3% irq + 0.4% softirq
+05-22 22:51:44.139  1000   579  8794 D ActivityManager: Completed ANR of vip.com.vipmeetings in 2383ms, latency 1ms
+05-22 22:51:44.151  1000   579  8796 I DropBoxManagerService: add tag=data_app_anr isTagEnabled=true flags=0x6
+05-22 22:51:44.184  1000   579   606 D CoreBackPreview: Window{39938c0 u0 Application Not Responding: vip.com.vipmeetings}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.WindowOnBackInvokedDispatcher$OnBackInvokedCallbackWrapper@3f5cf31, mPriority=0, mIsAnimationCallback=false}
+05-22 22:51:44.198  1000   579  4827 E OpenGLRenderer: Unable to match the desired swap behavior.
+05-22 22:51:44.292 10163   810   810 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+05-22 22:51:44.936 10163   810   810 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+05-22 22:51:47.485 10128  8062  8062 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.measurement.START pkg=com.google.android.gms }
+05-22 22:51:47.489  1002  6725  6783 D BtGatt.ScanManager: uid 10128 isForeground true scanMode -1
+05-22 22:51:49.352 10128  1351  1351 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.presencemanager.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+05-22 22:51:49.355 10128  1351  1351 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.presencemanager.service.INTERNAL_IDENTITY dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+05-22 22:51:50.525  1000   579   782 D androidtc: Initializing SystemTextClassifier, type = System
+05-22 22:51:50.527 10126  1542  1542 I AiAiTextClassifier: onCreateTextClassificationSession = TextClassificationSessionId {93c0044c-621d-4953-a0a4-1eca510d72a1}
+05-22 22:51:50.533 10158  1064  1064 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=387.95996, y[0]=1389.917, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=11123746, downTime=11123746, deviceId=4, source=0x5002, displayId=0, eventId=877279426 }
+05-22 22:51:50.537 10126  1542  1953 I AiAiTranslate: C2T - not in a conversation
+05-22 22:51:50.539 10126  1542  2225 I AiAiTextClassifier: GenerateLinks did not find valid links, returning empty result
+05-22 22:51:50.551 10126  1542  2225 I AiAiTextClassifier: GenerateLinks did not find valid links, returning empty result
+05-22 22:51:50.557 10163   810   810 I ClipboardListener: Clipboard overlay suppressed.
+05-22 22:51:50.562 10163   810   810 I ClipboardListener: Clipboard overlay suppressed.
+05-22 22:51:50.595  1000   579  4827 D EGL_emulation: app_time_stats: avg=525.65ms min=10.94ms max=6151.00ms count=12
+05-22 22:51:50.623 10158  1064  1064 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=387.95996, y[0]=1389.917, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=11123846, downTime=11123746, deviceId=4, source=0x5002, displayId=0, eventId=176539490 }
+05-22 22:51:50.661  1041   408  2000 D audioserver: FGS Logger Transaction failed
+05-22 22:51:50.661  1041   408  2000 D audioserver: -129
+05-22 22:51:50.670  1041   408   540 D AudioFlinger: mixer(0x77381f823930) throttle end: throttle time(36)
+05-22 22:51:50.675  1000   579   606 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@a0d5fd8
+05-22 22:51:50.676  1000   579   606 D CoreBackPreview: Window{39938c0 u0 Application Not Responding: vip.com.vipmeetings}: Setting back callback null
+05-22 22:51:50.690  1000   579  4827 D OpenGLRenderer: endAllActiveAnimators on 0x7b1ff5aa25f0 (RippleDrawable) with handle 0x7b21b5c37d50
+05-22 22:51:50.692  1000   579   606 W InputManager-JNI: Input channel object '39938c0 Application Not Responding: vip.com.vipmeetings (client)' was disposed without first being removed with the input manager!
+05-22 22:51:50.711  1000   579   608 V WindowManager: Unknown focus tokens, dropping reportFocusChanged
+05-22 22:51:50.738  1000   579  2163 I ImeTracker: vip.com.vipmeetings:a714530d: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_SAME_WINDOW_FOCUSED_WITHOUT_EDITOR
+05-22 22:51:50.741  1000   579  2163 I ImeTracker: vip.com.vipmeetings:a714530d: onCancelled at PHASE_SERVER_SHOULD_HIDE
+05-22 22:51:50.744 10142  1468  1468 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+05-22 22:51:50.746 10142  1468  1468 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+05-22 22:51:50.747 10142  1468  1468 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=vip.com.vipmeetings fieldId=0 fieldName=null extras=null}, false)
+05-22 22:51:50.747 10142  1468  1468 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+05-22 22:51:50.748 10142  1468  1468 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+05-22 22:51:50.830  1041   408   540 D audioserver: FGS Logger Transaction failed
+05-22 22:51:50.830  1041   408   540 D audioserver: -129
+05-22 22:51:51.742  wifi   795   795 I wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS 
+05-22 22:51:52.196  root   355  8806 I resolv  : GetAddrInfoHandler::run: {103 786535 103 983143 10128 0}
+05-22 22:51:52.202  root   355  8807 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+05-22 22:51:52.203  root   355  8808 I resolv  : res_nmkquery: (QUERY, IN, A)
+05-22 22:51:52.232  root   355  8807 I resolv  : res_nsend: used send_dg 65 terrno: 0
+05-22 22:51:52.233  root   355  8807 I resolv  : doQuery: rcode=0, ancount=1, return value=65
+05-22 22:51:52.233  root   355  8808 I resolv  : res_nsend: used send_dg 53 terrno: 0
+05-22 22:51:52.234  root   355  8808 I resolv  : doQuery: rcode=0, ancount=1, return value=53
+05-22 22:51:52.237 10128  8062  8805 D TrafficStats: tagSocket(91) with statsTag=0x20003300, statsUid=10194
+05-22 22:51:53.304 10163   810   810 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+05-22 22:51:53.720  1041   361  6500 D android.hardware.audio@7.1-impl.ranchu: threadLoop: entering standby, frames: 1042304
+05-22 22:51:54.939 10163   810   810 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+05-22 22:51:56.320 10163   810   810 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+05-22 22:51:56.904 10125  7496  7575 I DialerVvmSmsDispatcherImpl: com.android.dialer.voicemail.service.impl.sms.VvmSmsDispatcherImpl.lambda$getOmtpSmsMessage$1:83 remove sms listener: 118680878
+05-22 22:51:56.904 10125  7496  7576 W DialerTikTokListenableWorker: com.google.apps.tiktok.contrib.work.TikTokListenableWorker.lambda$logOnCancellationOrFailure$0:170 TikTokListenableWorker was cancelled while running client worker: com.android.dialer.voicemail.service.impl.VvmTaskWorker
+05-22 22:51:56.907 10125  7496  7576 I WM-WorkerWrapper: Work [ id=cedbe491-4254-4a57-85ac-37e4c9f1ec90, tags={ com.google.apps.tiktok.contrib.work.TikTokListenableWorker, 1, UPDATE_STATUS, TikTokWorker#com.android.dialer.voicemail.service.impl.VvmTaskWorker } ] was cancelled
+05-22 22:51:56.907 10125  7496  7576 I WM-WorkerWrapper: java.util.concurrent.CancellationException: Task was cancelled.
+05-22 22:51:56.907 10125  7496  7576 I WM-WorkerWrapper: 	at bmv.n(PG:2)
+05-22 22:51:56.907 10125  7496  7576 I WM-WorkerWrapper: 	at bmv.get(PG:2)
+05-22 22:51:56.907 10125  7496  7576 I WM-WorkerWrapper: 	at bfb.run(PG:115)
+05-22 22:51:56.907 10125  7496  7576 I WM-WorkerWrapper: 	at bly.run(PG:8)
+05-22 22:51:56.907 10125  7496  7576 I WM-WorkerWrapper: 	at ocg.run(PG:1)
+05-22 22:51:56.907 10125  7496  7576 I WM-WorkerWrapper: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+05-22 22:51:56.907 10125  7496  7576 I WM-WorkerWrapper: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+05-22 22:51:56.907 10125  7496  7576 I WM-WorkerWrapper: 	at oca.run(PG:19)
+05-22 22:51:56.907 10125  7496  7576 I WM-WorkerWrapper: 	at oca.run(PG:32)
+05-22 22:51:56.907 10125  7496  7576 I WM-WorkerWrapper: 	at java.lang.Thread.run(Thread.java:1012)
+05-22 22:51:56.907 10125  7496  7576 I WM-WorkerWrapper: 	at ocj.run(PG:6)
+05-22 22:51:56.958 10125  7496  7513 W .android.dialer: Reducing the number of considered missed Gc histogram windows from 920 to 100
+05-22 22:51:56.970 10125  7496  7565 I DialerRestVoicemailEnabledFn: com.android.dialer.voicemail.service.impl.vvmclients.rest.RestVoicemailEnabledFn.isEnabled:51 disabled by flag [CONTEXT ratelimit_period="1 MINUTES [skipped: 12]" ]
+05-22 22:51:56.980 10125  7496  7575 I DialerVvmExecutorImpl: com.android.dialer.voicemail.service.impl.scheduler.VvmExecutorImpl.lambda$execute$6:166 Beginning VVM action: UPDATE_STATUS with retryCount: 2 [CONTEXT enable_persistent_logger=true ]
+05-22 22:51:56.983 10125  7496  7565 I DialerOmtpStatusChecker: com.android.dialer.voicemail.service.impl.vvmclients.omtp.OmtpStatusChecker.updateStatus:84 enter [CONTEXT enable_persistent_logger=true ]
+05-22 22:51:56.984 10125  7496  7565 I DialerLogcatLoggingBindings: com.android.dialer.logging.logcat.LogcatLoggingBindings.logImpression:46 Impression: VVM_STATUS_CHECK_STARTED
+05-22 22:51:56.995 10125  7496  7565 I DialerVvmSmsDispatcherImpl: com.android.dialer.voicemail.service.impl.sms.VvmSmsDispatcherImpl.lambda$getOmtpSmsMessage$3:94 add sms listener: 236011920
+05-22 22:51:56.995 10125  7496  8812 I DialerVvmSmsRequestSender: com.android.dialer.voicemail.service.impl.vvmclients.omtp.sms.VvmSmsRequestSender.lambda$sendOmtpSmsMessage$4:203 send visual voicemail sms
+05-22 22:51:56.997 10125  7496  8811 I DialerSmsSenderImpl: com.android.dialer.voicemail.service.impl.vvmclients.omtp.sms.impl.SmsSenderImpl.lambda$sendVvmSms$0:45 send visual voicemail sms: STATUS [CONTEXT enable_persistent_logger=true ]
+05-22 22:51:57.020 radio  1021  5884 D SmsNumberUtils: enter filterDestAddr. destAddr="[BajqU4K5_YhSYbs-7QUn0dOwcmI]"
+05-22 22:51:57.026 radio  1021  5884 D SmsNumberUtils: destAddr is not formatted.
+05-22 22:51:57.026 radio  1021  5884 D SmsNumberUtils: leave filterDestAddr, new destAddr="[BajqU4K5_YhSYbs-7QUn0dOwcmI]"
+05-22 22:51:57.054 10125  7496  7496 I DialerVvmSmsRequestSender: com.android.dialer.voicemail.service.impl.vvmclients.omtp.sms.VvmSmsRequestSender$SendSmsResultCodeListener.onResultCodeReceived:274 send SMS completed successfully
+05-22 22:51:57.055 10125  7496  7496 I DialerBroadcastReceiverStrategyImpl: com.android.dialer.broadcastreceiverstrategy.impl.BroadcastReceiverStrategyImpl.backgroundThenInlineThenForeground:76 try doing work using a background service
+05-22 22:51:57.061  1000   579  2194 W ActivityManager: Background start not allowed: service Intent { cmp=com.google.android.dialer/com.google.apps.tiktok.concurrent.AndroidFuturesService (has extras) } to com.google.android.dialer/com.google.apps.tiktok.concurrent.AndroidFuturesService from pid=7496 uid=10125 pkg=com.google.android.dialer startFg?=false
+05-22 22:51:57.066 10125  7496  7496 I DialerBroadcastReceiverStrategyImpl: com.android.dialer.broadcastreceiverstrategy.impl.BroadcastReceiverStrategyImpl.backgroundThenInlineThenForeground:82 can't start a background service, attempting to complete work inline within 3000 milliseconds
+05-22 22:51:57.067 10125  7496  7496 I DialerBroadcastReceiverStrategyImpl: com.android.dialer.broadcastreceiverstrategy.impl.BroadcastReceiverStrategyImpl.lambda$backgroundThenInlineThenForeground$3:118 work has finished within 3000 milliseconds, canceling scheduled ForegroundService
+05-22 22:51:59.674  wifi   795   795 I wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS 
+05-22 22:52:00.022 10126  1542  1759 I AiAiEcho: Predicting[0]: 
+05-22 22:52:00.023 10126  1542  1759 I AiAiEcho: EchoTargets: 
+05-22 22:52:00.023 10126  1542  1759 I AiAiEcho: Filtered by AiAi flag check: 
+05-22 22:52:00.023 10126  1542  1759 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+05-22 22:52:00.024 10163   810   902 D EGL_emulation: app_time_stats: avg=2506.82ms min=2.14ms max=22496.55ms count=9
+05-22 22:52:00.024 10126  1542  1759 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+05-22 22:52:00.039 10163   810   810 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+05-22 22:52:01.744  1000   579   675 D ActivityManager: freezing 8062 com.google.android.gms
+05-22 22:52:04.941 10163   810   810 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+05-22 22:52:06.964 10125  7496  7565 E DialerTraceManagerImpl: com.google.apps.tiktok.tracing.TraceManagerImpl.handleTraceTimeout:339 Trace Application creation timed out after 9230705 ms. Complete trace: # rsy@b9ffca7c
+05-22 22:52:06.964 10125  7496  7565 E DialerTraceManagerImpl: rtd: 
+05-22 22:52:06.964 10125  7496  7565 E DialerTraceManagerImpl: 	at tk_trace.Read com.google.android.dialer.directboot#com.google.android.dialer(Started After:0)
+05-22 22:52:07.083  1000   579   675 D ActivityManager: freezing 7496 com.google.android.dialer
+05-22 22:52:07.610  wifi   795   795 I wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS 
+05-22 22:52:11.453  1000   579  2158 D WifiNl80211Manager: Scan result ready event
+05-22 22:52:11.454  1000   579  2158 D WifiNative: Scan result ready event
+05-22 22:52:14.942 10163   810   810 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+05-22 22:52:14.956 10163   810   902 D EGL_emulation: app_time_stats: avg=14931.30ms min=14931.30ms max=14931.30ms count=1
+05-22 22:52:19.642  wifi   795   795 I wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS 
+05-22 22:52:24.955 10163   810   810 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+05-22 22:52:26.807 10194  8696  8730 D TransportRuntime.CctTransportBackend: Making request to: https://firebaselogging-pa.googleapis.com/v1/firelog/legacy/batchlog
+05-22 22:52:26.813  root   355  8815 I resolv  : GetAddrInfoHandler::run: {103 103 103 983143 10194 0}
+05-22 22:52:26.815  root   355  8816 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+05-22 22:52:26.816  root   355  8817 I resolv  : res_nmkquery: (QUERY, IN, A)
+05-22 22:52:26.847  root   355  8816 I resolv  : res_nsend: used send_dg 163 terrno: 0
+05-22 22:52:26.848  root   355  8817 I resolv  : res_nsend: used send_dg 195 terrno: 0
+05-22 22:52:26.849  root   355  8817 I resolv  : doQuery: rcode=0, ancount=9, return value=195
+05-22 22:52:26.849  root   355  8816 I resolv  : doQuery: rcode=0, ancount=4, return value=163
+05-22 22:52:26.857 10194  8696  8730 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+05-22 22:52:27.835  wifi   795   795 I wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS 
+05-22 22:52:29.319 10194  8696  8730 I TransportRuntime.CctTransportBackend: Status Code: 200
+05-22 22:52:29.320 10194  8696  8730 I TransportRuntime.CctTransportBackend: Content-Type: application/json; charset=UTF-8
+05-22 22:52:29.320 10194  8696  8730 I TransportRuntime.CctTransportBackend: Content-Encoding: gzip
+05-22 22:52:29.345 10194  8696  8696 D LeakCanary: Watching instance of com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService (com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService received Service#onDestroy() callback) with key 0fbdb63b-bfe5-4e55-bb32-6f4bbeacb847
+05-22 22:52:29.392 10163   810   810 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+05-22 22:52:34.956 10163   810   810 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+05-22 22:52:35.409 10163   810   810 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+05-22 22:52:35.771  wifi   795   795 I wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS 
+05-22 22:52:43.707  wifi   795   795 I wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS 
+05-22 22:52:44.420 10163   810   810 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+05-22 22:52:44.953 10163   810   810 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+05-22 22:52:46.210  1002  6725  6767 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:265 ack_pause: Client already in paused state
+05-22 22:52:46.230  1002  6725  6762 E bt_btu_hcif: packages/modules/Bluetooth/system/stack/btu/btu_hcif.cc:182 btu_hcif_log_event_metrics: Unexpectedly received event_code:0x10 that should not be handled here
+05-22 22:52:46.230  1002  6725  6762 E bt_btu_hcif: packages/modules/Bluetooth/system/stack/btu/btu_hcif.cc:1375 btu_hcif_hardware_error_evt: UNHANDLED Ctlr H/w error event - code:0x42
+05-22 22:52:46.233  1002  6725  6762 E bt_btif : packages/modules/Bluetooth/system/main/bte_logmsg.cc:105 LogMsg: Received H/W Error. 
+05-22 22:52:46.346  1000   579  2150 I ActivityManager: Process com.google.android.bluetooth (pid 6725) has died: psvc PER 
+05-22 22:52:46.350  1002   381   381 E android.hardware.bluetooth.service.default: Bluetooth remote service has died
+05-22 22:52:46.350  root   356   356 I Zygote  : Process 6725 exited due to signal 9 (Killed)
+05-22 22:52:46.350  1002   381   381 I android.hardware.bluetooth.service.default: close
+05-22 22:52:46.352  1002   381   381 E android.hardware.bluetooth.service.default: unable to open /dev/rfkill: Permission denied
+05-22 22:52:46.353  1002   381   381 E android.hardware.bluetooth.service.default: rfkill unavailable
+05-22 22:52:46.353  1000   579  2150 W ActivityManager: Scheduling restart of crashed service com.google.android.bluetooth/com.android.bluetooth.gatt.GattService in 1000ms for connection
+05-22 22:52:46.353  1002   381   381 E android.hardware.bluetooth-service.default: unlinkToDeath: removed reference to death recipient but unlink failed: DEAD_OBJECT
+05-22 22:52:46.354  1000   579  1747 I MediaSessionStack: removeSession | record: com.google.android.bluetooth/BluetoothMediaBrowserService (userId=0)
+05-22 22:52:46.355  1000   579  2163 I MediaSessionStack: removeSession | record: com.google.android.bluetooth/BluetoothMediaBrowserService (userId=0)
+05-22 22:52:46.356  1000   579  1693 W BluetoothManagerService: Profile service for profile: ComponentInfo{com.google.android.bluetooth/com.android.bluetooth.hearingaid.HearingAidService} died.
+05-22 22:52:46.357  1000   579  1693 D BluetoothHearingAid: Proxy object disconnected
+05-22 22:52:46.357  1000   579  1693 D BluetoothHearingAid: Unbinding service...
+05-22 22:52:46.358  1000   579  1693 D BluetoothHearingAid: Proxy object disconnected
+05-22 22:52:46.358  1000   579  1693 D BluetoothHearingAid: Unbinding service...
+05-22 22:52:46.359  1000   579  1693 D BluetoothHearingAid: Proxy object disconnected
+05-22 22:52:46.359  1000   579  2150 W ActivityManager: Scheduling restart of crashed service com.google.android.bluetooth/com.android.bluetooth.btservice.AdapterService in 10994ms for connection
+05-22 22:52:46.360  1000   579  1669 W BluetoothManagerService: Profile service for profile: ComponentInfo{com.google.android.bluetooth/com.android.bluetooth.hfp.HeadsetService} died.
+05-22 22:52:46.362  1000   579  1669 D BluetoothHeadset: Proxy object disconnected
+05-22 22:52:46.362  1000   579  2161 W AS.PlaybackActivityMon: client died
+05-22 22:52:46.363  1000   579   621 I libprocessgroup: Successfully killed process cgroup uid 1002 pid 6725 in 0ms
+05-22 22:52:46.365  1000   579   579 D BluetoothManagerService: BluetoothServiceConnection, disconnected: com.android.bluetooth.gatt.GattService
+05-22 22:52:46.366  1000   579   579 D BluetoothManagerService: BluetoothServiceConnection, disconnected: com.android.bluetooth.btservice.AdapterService
+05-22 22:52:46.367 10163   810  7124 D BluetoothPbap: Proxy object disconnected
+05-22 22:52:46.368  1000   579   579 D BluetoothA2dp: Proxy object disconnected
+05-22 22:52:46.368  1000   579   689 E BluetoothManagerService: MESSAGE_BLUETOOTH_SERVICE_DISCONNECTED(2)
+05-22 22:52:46.368 10163   810  7124 D BluetoothPbap: Unbinding service...

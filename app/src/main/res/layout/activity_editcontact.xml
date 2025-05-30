@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fltoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/paddingTop">
+
+        <ImageView
+            android:id="@+id/tvback"
+            android:layout_width="@dimen/back50"
+            android:layout_height="@dimen/back50"
+            android:layout_gravity="center|start"
+            android:background="?android:selectableItemBackground"
+            android:gravity="center"
+            android:padding="@dimen/paddingback"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_back" />
+
+
+        <ImageView
+            android:id="@+id/ivhome"
+            style="@style/iv_home" />
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvcontacts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="12dp"
+        android:background="@drawable/rvrect"
+        android:padding="12dp" />
+
+</LinearLayout>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clroot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/ivimagefull"
+        android:layout_width="100dp"
+        android:visibility="gone"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        app:actualImageResource="@mipmap/ic_profile"
+        app:actualImageScaleType="focusCrop"
+        app:failureImage="@mipmap/ic_profile"
+        app:failureImageScaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sparea"
+        app:placeholderImage="@mipmap/ic_profile"
+        app:placeholderImageScaleType="centerCrop"/>
+
+
+    <FrameLayout
+        android:id="@+id/fltoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/paddingTop"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/tvback"
+            android:layout_width="@dimen/back50"
+            android:layout_height="@dimen/back50"
+            android:layout_gravity="center|start"
+            android:background="?android:selectableItemBackground"
+            android:gravity="center"
+            android:padding="@dimen/paddingback"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_back" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvevastatus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/back50"
+            android:layout_marginRight="@dimen/back50"
+            android:gravity="center"
+            android:text="No evacuation has been enabled"
+            android:textColor="@color/color_yellow"
+            android:textSize="@dimen/toptextsize"
+            app:fontFamily="@font/avregularfont" />
+
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvarea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="My area profile"
+        android:textColor="@color/md_white_1000"
+        android:textSize="22sp"
+        app:fontFamily="@font/avregularfont"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fltoolbar" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/sparea"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        android:background="@null"
+        android:dropDownVerticalOffset="40dp"
+        android:gravity="center"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvarea"
+        tools:entries="@array/sort_area_company" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvlist"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="4dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tvcontact"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sparea"
+        tools:itemCount="4"
+        tools:listitem="@layout/inflate_adapternormallist1" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvcontact"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_gravity="center|start"
+        android:background="@drawable/bottom"
+        android:gravity="center"
+        android:paddingStart="54dp"
+        android:paddingLeft="54dp"
+        android:text="Contact Head of Evacuation"
+        android:textColor="@color/md_white_1000"
+        android:textSize="@dimen/tvsizelarge"
+        app:fontFamily="@font/avregularfont"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivmessage"
+        android:layout_width="@dimen/iconchat"
+        android:layout_height="@dimen/iconchat"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/paddingback"
+        android:layout_marginLeft="@dimen/paddingback"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/unread"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvcontact" />
+
+    <ImageView
+        android:id="@+id/ivcount"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center"
+        android:visibility="visible"
+        app:layout_constraintCircle="@+id/ivmessage"
+        app:layout_constraintCircleAngle="45"
+        app:layout_constraintCircleRadius="22dp"
+        tools:src="@drawable/circlered" />
+
+    <TextView
+        android:id="@+id/tvcount"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:lines="1"
+        android:maxLines="1"
+        android:textColor="@android:color/white"
+        android:textSize="10sp"
+        app:layout_constraintCircle="@+id/ivmessage"
+        app:layout_constraintCircleAngle="45"
+        app:layout_constraintCircleRadius="22dp"
+        tools:text="100" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

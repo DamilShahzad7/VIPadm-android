@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!--<base-config cleartextTrafficPermitted="false"/>-->
+    <base-config cleartextTrafficPermitted="true" />
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">cloud.vipadm.com</domain>
+        <domain includeSubdomains="true">maps.googleapis.com</domain>
+        <domain includeSubdomains="true">settings.crashlytics.com</domain>
+        <domain includeSubdomains="true">schemas.xmlsoap.org</domain>
+        <domain includeSubdomains="true">www.w3.org</domain>
+        <domain includeSubdomains="true">tempuri.org</domain>
+    </domain-config>
+</network-security-config>

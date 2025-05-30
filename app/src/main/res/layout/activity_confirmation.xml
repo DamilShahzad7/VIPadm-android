@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fltoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:paddingTop="@dimen/paddingtop">
+
+
+        <ImageView
+            android:id="@+id/ivback"
+            android:layout_width="@dimen/back50"
+            android:layout_height="@dimen/back50"
+            android:layout_gravity="center|start"
+            android:padding="@dimen/paddingback"
+            android:src="@mipmap/icon_back" />
+
+        <ImageView
+            android:id="@+id/ivhome"
+            style="@style/iv_home" />
+
+        <TextView
+            android:id="@+id/tvbook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:gravity="center"
+            android:padding="@dimen/padding"
+            android:text="Book"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvconfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fltoolbar"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="Confirmation"
+        android:textColor="@color/md_white_1000"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvbook_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvconfirm"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:gravity="center"
+        android:text="@string/bookmessage"
+        android:textColor="@color/greywhite"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:id="@+id/llsubject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvbook_message"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/tendp"
+        android:layout_marginLeft="@dimen/tendp"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center|start"
+            android:text="Subject:"
+            android:textColor="@color/md_white_1000"
+            android:textSize="16sp"
+            app:fontFamily="@font/medium" />
+
+        <TextView
+            android:id="@+id/tvsubject"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|start"
+            android:textColor="@color/md_white_1000"
+            android:textSize="16sp"
+            tools:text="Subject" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lldate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llsubject"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/tendp"
+        android:layout_marginLeft="@dimen/tendp"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center|start"
+            android:text="From Date:"
+            android:textColor="@color/md_white_1000"
+            android:textSize="16sp"
+            app:fontFamily="@font/medium" />
+
+
+        <TextView
+            android:id="@+id/tvdate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|start"
+            android:textColor="@color/md_white_1000"
+            android:textSize="15sp"
+            tools:text="Date" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lltime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lldate"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/tendp"
+        android:layout_marginLeft="@dimen/tendp"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvtime1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center|start"
+            android:text="To Date:"
+            android:textColor="@color/md_white_1000"
+            android:textSize="16sp"
+            app:fontFamily="@font/medium" />
+
+
+        <TextView
+            android:id="@+id/tvtime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|start"
+            android:textColor="@color/md_white_1000"
+            android:textSize="15sp"
+            tools:text="Time" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lllocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lltime"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/tendp"
+        android:layout_marginLeft="@dimen/tendp"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center|start"
+            android:text="Location :"
+            android:textColor="@color/md_white_1000"
+            android:textSize="16sp"
+            app:fontFamily="@font/medium" />
+
+        <TextView
+            android:id="@+id/tvlocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|start"
+            android:textColor="@color/md_white_1000"
+            android:textSize="15sp"
+            tools:text="Location" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llroom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lllocation"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/tendp"
+        android:layout_marginLeft="@dimen/tendp"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center|start"
+            android:text="Room :"
+            android:textColor="@color/md_white_1000"
+            android:textSize="16sp"
+            app:fontFamily="@font/medium" />
+
+        <TextView
+            android:id="@+id/tvroom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|start"
+            android:textColor="@color/md_white_1000"
+            android:textSize="15sp"
+            tools:text="Room" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/llroom"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll_show_subject"
+        android:visibility="visible"
+        android:layout_marginTop="6dp"
+        android:orientation="vertical">
+        <!-- New Section for Options -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp">
+        <TextView
+            android:id="@+id/tvShowSubjectText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginRight="12dp"
+            android:text="Show Subject Text"
+            app:fontFamily="@font/medium"
+            android:textColor="@color/md_white_1000"
+            android:textSize="16sp" />
+        <CheckBox
+            android:id="@+id/checkboxParticipantsShowSubjectText"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/md_white_1000" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="List of participants to room display"
+                android:textColor="@color/md_white_1000"
+                android:textSize="16sp"
+                app:fontFamily="@font/medium" />
+
+            <CheckBox
+                android:id="@+id/checkboxParticipantsToRoomDisplay"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/md_white_1000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Include meeting to monitor(TV)"
+                android:textColor="@color/md_white_1000"
+                android:textSize="16sp"
+                app:fontFamily="@font/medium" />
+
+            <CheckBox
+                android:id="@+id/checkboxIncludeMeetingToMonitor"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="27dp"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/md_white_1000" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:id="@+id/llnewlocation"
+            android:layout_below="@+id/ll_show_subject"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="13dp"
+                    android:src="@drawable/office_meeting"></ImageView>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/cb_physical_meeting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/md_white_1000"
+                    android:checked="true"
+                    android:padding="8dp"
+                    app:fontFamily="@font/medium"
+                    android:text="Physical Meeting"
+                    android:textColor="@color/md_white_1000"
+                    android:textSize="16sp"
+                    app:buttonTint="@color/md_white_1000"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/teams_meeting"></ImageView>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/cb_teams_meeting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/md_white_1000"
+                    android:padding="11dp"
+                    app:fontFamily="@font/medium"
+                    android:text="Teams Meeting"
+                    android:textColor="@color/md_white_1000"
+                    android:textSize="16sp"
+                    app:buttonTint="@color/md_white_1000"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="13dp"
+                    android:src="@drawable/google_meeting"></ImageView>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/cb_google_meeting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/md_white_1000"
+                    android:padding="8dp"
+                    app:fontFamily="@font/medium"
+                    android:text="Google Meeting"
+                    android:textColor="@color/md_white_1000"
+                    android:textSize="16sp"
+                    app:buttonTint="@color/md_white_1000"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+            </LinearLayout>
+            <Button
+                android:id="@+id/btnnewlocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/btblueborder"
+                android:padding="5dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/new_location"
+                android:textAllCaps="false"
+                android:textColor="@color/red"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+
+
+    <FrameLayout
+        android:id="@+id/frame_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/security_instruction"
+        android:layout_below="@+id/llnewlocation"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="70dp">
+
+
+        <fragment
+            android:id="@+id/map_fragment"
+            class="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/ivplaceholder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:adjustViewBounds="true"
+            app:actualImageScaleType="fitXY"
+            app:failureImage="@drawable/transparant"
+            app:placeholderImage="@drawable/transparant"
+            app:placeholderImageScaleType="fitXY"
+            app:progressBarImage="@drawable/transparant" />
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/website"
+        android:layout_marginLeft="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/security_instruction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="@string/security_instruction"
+            android:textColor="@color/md_white_1000" />
+
+        <CheckBox
+            android:id="@+id/check_security"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/md_white_1000"
+            android:checked="false" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/website"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center|bottom"
+        android:text="@string/site"
+        android:textColor="@color/md_white_1000"
+        android:textSize="12sp"
+        app:layout_marginBottomPercent="1%" />
+
+
+</androidx.percentlayout.widget.PercentRelativeLayout>

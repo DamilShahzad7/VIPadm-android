@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvtakephoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:drawableRight="@drawable/right_arrow_grey"
+        android:padding="10dp"
+        android:text="Take Photo"
+        android:textColor="@color/md_black_1000"
+        app:fontFamily="@font/latofont"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvchoosephoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:drawableRight="@drawable/right_arrow_grey"
+        android:padding="10dp"
+        android:text="Upload Photo"
+        android:textColor="@color/md_black_1000"
+        app:fontFamily="@font/latofont"
+        app:layout_constraintTop_toBottomOf="@+id/tvtakephoto" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvviewphoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:drawableRight="@drawable/right_arrow_grey"
+        android:padding="10dp"
+        android:text="View Photo"
+        android:textColor="@color/md_black_1000"
+        app:fontFamily="@font/latofont"
+        app:layout_constraintTop_toBottomOf="@+id/tvchoosephoto" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvremovephoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:drawableRight="@drawable/right_arrow_grey"
+        android:padding="10dp"
+        android:text="Remove Photo"
+        android:textColor="@color/md_black_1000"
+        app:fontFamily="@font/latofont"
+        app:layout_constraintTop_toBottomOf="@+id/tvviewphoto" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

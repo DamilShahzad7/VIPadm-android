@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding">10dp</dimen>
+    <dimen name="paddingTop">9dp</dimen>
+    <dimen name="paddingback">14dp</dimen>
+    <dimen name="paddingtop">9dp</dimen>
+    <dimen name="width">45dp</dimen>
+    <dimen name="height">40dp</dimen>
+    <dimen name="homewidth">-1dp</dimen>
+    <dimen name="homeheight">-2dp</dimen>
+    <dimen name="tendp">24dp</dimen>
+    <dimen name="back">26dp</dimen>
+    <dimen name="twodp">200dp</dimen>
+    <dimen name="ivwidth">45dp</dimen>
+    <dimen name="ivwidth48">50dp</dimen>
+    <dimen name="ivwidth50">50dp</dimen>
+    <dimen name="dp100">90dp</dimen>
+    <dimen name="dp80">80dp</dimen>
+    <dimen name="dp100_iv">80dp</dimen>
+    <dimen name="dp40">40dp</dimen>
+    <dimen name="dp75iv">60dp</dimen>
+    <dimen name="calendar_40">35dp</dimen>
+    <dimen name="calendar_30dp">38dp</dimen>
+    <dimen name="calendar40dp">38dp</dimen>
+    <dimen name="back50">50dp</dimen>
+    <dimen name="iconchat">40dp</dimen>
+    <dimen name="linedp">0.1dp</dimen>
+    <dimen name="toptextsize">15sp</dimen>
+    <dimen name="iv100dp">100dp</dimen>
+    <dimen name="tvsizelarge">18sp</dimen>
+</resources>

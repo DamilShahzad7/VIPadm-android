@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rledit"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="6dp"
+    android:paddingRight="6dp"
+    android:background="@drawable/underline_grey">
+
+
+    <ImageView
+        android:id="@+id/ivtruefalse"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerInParent="true"
+        tools:src="@mipmap/ic_false" />
+
+    <TextView
+        android:id="@+id/tvcontactname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="4dp"
+        android:layout_toEndOf="@+id/ivtruefalse"
+        android:layout_toRightOf="@+id/ivtruefalse"
+        android:gravity="center|start"
+        android:padding="8dp"
+        android:textColor="@color/md_black_1000"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btdelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center|end"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:gravity="center"
+        android:text="DELETE"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_below="@+id/tvcontactname"
+        android:background="@color/md_grey_400"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_height="1dp"/>
+
+</RelativeLayout>

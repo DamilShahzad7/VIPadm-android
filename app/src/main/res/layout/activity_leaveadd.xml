@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp">
+
+
+    <RelativeLayout
+        android:id="@+id/fltoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/back50"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:paddingTop="@dimen/paddingtop">
+
+        <ImageView
+            android:id="@+id/tvback"
+            android:layout_width="@dimen/back50"
+            android:layout_height="@dimen/back50"
+            android:layout_gravity="center|start"
+            android:background="?android:selectableItemBackground"
+            android:gravity="center"
+            android:padding="@dimen/paddingback"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_back" />
+
+        <ImageView
+            android:id="@+id/ivhome"
+            style="@style/iv_home"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/tvedit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center|end"
+            android:layout_toStartOf="@+id/tvnext"
+            android:layout_toLeftOf="@+id/tvnext"
+            android:background="?android:selectableItemBackground"
+            android:gravity="center"
+            android:padding="@dimen/padding"
+            android:text="Edit"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvnext"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center|end"
+            android:background="?android:selectableItemBackground"
+            android:gravity="center"
+            android:padding="@dimen/padding"
+            android:text="Save"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tvdate1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fltoolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="center"
+        android:gravity="center|start"
+        app:fontFamily="@font/medium"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:text="Enter leave from date"
+        android:textColor="@android:color/white"
+        android:textSize="17sp"
+        app:layout_marginTopPercent="1%" />
+
+    <TextView
+        android:id="@+id/tvstartdate"
+        android:layout_width="0dip"
+        android:layout_height="0dp"
+        android:layout_below="@+id/tvdate1"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:background="@drawable/rectnobg"
+        android:gravity="center|start"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_heightPercent="6%"
+        app:layout_widthPercent="100%" />
+
+
+    <TextView
+        android:id="@+id/tvdate2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvstartdate"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        app:fontFamily="@font/medium"
+        android:layout_gravity="center"
+        android:gravity="center|start"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:text="Enter leave to date"
+        android:textColor="@android:color/white"
+        android:textSize="17sp"
+        app:layout_marginTopPercent="1%" />
+
+    <TextView
+        android:id="@+id/tvenddate"
+        android:layout_width="0dip"
+        android:layout_height="0dp"
+        android:layout_below="@+id/tvdate2"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:background="@drawable/rectnobg"
+        android:gravity="center|start"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_heightPercent="6%"
+        app:layout_widthPercent="100%" />
+
+
+    <TextView
+        android:id="@+id/tvreason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvenddate"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        app:fontFamily="@font/medium"
+        android:layout_gravity="center"
+        android:gravity="center|start"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:text="Reason for leave"
+        android:textColor="@android:color/white"
+        android:textSize="17sp"
+        app:layout_marginTopPercent="1%" />
+
+    <TextView
+        android:id="@+id/tvreasonleave"
+        android:layout_width="0dip"
+        android:layout_height="0dp"
+        android:layout_below="@+id/tvreason"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:background="@drawable/rectnobg"
+        android:gravity="center|start"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_heightPercent="6%"
+        app:layout_widthPercent="100%" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvleave1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tvreasonleave"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="12dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="2"
+        tools:listitem="@layout/inflate_leave" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clleave"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tvreasonleave"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="12dp">
+
+
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/md_white_1000"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:mcv_dateTextAppearance="@style/tv_style_calender"
+            app:mcv_headerTextAppearance="@style/tv_style_calender_header"
+            app:mcv_selectionColor="#88b6db"
+            app:mcv_showOtherDates="out_of_range"
+            app:mcv_tileHeight="@dimen/calendar_30dp"
+            app:mcv_tileWidth="@dimen/calendar40dp"
+            app:mcv_weekDayTextAppearance="@style/TextAppearance.WeekDay" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvleave"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/website"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        app:layout_marginBottomPercent="1%"
+        android:text="@string/site"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:textColor="@color/md_white_1000"
+        android:textSize="12sp" />
+
+
+</androidx.percentlayout.widget.PercentRelativeLayout>

@@ -1,0 +1,74 @@
+Process: com.google.android.gms
+PID: 1695
+UID: 10128
+Frozen: false
+Flags: 0xa0cabe45
+Package: com.google.android.gms v231818047 (23.18.18 (190800-535401451))
+Foreground: No
+Process-Runtime: 57407
+Build: google/sdk_gphone64_x86_64/emu64xa:14/UE1A.230829.030/10921827:userdebug/dev-keys
+Loading-Progress: 1.0
+Dropped-Count: 0
+
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+Build fingerprint: 'google/sdk_gphone64_x86_64/emu64xa:14/UE1A.230829.030/10921827:userdebug/dev-keys'
+Revision: '0'
+ABI: 'x86_64'
+Timestamp: 2025-05-22 19:44:09.565038550+0500
+Process uptime: 48s
+Cmdline: com.google.android.gms
+pid: 1695, tid: 3573, name: peration loader  >>> com.google.android.gms <<<
+uid: 10128
+signal 6 (SIGABRT), code -1 (SI_QUEUE), fault addr --------
+Abort message: 'Invalid address for an implicit NullPointerException check: 0x0, at invoke-static {v1}, void dhat.y(java.lang.Object) // method@53685 in void dfew.<init>(java.lang.String, java.util.UUID)'
+    rax 0000000000000000  rbx 00007b1f5fdf3ad8  rcx 00007b226ccb1610  rdx 0000000000000006
+    r8  0000000000033000  r9  0000000000033000  r10 00007b1f5fdf3ae0  r11 0000000000000213
+    r12 00007b1fc46aacf9  r13 000000005a000000  r14 000000000000069f  r15 0000000000000df5
+    rdi 000000000000069f  rsi 0000000000000df5
+    rbp 0000000000000000  rsp 00007b1f5fdf3ad0  rip 00007b226ccb1610
+44 total frames
+backtrace:
+      #00 pc 0000000000061610  /apex/com.android.runtime/lib64/bionic/libc.so (abort+192) (BuildId: fa337969c798946280caa45e2d71a2e7)
+      #01 pc 00000000007fabab  /apex/com.android.art/lib64/libart.so (art::Runtime::Abort(char const*)+1627) (BuildId: b6dc79e02101ea00827a35a55ab6597a)
+      #02 pc 0000000000037abd  /apex/com.google.mainline.primary.libs@340724000/lib64/libbase.so/a5cce001552a532d111a59af51bbb6cc5e93475522f033f9807fa5f8ad346840deb8c6475491b3425ed7ef34094fb412761afd70b2205820f67d8a4c71c39832/libbase.so (android::base::SetAborter(std::__1::function<void (char const*)>&&)::$_0::__invoke(char const*)+61) (BuildId: d848a07685150bc1df3af6b95e4bc316)
+      #03 pc 0000000000036fe2  /apex/com.google.mainline.primary.libs@340724000/lib64/libbase.so/a5cce001552a532d111a59af51bbb6cc5e93475522f033f9807fa5f8ad346840deb8c6475491b3425ed7ef34094fb412761afd70b2205820f67d8a4c71c39832/libbase.so (android::base::LogMessage::~LogMessage()+354) (BuildId: d848a07685150bc1df3af6b95e4bc316)
+      #04 pc 000000000043e07a  /apex/com.android.art/lib64/libart.so (art::ThrowNullPointerExceptionFromDexPC(bool, unsigned long)+1503) (BuildId: b6dc79e02101ea00827a35a55ab6597a)
+      #05 pc 000000000091e2d0  /apex/com.android.art/lib64/libart.so (artThrowNullPointerExceptionFromSignal+16) (BuildId: b6dc79e02101ea00827a35a55ab6597a)
+      #06 pc 00000000003777db  /apex/com.android.art/lib64/libart.so (art_quick_throw_null_pointer_exception_from_signal+187) (BuildId: b6dc79e02101ea00827a35a55ab6597a)
+      #07 pc 0000000000373b76  /apex/com.android.art/lib64/libart.so (nterp_helper+20358) (BuildId: b6dc79e02101ea00827a35a55ab6597a)
+      #08 pc 0000000000588a18  /product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk (dfew.<init>+12)
+      #09 pc 000000000036fa88  /apex/com.android.art/lib64/libart.so (nterp_helper+3736) (BuildId: b6dc79e02101ea00827a35a55ab6597a)
+      #10 pc 00000000005892bc  /product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk (dffh.<init>+0)
+      #11 pc 000000000036fa88  /apex/com.android.art/lib64/libart.so (nterp_helper+3736) (BuildId: b6dc79e02101ea00827a35a55ab6597a)
+      #12 pc 0000000000589810  /product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk (dffo.<init>+0)
+      #13 pc 000000000036fa88  /apex/com.android.art/lib64/libart.so (nterp_helper+3736) (BuildId: b6dc79e02101ea00827a35a55ab6597a)
+      #14 pc 00000000005897c0  /product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk (dffo.e+8)
+      #15 pc 000000000036ec28  /apex/com.android.art/lib64/libart.so (nterp_helper+56) (BuildId: b6dc79e02101ea00827a35a55ab6597a)
+      #16 pc 0000000000589758  /product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk (dffq.b+32)
+      #17 pc 0000000000370f7d  /apex/com.android.art/lib64/libart.so (nterp_helper+9101) (BuildId: b6dc79e02101ea00827a35a55ab6597a)
+      #18 pc 000000000058aca6  /product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk (dfgr.a+26)
+      #19 pc 000000000036fa88  /apex/com.android.art/lib64/libart.so (nterp_helper+3736) (BuildId: b6dc79e02101ea00827a35a55ab6597a)
+      #20 pc 000000000041d9bc  /product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk (com.google.android.gms.framework.tracing.AbstractGmsTracer.g+420)
+      #21 pc 000000000201927d  /memfd:jit-cache (deleted) (offset 0x2000000) (com.google.android.gms.framework.tracing.AbstractGmsTracer.b+413)
+      #22 pc 000000000036faed  /apex/com.android.art/lib64/libart.so (nterp_helper+3837) (BuildId: b6dc79e02101ea00827a35a55ab6597a)
+      #23 pc 000000000041fd04  /product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk (aoeh.i+64)
+      #24 pc 000000000036fa88  /apex/com.android.art/lib64/libart.so (nterp_helper+3736) (BuildId: b6dc79e02101ea00827a35a55ab6597a)
+      #25 pc 00000000004d4826  /product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk (zhw.m+6)
+      #26 pc 000000000036ec28  /apex/com.android.art/lib64/libart.so (nterp_helper+56) (BuildId: b6dc79e02101ea00827a35a55ab6597a)
+      #27 pc 00000000004d44da  /product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk (zht.a+34)
+      #28 pc 000000000036fa88  /apex/com.android.art/lib64/libart.so (nterp_helper+3736) (BuildId: b6dc79e02101ea00827a35a55ab6597a)
+      #29 pc 000000000041d4ba  /product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk (hji.b+94)
+      #30 pc 000000000037023e  /apex/com.android.art/lib64/libart.so (nterp_helper+5710) (BuildId: b6dc79e02101ea00827a35a55ab6597a)
+      #31 pc 000000000041e4a8  /product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk (hjr.run+1208)
+      #32 pc 000000000036fa88  /apex/com.android.art/lib64/libart.so (nterp_helper+3736) (BuildId: b6dc79e02101ea00827a35a55ab6597a)
+      #33 pc 000000000041d7e6  /product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk (hjl.run+102)
+      #34 pc 00000000003707e5  /apex/com.android.art/lib64/libart.so (nterp_helper+7157) (BuildId: b6dc79e02101ea00827a35a55ab6597a)
+      #35 pc 000000000058b454  /product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk (dfhf.run+24)
+      #36 pc 00000000002f2a29  /system/framework/x86_64/boot.oat (java.util.concurrent.ThreadPoolExecutor.runWorker+857) (BuildId: c78b6b6270062f2e659e76e5f8dac6d757f47ca6)
+      #37 pc 00000000002ef4f4  /system/framework/x86_64/boot.oat (java.util.concurrent.ThreadPoolExecutor$Worker.run+68) (BuildId: c78b6b6270062f2e659e76e5f8dac6d757f47ca6)
+      #38 pc 0000000000175324  /system/framework/x86_64/boot.oat (java.lang.Thread.run+84) (BuildId: c78b6b6270062f2e659e76e5f8dac6d757f47ca6)
+      #39 pc 00000000003784c4  /apex/com.android.art/lib64/libart.so (art_quick_invoke_stub+756) (BuildId: b6dc79e02101ea00827a35a55ab6597a)
+      #40 pc 00000000003c535c  /apex/com.android.art/lib64/libart.so (art::ArtMethod::Invoke(art::Thread*, unsigned int*, unsigned int, art::JValue*, char const*)+204) (BuildId: b6dc79e02101ea00827a35a55ab6597a)
+      #41 pc 0000000000853176  /apex/com.android.art/lib64/libart.so (art::Thread::CreateCallback(void*)+1510) (BuildId: b6dc79e02101ea00827a35a55ab6597a)
+      #42 pc 00000000000cd06a  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*)+58) (BuildId: fa337969c798946280caa45e2d71a2e7)
+      #43 pc 0000000000062d88  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+56) (BuildId: fa337969c798946280caa45e2d71a2e7)

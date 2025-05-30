@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rvrow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    android:background="?selectableItemBackground"
+    tools:background="@color/bg">
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/ivimage"
+        android:layout_width="@dimen/ivwidth50"
+        android:layout_height="@dimen/ivwidth50"
+        app:actualImageResource="@mipmap/ic_profile"
+        app:failureImage="@mipmap/ic_profile"
+        app:layout_constraintBottom_toBottomOf="@+id/clright"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/clright"
+        app:placeholderImage="@mipmap/ic_profile"
+        app:progressBarImage="@mipmap/ic_profile"
+        app:roundAsCircle="true" />
+
+
+    <ImageView
+        android:id="@+id/ivcount"
+        android:layout_width="20dp"
+        android:layout_height="25dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        app:layout_constraintCircle="@+id/ivimage"
+        app:layout_constraintCircleAngle="135"
+        app:layout_constraintCircleRadius="22dp"
+        tools:src="@drawable/officegreen" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clright"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/ivimage"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/tvtext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/md_white_1000"
+            android:textSize="14sp"
+            app:fontFamily="@font/medium"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/ivright"
+            tools:text="sssasasadasdasd" />
+
+        <TextView
+            android:id="@+id/tvtext2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:drawablePadding="4dp"
+            android:gravity="start|center"
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/md_white_1000"
+            android:textSize="12sp"
+            app:fontFamily="@font/avregularfont"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/ivright"
+            app:layout_constraintTop_toBottomOf="@+id/tvtext"
+            tools:text="sssasasadasdasd" />
+
+
+        <TextView
+            android:id="@+id/tvclear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:gravity="center|start"
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/md_white_1000"
+            android:textSize="10sp"
+            app:fontFamily="@font/avregularfont"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/tvdate"
+            app:layout_constraintTop_toBottomOf="@+id/tvtext2"
+            tools:text="ssdsadsadsadsadsdsads" />
+
+        <TextView
+            android:id="@+id/tvdate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:gravity="center|end"
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/md_white_1000"
+            android:textSize="12sp"
+            app:fontFamily="@font/avregularfont"
+            app:layout_constraintEnd_toStartOf="@+id/ivright"
+            app:layout_constraintLeft_toRightOf="@+id/tvclear"
+            app:layout_constraintRight_toLeftOf="@+id/ivright"
+            app:layout_constraintStart_toEndOf="@+id/tvclear"
+            app:layout_constraintTop_toBottomOf="@+id/tvtext2"
+            tools:text="zcxzcxzczxcxcczxccx" />
+
+        <ImageView
+            android:id="@+id/ivright"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_gravity="center|end"
+            android:gravity="center"
+            android:rotation="180"
+            android:background="?selectableItemBackground"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="12dp"
+        android:alpha="0.5"
+        android:background="@color/md_white_1000"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clright" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

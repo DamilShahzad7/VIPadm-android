@@ -1,0 +1,30 @@
+pluginManagement {
+    repositories {
+        // for the plugins themselves (kotlin, android-gradle, etc)
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+
+dependencyResolutionManagement {
+    // refuse to fall back to module-level repos:
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+
+    repositories {
+        // everywhere Gradle looks for *any* dependency
+        google()
+        mavenCentral()
+        // only add these if you really need them:
+        jcenter()
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://oss.sonatype.org/content/repositories/ksoap2-android-releases' }
+        maven { url 'https://raw.github.com/embarkmobile/zxing-android-minimal/mvn-repo/maven-repository/' }
+    }
+}
+
+// your modules
+include ':library'
+include ':pushdown-anim-click'
+project(':pushdown-anim-click').projectDir = file('library/pushdown-anim-click')
+include ':app'

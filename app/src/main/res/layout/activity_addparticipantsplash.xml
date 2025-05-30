@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvorder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="Add participants?"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        app:layout_heightPercent="10%"
+        app:layout_marginTopPercent="35%"
+        app:layout_widthPercent="100%" />
+
+
+    <TextView
+        android:id="@+id/tvadd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvorder"
+        android:layout_centerInParent="true"
+        android:gravity="center|start|end"
+        android:paddingLeft="36dp"
+        android:paddingRight="36dp"
+        android:alpha="0.7"
+        android:text="@string/contactmessage"
+        android:textAlignment="center"
+        android:textColor="@color/md_white_1000"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tvcontinue"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/tvadd"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="Continue"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_heightPercent="10%"
+        app:layout_marginTopPercent="3%"
+        app:layout_widthPercent="100%" />
+
+    <TextView
+        android:id="@+id/tvlater"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/tvcontinue"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="Invite participants later"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_heightPercent="10%"
+        app:layout_widthPercent="100%" />
+
+    <TextView
+        android:id="@+id/website"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        app:layout_marginBottomPercent="1%"
+        android:text="@string/site"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:textColor="@color/md_white_1000"
+        android:textSize="12sp" />
+
+</androidx.percentlayout.widget.PercentRelativeLayout>

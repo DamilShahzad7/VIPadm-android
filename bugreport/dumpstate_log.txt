@@ -1,0 +1,266 @@
+Module metadata package name: com.google.android.modulemetadata
+Duration of 'DUMPSYS CRITICAL': 0.99s
+SERVICE com.android.systemui/.SystemUIService 5e0a04c pid=810 user=0
+  Client:
+
+    com.android.systemui.wmshell.WMShell:
+    ----------------------------------------------------------------------------
+    Logging to proto is not enabled for WMShell.
+
+    Dump took 1ms
+SERVICE com.android.systemui/.SystemUIService 5e0a04c pid=810 user=0
+  Client:
+
+    com.android.systemui.wmshell.WMShell:
+    ----------------------------------------------------------------------------
+    Writing file to /data/misc/wmtrace/shell_transition_trace.winscope from process 810
+
+    Dump took 6ms
+Writing file to /data/misc/wmtrace/wm_transition_trace.winscope from process 579
+Result: Parcel(	00000000    '....')
+Duration of 'SYSTEM LOG': 0.64s
+Duration of 'EVENT LOG': 0.23s
+Duration of 'STATS LOG': 0.02s
+Duration of 'RADIO LOG': 0.28s
+Start thread pool:1
+Adding dir /cache/recovery (recursive: 1)
+/cache/recovery: No such file or directory
+Adding dir /data/misc/recovery (recursive: 1)
+Adding dir /data/misc/update_engine_log (recursive: 1)
+Adding dir /data/misc/update_engine/prefs (recursive: 1)
+/data/misc/update_engine/prefs: No such file or directory
+Adding dir /data/misc/logd (recursive: 0)
+Adding dir /data/misc/profiles/cur (recursive: 1)
+Adding dir /data/misc/profiles/ref (recursive: 1)
+open(/data/system/package-dex-usage.list): No such file or directory
+Adding dir /data/misc/prereboot (recursive: 0)
+MOUNT INFO: 38 entries added to zip file
+Failed to read metadata.
+*** command 'lpdump --all' failed: exit code 66
+Duration of 'LPDUMP': 1.07s
+Duration of 'DEVICE-MAPPER': 1.08s
+Adding dir /metadata/ota (recursive: 1)
+Duration of 'IOTOP': 1.48s
+Duration of 'DUMP TRACES': 5.24s
+Duration of 'Dmabuf dump': 1.29s
+shutdown thread pool
+Start thread pool:3
+section 1000 status 1
+section 1000 status 2
+section 1002 status 1
+section 1002 status 2
+section 1109 status 1
+section 1109 status 2
+section 1110 status 1
+section 1110 status 2
+section 1111 status 1
+section 1111 status 2
+section 1112 status 1
+section 1112 status 2
+section 1113 status 1
+section 1113 status 2
+section 1114 status 1
+section 1114 status 2
+section 1115 status 1
+section 1115 status 2
+section 1116 status 1
+Duration of 'HARDWARE HALS': 0.76s
+Calling IDumpstateDevice implementation using path /data/user_de/0/com.android.shell/files/bugreports/dumpstate_board.txt
+Calling IDumpstateDevice implementation using path /data/user_de/0/com.android.shell/files/bugreports/dumpstate_board.bin
+Using IDumpstateDevice AIDL HALIgnoring empty dumpstate_board.bin
+Duration of 'dumpstate_board()': 1.25s
+Duration of 'DUMP CHECKINS': 0.79s
+section 1116 status 2
+section 2001 status 1
+section 2001 status 2
+section 2002 status 1
+section 2002 status 2
+section 2003 status 1
+Duration of 'DUMP HALS': 3.00s
+Duration of 'CPU INFO': 3.69s
+Parsing /data/misc/wmtrace/transactions_trace.winscope
+Generating /data/misc/wmtrace/layers_trace_from_transactions.winscope
+Duration of 'POST-PROCESS UI TRACES': 4.05s
+section 2003 status 2
+section 2004 status 1
+section 2004 status 2
+section 2005 status 1
+section 2005 status 2
+section 2006 status 1
+section 2006 status 2
+section 2007 status 1
+section 2007 status 2
+section 3000 status 1
+section 3000 status 2
+section 3002 status 1
+section 3002 status 2
+section 3004 status 1
+section 3004 status 2
+section 3005 status 1
+section 3005 status 2
+section 3006 status 1
+section 3006 status 2
+section 3007 status 1
+section 3007 status 2
+section 3008 status 1
+section 3008 status 2
+section 3009 status 1
+section 3009 status 2
+section 3010 status 1
+section 3010 status 2
+section 3011 status 1
+section 3011 status 2
+section 3012 status 1
+section 3012 status 2
+section 3013 status 1
+section 3013 status 2
+section 3014 status 1
+section 3014 status 2
+section 3015 status 1
+section 3015 status 2
+section 3016 status 1
+section 3016 status 2
+section 3017 status 1
+section 3017 status 2
+section 3019 status 1
+section 3019 status 2
+section 3020 status 1
+section 3020 status 2
+section 3021 status 1
+section 3021 status 2
+section 3022 status 1
+section 3022 status 2
+section 3023 status 1
+section 3023 status 2
+section 3027 status 1
+section 3027 status 2
+section 3028 status 1
+section 3028 status 2
+section 3029 status 1
+section 3029 status 2
+section 3030 status 1
+section 3030 status 2
+section 3031 status 1
+section 3031 status 2
+section 3032 status 1
+section 3032 status 2
+section 3033 status 1
+section 3033 status 2
+section 3034 status 1
+section 3034 status 2
+section 3035 status 1
+section 3035 status 2
+section 3036 status 1
+section 3036 status 2
+section 3037 status 1
+section 3037 status 2
+section 3038 status 1
+section 3038 status 2
+section 3039 status 1
+section 3039 status 2
+section 3040 status 1
+section 3040 status 2
+section 3041 status 1
+section 3041 status 2
+section 3042 status 1
+section 3042 status 2
+section 3043 status 1
+section 3043 status 2
+section 3044 status 1
+section 3044 status 2
+section 3045 status 1
+section 3045 status 2
+section 3046 status 1
+section 3046 status 2
+section 3047 status 1
+section 3047 status 2
+section 3049 status 1
+section 3049 status 2
+section 3050 status 1
+section 3050 status 2
+section 3051 status 1
+section 3051 status 2
+section 3052 status 1
+section 3052 status 2
+section 3053 status 1
+section 3053 status 2
+section 3054 status 1
+section 3054 status 2
+section 3055 status 1
+section 3055 status 2
+section 3056 status 1
+section 3056 status 2
+section 4000 status 1
+section 4000 status 2
+section 4001 status 1
+section 4001 status 2
+done
+Duration of 'INCIDENT REPORT': 11.43s
+*** command '/system/xbin/su root bugreport_procdump' timed out after 12.335s (killing pid 9421)
+could not kill command '/system/xbin/su root bugreport_procdump' (pid 9421) even with SIGKILL.
+Duration of 'BUGREPORT_PROCDUMP': 22.34s
+Duration of 'PROCESSES AND THREADS': 2.37s
+Failed to read cmdline from: /proc/7900/cmdline
+modinfo: mac80211: not found
+modinfo: libarc4: not found
+modinfo: cfg80211: not found
+modinfo: can_dev: not found
+modinfo: btbcm: not found
+modinfo: bluetooth: not found
+modinfo: zram: not found
+modinfo: rfkill: not found
+modinfo: zsmalloc: not found
+modinfo: vmw_vsock_virtio_transport: not found
+modinfo: virtio_rng: not found
+modinfo: virtio_pci: not found
+modinfo: virtio_pci_legacy_dev: not found
+modinfo: virtio_pci_modern_dev: not found
+modinfo: virtio_dma_buf: not found
+modinfo: virtio_console: not found
+modinfo: virtio_blk: not found
+*** command '/system/xbin/su root sh -c cat /proc/modules | cut -d' ' -f1 |     while read MOD ; do echo modinfo:$MOD ; modinfo $MOD ; done' failed: exit code 1
+Duration of 'MODULES INFO': 1.93s
+Adding dir /system/etc/vintf/ (recursive: 1)
+Adding dir /vendor/etc/vintf/ (recursive: 1)
+Adding dir /system_ext/etc/vintf/ (recursive: 1)
+Duration of 'LIST OF OPEN FILES': 2.86s
+Adding dir /data/misc/nfc/logs (recursive: 1)
+AddAnrTraceDir(): dump_traces_file=/data/user_de/0/com.android.shell/files/bugreports/dumptrace_YRyR84, anr_traces_dir=/data/anr
+Dumping current ANR traces (/data/user_de/0/com.android.shell/files/bugreports/dumptrace_YRyR84) to the main bugreport entry
+open(/data/misc/perfetto-traces/bugreport/systrace.pftrace): No such file or directory
+Failed to unlink file (/data/misc/perfetto-traces/bugreport/systrace.pftrace): No such file or directory
+Duration of 'DUMP ROUTE TABLES': 0.55s
+Failed to read cmdline from: /proc/9206/cmdline
+Failed to read cmdline from: /proc/9400/cmdline
+Failed to read cmdline from: /proc/9416/cmdline
+Failed to read cmdline from: /proc/9417/cmdline
+Duration of 'DUMPSYS HIGH': 8.49s
+Duration of 'SERVICE HIGH connectivity': 5.00s
+Adding dir /data/misc/snapshotctl_log (recursive: 0)
+Can't find service: android.hardware.cas.IMediaCasService/default
+Failed to start dump thread for service: android.hardware.cas.IMediaCasService/default, status: -2Can't find service: android.hardware.radio.config.IRadioConfig/default
+Failed to start dump thread for service: android.hardware.radio.config.IRadioConfig/default, status: -2Can't find service: android.hardware.radio.data.IRadioData/slot1
+Failed to start dump thread for service: android.hardware.radio.data.IRadioData/slot1, status: -2Can't find service: android.hardware.radio.ims.IRadioIms/slot1
+Failed to start dump thread for service: android.hardware.radio.ims.IRadioIms/slot1, status: -2Can't find service: android.hardware.radio.ims.media.IImsMedia/default
+Failed to start dump thread for service: android.hardware.radio.ims.media.IImsMedia/default, status: -2Can't find service: android.hardware.radio.messaging.IRadioMessaging/slot1
+Failed to start dump thread for service: android.hardware.radio.messaging.IRadioMessaging/slot1, status: -2Can't find service: android.hardware.radio.modem.IRadioModem/slot1
+Failed to start dump thread for service: android.hardware.radio.modem.IRadioModem/slot1, status: -2Can't find service: android.hardware.radio.network.IRadioNetwork/slot1
+Failed to start dump thread for service: android.hardware.radio.network.IRadioNetwork/slot1, status: -2Can't find service: android.hardware.radio.sim.IRadioSim/slot1
+Failed to start dump thread for service: android.hardware.radio.sim.IRadioSim/slot1, status: -2Can't find service: android.hardware.radio.voice.IRadioVoice/slot1
+Failed to start dump thread for service: android.hardware.radio.voice.IRadioVoice/slot1, status: -2Can't find service: android.hardware.usb.IUsb/default
+Failed to start dump thread for service: android.hardware.usb.IUsb/default, status: -2Can't find service: android.hardware.wifi.supplicant.ISupplicant/default
+Failed to start dump thread for service: android.hardware.wifi.supplicant.ISupplicant/default, status: -2Can't find service: android.service.gatekeeper.IGateKeeperService
+Failed to start dump thread for service: android.service.gatekeeper.IGateKeeperService, status: -2Can't find service: vold
+Failed to start dump thread for service: vold, status: -2Duration of 'DUMPSYS': 12.83s
+Adding dir /data/misc/bluetooth/logs (recursive: 1)
+Duration of 'APP SERVICES NON-PLATFORM': 1.85s
+Duration of 'APP PROVIDERS NON-PLATFORM': 2.69s
+Adding dir /linkerconfig (recursive: 1)
+Adding frozen processes from /sys/fs/cgroup
+Adding dir /data/misc/wmtrace (recursive: 0)
+Duration of '/data/misc/wmtrace': 0.64s
+Duration of 'DUMPSTATE': 67.89s
+Adding main entry (bugreport-sdk_gphone64_x86_64-UE1A.230829.030-2025-05-22-22-53-40.txt) from /data/user_de/0/com.android.shell/files/bugreports/bugreport-sdk_gphone64_x86_64-UE1A.230829.030-2025-05-22-22-53-40.tmp to .zip bugreport
+dumpstate id 1 finished around 2025/05/22 22:54:58 (78 s)
+Adding zip text entry main_entry.txt
+dumpstate_log.txt entry on zip file logged up to here

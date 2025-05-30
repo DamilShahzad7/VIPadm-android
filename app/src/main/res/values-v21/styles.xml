@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--<style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">-->
+        <!--<item name="android:windowBackground">@drawable/splash</item>-->
+        <!--&lt;!&ndash;<item name="colorPrimaryDark">@color/md_black_1000</item>&ndash;&gt;-->
+        <!--<item name="colorPrimary">@color/md_white_1000</item>-->
+        <!--<item name="colorAccent">@color/md_white_1000</item>-->
+        <!--<item name="android:windowDrawsSystemBarBackgrounds">true</item>-->
+        <!--<item name="android:windowTranslucentStatus">true</item>-->
+        <!--<item name="android:fitsSystemWindows">true</item>-->
+
+        <!--<item name="isLightTheme">true</item>-->
+        <!--<item name="android:windowContentOverlay">@null</item>-->
+        <!--<item name="android:windowActionBar">false</item>-->
+        <!--<item name="android:navigationBarColor">@color/md_white_1000</item>-->
+
+    <!--</style>-->
+
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash</item>
+        <!--<item name="colorPrimaryDark">@color/md_black_1000</item>-->
+        <item name="colorPrimary">@color/transparent</item>
+        <item name="colorAccent">@color/transparent</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+
+        <item name="isLightTheme">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:navigationBarColor">@color/transparent</item>
+
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/md_black_1000</item>
+        <!--<item name="colorControlNormal">@color/md_black_1000</item>-->
+        <item name="colorPrimaryDark">@color/md_black_1000</item>
+        <!--<item name="textColorPrimary">@color/md_black_1000</item>-->
+        <item name="colorAccent">@color/md_grey_500</item>
+        <item name="fontFamily">@font/latofont</item>
+        <item name="android:fontFamily">@font/latofont</item>
+
+        <item name="android:navigationBarColor">@color/bg</item>
+
+    </style>
+
+    <style name="MessageTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimaryDark">@color/bg</item>
+        <!--<item name="textColorPrimary">@color/md_black_1000</item>-->
+        <item name="fontFamily">@font/latofont</item>
+        <item name="android:fontFamily">@font/latofont</item>
+        <item name="android:navigationBarColor">@color/bg</item>
+
+
+    </style>
+
+    <style name="EvaTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimaryDark">@color/bg</item>
+        <!--<item name="textColorPrimary">@color/md_black_1000</item>-->
+        <item name="fontFamily">@font/latofont</item>
+        <item name="android:fontFamily">@font/latofont</item>
+        <item name="android:navigationBarColor">@color/color_red</item>
+
+
+    </style>
+
+    <style name="HomeTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+
+        <item name="isLightTheme">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="colorPrimary">@color/md_white_1000</item>
+        <item name="colorControlNormal">@color/md_black_1000</item>
+        <item name="colorPrimaryDark">@color/md_white_1000</item>
+        <!--<item name="textColorPrimary">@color/md_black_1000</item>-->
+        <item name="colorAccent">@color/md_grey_500</item>
+        <item name="fontFamily">@font/latofont</item>
+        <item name="android:fontFamily">@font/latofont</item>
+        <item name="android:navigationBarColor">@color/md_white_1000</item>
+
+        <!--<item name="android:windowTranslucentStatus">true</item>-->
+
+    </style>
+
+
+</resources>

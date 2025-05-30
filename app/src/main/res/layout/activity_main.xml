@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvwelcome"
+        android:layout_width="0dip"
+        android:layout_height="0dip"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="Welcome"
+        android:textColor="@android:color/white"
+        android:textSize="35sp"
+        app:layout_heightPercent="25%"
+        app:layout_widthPercent="100%" />
+
+
+    <LinearLayout
+        android:id="@+id/llclientid"
+        android:layout_width="0dip"
+        android:layout_height="0dip"
+        android:layout_below="@+id/tvwelcome"
+        android:background="@drawable/etrect"
+        android:orientation="horizontal"
+        app:layout_heightPercent="8%"
+        app:layout_marginLeftPercent="4%"
+        app:layout_marginRightPercent="4%"
+        app:layout_marginTopPercent="5%"
+        app:layout_widthPercent="100%"
+        tools:visibility="gone">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvclientid"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="Client ID : "
+            android:textColor="@color/grey"
+            android:textSize="18sp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etclientid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="Enter client ID"
+            android:imeOptions="actionDone"
+            android:inputType="textCapCharacters"
+            android:lines="1"
+            android:maxLines="1"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/hint"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llemail"
+        android:layout_width="0dip"
+        android:layout_height="0dip"
+        android:layout_below="@+id/llclientid"
+        android:background="@drawable/etrect"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        app:layout_heightPercent="8%"
+        app:layout_marginLeftPercent="4%"
+        app:layout_marginRightPercent="4%"
+        app:layout_marginTopPercent="5%"
+        app:layout_widthPercent="100%"
+        tools:visibility="visible">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvemail"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="Your mail : "
+            android:textColor="@color/grey"
+            android:textSize="18sp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etemail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="email@exmple.com"
+            android:imeOptions="actionDone"
+            android:inputType="textEmailAddress"
+            android:lines="1"
+            android:maxLines="1"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/hint"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvmessge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llemail"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="@string/otpmessage"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+
+    <LinearLayout
+        android:id="@+id/llotp"
+        android:layout_width="0dip"
+        android:layout_height="0dip"
+        android:layout_below="@+id/tvmessge"
+        android:background="@drawable/etrect"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_heightPercent="8%"
+        app:layout_marginLeftPercent="4%"
+        app:layout_marginRightPercent="4%"
+        app:layout_marginTopPercent="2%"
+        app:layout_widthPercent="100%"
+        tools:visibility="visible">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvotp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="OTP : "
+            android:textColor="@color/grey"
+            android:textSize="18sp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etotp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="Enter OTP here"
+            android:imeOptions="actionDone"
+            android:inputType="numberPassword"
+            android:lines="1"
+            android:maxLines="1"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/hint"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvsite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:lines="1"
+        android:maxLines="1"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="@string/site"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/hint"
+        android:textSize="12sp" />
+
+
+</androidx.percentlayout.widget.PercentRelativeLayout>

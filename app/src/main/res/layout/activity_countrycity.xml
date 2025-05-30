@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:padding="12dp">
+
+
+    <FrameLayout
+        android:id="@+id/fltoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="Back"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/ivhome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_home" />
+
+        <TextView
+            android:id="@+id/tvnext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="Next"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/tvdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fltoolbar"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_marginTopPercent="5%" />
+
+
+    <TextView
+        android:id="@+id/tvtime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvdate"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_marginTopPercent="1%"
+        app:layout_widthPercent="100%" />
+
+    <TextView
+        android:id="@+id/tvsubject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvtime"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_marginTopPercent="1%"
+        app:layout_widthPercent="100%" />
+
+    <TextView
+        android:id="@+id/tvcountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvsubject"
+        android:text="Country :"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_marginTopPercent="15%" />
+
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/sp_country"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/tvcountry"
+        android:background="@drawable/spinnerbg"
+        android:dropDownVerticalOffset="50dp"
+        app:layout_heightPercent="9%"
+        app:layout_widthPercent="100%" />
+
+
+    <TextView
+        android:id="@+id/tvcity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sp_country"
+        android:text="City :"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_marginTopPercent="3%" />
+
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/sp_city"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/tvcity"
+        android:background="@drawable/spinnerbg"
+        android:dropDownVerticalOffset="50dp"
+        app:layout_heightPercent="9%"
+        app:layout_widthPercent="100%"/>
+
+
+    <TextView
+        android:id="@+id/tvdone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sp_city"
+        android:layout_centerInParent="true"
+        android:text="Done"
+        android:padding="12dp"
+        android:textColor="@android:color/white"
+        android:textSize="17sp"
+        app:layout_marginTopPercent="10%" />
+
+
+</androidx.percentlayout.widget.PercentRelativeLayout>

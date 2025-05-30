@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/underline_grey">
+
+    <TextView
+        android:id="@+id/tvcategory"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:background="#5792e8"
+        android:gravity="center|start"
+        android:textColor="@color/md_white_1000"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvcategory"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:orientation="horizontal"
+        android:padding="6dp">
+
+
+        <TextView
+            android:id="@+id/tvdes"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center|start"
+            android:textColor="@color/md_black_1000"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/tvprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:gravity="center|start"
+            android:textColor="@color/md_black_1000"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etquantity"
+            android:layout_width="55dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/rectedit"
+            android:gravity="center"
+            android:hint="quantity"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/md_black_1000"
+            android:textColorHint="@color/grey"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/etsum"
+            android:layout_width="85dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rectedit"
+            android:gravity="center"
+            android:hint="sum"
+            android:textColor="@color/md_black_1000"
+            android:textColorHint="@color/grey"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

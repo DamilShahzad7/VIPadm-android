@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="grey">#8c8b8b</color>
+    <color name="hint">#dcdada</color>
+    <color name="greytext">#dddddd</color>
+    <color name="bg">#64829a</color>
+    <color name="bg1">#64829a</color>
+    <color name="transparent">#00000000</color>
+    <drawable name="colordra">@drawable/rect_date</drawable>
+
+    <color name="greylocation">#c9c9ce</color>
+    <color name="datecolor">#96b5d8</color>
+    <color name="datecolor2">#96d8d4</color>
+
+
+    <color name="toolbar">#a7afb9</color>
+    <color name="dialog_header">#cbcbcb</color>
+    <color name="blue">#467cfa</color>
+    <color name="blue_dark_drop_down">#07447B</color>
+    <color name="blue_drop_down">#A3BCDB</color>
+    <color name="meetingbg1">#afbdc8</color>
+    <color name="meetingbg">#aebcc7</color>
+    <color name="greywhite">#c9ccd5</color>
+
+    <color name="red">#ea041f</color>
+    <color name="green">#62a30b</color>
+    <color name="blue_color">#2c4e96</color>
+    <color name="bg_blue">#6d819f</color>
+    <color name="color_gradient_top">#ccdde3</color>
+    <color name="color_gradient_bottom">#aebfcb</color>
+
+    <color name="color_gradient_top1">#ccd5dc</color>
+    <color name="color_gradient_bottom1">#aebfcb</color>
+    <color name="color_red">#ea041f</color>
+
+    <color name="color_useravailability_empty">#ffe061</color>
+    <color name="color_useravailability_yes">#3ab549</color>
+    <color name="color_useravailability_no">#ffe061</color>
+    <color name="color_noevacuation">#ffff02</color>
+    <color name="color_yellow">#ffe061</color>
+    <color name="icon_yellow">#ffe061</color>
+    <color name="color_green">#3ab549</color>
+    <color name="color_redd">#ea041f</color>
+
+    <!--<color name="gradient">@drawable/gradient_tv_nocorenr</color>-->
+
+    <color name="gradientcard">#000</color>
+
+    <color name="colorno1">#d6dde3</color>
+    <color name="colorno2">#aebfcb</color>
+
+    <color name="colorno_dark1">#c4ccd2</color>
+    <color name="colorno_dark2">#aebfcb</color>
+    <color name="date_selected">#88b6db</color>
+    <color name="bg_spiiner">#aebfcb</color>
+    <color name="textred">#c02513</color>
+
+    <color name="iconred">#e81900</color>
+    <color name="cardcolor">#cdd4db</color>
+
+    <!--[31/08/18, 1:07:23 AM] arun darla: True - Green: [UIColor colorWithRed:58.0/255.0 green:181.0/255.0 blue:73.0/255.0 alpha:1.0]-->
+    <!--[31/08/18, 1:08:06 AM] arun darla: False - Red : [UIColor colorWithRed:255.0/255.0 green:224.0/255.0 blue:94.0/255.0 alpha:1.0]-->
+    <!--[31/08/18, 1:08:25 AM] arun darla: Empty: [UIColor colorWithRed:255.0/255.0 green:224.0/255.0 blue:94.0/255.0 alpha:1.0]-->
+
+</resources>

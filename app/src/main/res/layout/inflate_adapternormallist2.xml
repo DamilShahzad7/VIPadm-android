@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="@dimen/paddingback"
+    android:layout_marginRight="@dimen/paddingback"
+    tools:background="@color/bg">
+
+
+    <TextView
+        android:id="@+id/tvtype"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:gravity="center|start"
+        android:paddingTop="12dp"
+        android:textColor="@color/md_white_1000"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:fontFamily="@font/medium"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="ssfsfsafsafsafsa"
+        tools:visibility="visible" />
+
+
+    <TextView
+        android:id="@+id/tvarea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/md_white_1000"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:fontFamily="@font/avregularfont"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="ssfsfsafsafsafsa" />
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/ivimage"
+        android:layout_width="@dimen/ivwidth48"
+        android:layout_height="@dimen/ivwidth48"
+        android:layout_marginTop="4dp"
+        app:failureImage="@mipmap/ic_profile"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvtype"
+        app:placeholderImage="@mipmap/ic_profile"
+        app:roundAsCircle="true" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivcameraactual"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:gravity="center"
+        app:layout_constraintCircle="@+id/ivimage"
+        app:layout_constraintCircleAngle="135"
+        app:layout_constraintCircleRadius="23dp" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivcamera"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:src="@mipmap/ic_camera"
+        android:visibility="gone"
+        app:layout_constraintCircle="@+id/ivimage"
+        app:layout_constraintCircleAngle="135"
+        app:layout_constraintCircleRadius="23dp"
+        app:layout_constraintEnd_toEndOf="@+id/ivimage" />
+
+    <ImageView
+        android:id="@+id/ivcount_image"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        app:layout_constraintCircle="@+id/ivimage"
+        app:layout_constraintCircleAngle="135"
+        app:layout_constraintCircleRadius="23dp"
+        app:layout_constraintEnd_toEndOf="@+id/ivimage" />
+
+
+    <LinearLayout
+        android:id="@+id/llright"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toRightOf="@+id/ivimage"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvtype">
+
+
+        <TextView
+            android:id="@+id/tvname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:gravity="center|start"
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/md_white_1000"
+            android:textSize="15sp"
+            app:fontFamily="@font/demiboldfont"
+            tools:text="ssfsfsafsafsafsa" />
+
+        <TextView
+            android:id="@+id/tvresponsible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:gravity="center|start"
+            android:textColor="@color/md_white_1000"
+            android:textSize="14sp"
+            app:fontFamily="@font/avregularfont"
+            tools:text="ssfsfsafsafsafsa" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tvmobile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:layout_weight="0.7"
+                android:ellipsize="end"
+                android:gravity="center|start"
+                android:lines="1"
+                android:maxLength="15"
+                android:maxLines="1"
+                android:textColor="@color/md_white_1000"
+                android:textSize="13sp"
+                app:fontFamily="@font/avregularfont"
+                tools:text="ssfsfsafsafsafsa" />
+
+            <TextView
+                android:id="@+id/tvemail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center|start"
+                android:maxLines="1"
+                android:textColor="@color/md_white_1000"
+                android:textSize="12sp"
+                app:fontFamily="@font/avregularfont"
+                tools:text="ssfsfsafsafsafsa" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvstatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:gravity="center|start"
+            android:textColor="@color/color_noevacuation"
+            android:textSize="10sp"
+            android:visibility="gone"
+            app:fontFamily="@font/avregularfont"
+            tools:text="ssfsfsafsafsafsa" />
+
+        <View
+            android:id="@+id/vline"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/md_white_1000" />
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/ivmessage"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/unread"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/llright"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/llright" />
+
+
+    <TextView
+        android:id="@+id/tvcount"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/md_white_1000"
+        android:textSize="11sp"
+        android:visibility="gone"
+        app:fontFamily="@font/avregularfont"
+        app:layout_constraintCircle="@+id/ivmessage"
+        app:layout_constraintCircleAngle="45"
+        app:layout_constraintCircleRadius="14dp"
+        tools:text="ssfsfsafsafsafsa" />
+
+    <ImageView
+        android:id="@+id/ivcount"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintCircle="@+id/ivmessage"
+        app:layout_constraintCircleAngle="135"
+        app:layout_constraintCircleRadius="14dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,291 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/md_black_1000</item>
+        <!--<item name="colorControlNormal">@color/md_black_1000</item>-->
+        <item name="colorPrimaryDark">@color/md_black_1000</item>
+        <!--<item name="textColorPrimary">@color/md_black_1000</item>-->
+        <item name="colorAccent">@color/md_grey_500</item>
+        <item name="fontFamily">@font/latofont</item>
+
+
+    </style>
+
+    <style name="MessageTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimaryDark">@color/bg</item>
+        <!--<item name="textColorPrimary">@color/md_black_1000</item>-->
+        <item name="fontFamily">@font/latofont</item>
+
+
+
+    </style>
+    <style name="MessageThemeNew" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here -->
+        <!-- Customize your theme here. -->
+        <item name="colorPrimaryDark">@color/bg</item>
+        <!--<item name="textColorPrimary">@color/md_black_1000</item>-->
+        <item name="fontFamily">@font/latofont</item>
+    </style>
+
+    <style name="EvaTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimaryDark">@color/bg</item>
+        <!--<item name="textColorPrimary">@color/md_black_1000</item>-->
+        <item name="fontFamily">@font/latofont</item>
+
+
+
+    </style>
+
+    <style name="TabStyle" parent="Base.Widget.Design.TabLayout">
+        <item name="android:paddingStart">0dip</item>
+        <item name="android:paddingLeft">0dip</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:paddingEnd">0dip</item>
+    </style>
+
+
+    <style name="LocationTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimaryDark">@color/greylocation</item>
+        <!--<item name="textColorPrimary">@color/md_black_1000</item>-->
+        <item name="fontFamily">@font/latofont</item>
+
+
+    </style>
+
+
+    <style name="HomeTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+
+        <item name="colorPrimary">@color/md_black_1000</item>
+        <item name="colorControlNormal">@color/md_black_1000</item>
+        <item name="colorPrimaryDark">@color/md_black_1000</item>
+        <!--<item name="textColorPrimary">@color/md_black_1000</item>-->
+        <item name="colorAccent">@color/md_grey_500</item>
+        <item name="fontFamily">@font/latofont</item>
+
+    </style>
+
+    <style name="MyPopupMenu" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:popupBackground">@color/bg</item>
+        <item name="android:disabledAlpha">0.5</item>
+        <item name="fontFamily">@font/latofont</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:itemBackground">@drawable/underline_icon</item>
+
+    </style>
+
+    <style name="MyTabLayoutTextAppearance" parent="Base.Widget.Design.TabLayout">
+        <item name="android:textSize">12sp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="SpinnerTheme" parent="Widget.AppCompat.Spinner">
+        <item name="backgroundTint">@color/md_white_1000</item>
+        <item name="android:dropDownVerticalOffset">45dp</item>
+    </style>
+
+
+    <style name="PauseDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowAnimationStyle">@style/PauseDialogAnimation</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="PauseDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_down</item>
+    </style>
+
+    <style name="PauseDialogAnimationUP">
+        <item name="android:windowEnterAnimation">@anim/slide_in_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_up</item>
+    </style>
+
+
+    <style name="myToolbarTheme">
+        <item name="colorControlNormal">@color/md_white_1000</item>
+    </style>
+
+    <style name="AppTheme2" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/md_black_1000</item>
+        <item name="colorPrimaryDark">@color/md_black_1000</item>
+        <item name="colorAccent">@color/md_grey_500</item>
+        <item name="fontFamily">@font/latofont</item>
+        <item name="android:textColorPrimary">@color/md_black_1000</item>
+    </style>
+
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash</item>
+        <item name="isLightTheme">true</item>
+        <item name="colorPrimary">@color/md_white_1000</item>
+        <item name="colorPrimaryDark">@color/md_white_1000</item>
+
+    </style>
+
+
+    <style name="MyTimePicker">
+        <item name="android:textColor">@color/md_white_1000</item>
+        <item name="android:divider">@color/md_grey_500</item>
+    </style>
+
+    <style name="tv_style_calender">
+        <!-- Customize your theme here. -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/md_black_1000</item>
+        <!--<item name="android:background">@color/md_white_1000</item>-->
+        <item name="android:background">#f2f2f2</item>
+    </style>
+
+
+    <style name="TextAppearance.WeekDay" parent="android:TextAppearance.DeviceDefault.Small">
+        <!-- Customize your theme here. -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/bg</item>
+        <!--<item name="android:background">@color/bg</item>-->
+    </style>
+
+    <style name="tv_style_calender_header">
+        <!-- Customize your theme here. -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/bg</item>
+
+    </style>
+
+
+    <style name="TextAppearance.MyCustomDay" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/my_custom_day_color</item>
+    </style>
+
+
+    <style name="tv_style_calender_header_12">
+        <!-- Customize your theme here. -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/bg</item>
+        <!--<item name="android:background">@color/bg</item>-->
+    </style>
+
+
+    <style name="tv_style_calender_text_date">
+        <!-- Customize your theme here. -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/md_black_1000</item>
+        <!--<item name="android:background">@color/bg</item>-->
+    </style>
+
+    <style name="AppCompatAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/bg</item>
+        <item name="android:alertDialogStyle">@style/CustomAlertDialogStyle</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="fontFamily">@font/latofont</item>
+    </style>
+
+
+    <style name="MyTheme" parent="android:Theme.Holo.Dialog">
+        <item name="android:alertDialogStyle">@style/CustomAlertDialogStyle</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="CustomAlertDialogStyle">
+        <item name="android:bottomBright">@color/transparent</item>
+        <item name="android:bottomDark">@color/transparent</item>
+        <item name="android:bottomMedium">@color/transparent</item>
+        <item name="android:centerBright">@color/transparent</item>
+        <item name="android:centerDark">@color/transparent</item>
+        <item name="android:centerMedium">@color/transparent</item>
+        <item name="android:fullBright">@color/transparent</item>
+        <item name="android:fullDark">@color/transparent</item>
+        <item name="android:topBright">@color/transparent</item>
+        <item name="android:topDark">@color/transparent</item>
+    </style>
+
+    <style name="iv_home">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:src">@mipmap/ic_home</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!--<item name="android:windowDrawsSystemBarBackgrounds">true</item>-->
+        <!--<item name="android:statusBarColor">@android:color/transparent</item>-->
+    </style>
+
+
+    <style name="AppTheme.Splash" parent="AppTheme">
+
+        <item name="android:windowBackground">@drawable/splash</item>
+        <item name="fontFamily">@font/latofont</item>
+
+    </style>
+
+    <style name="Spinnersort" parent="Base.Widget.AppCompat.Spinner">
+        <item name="android:textAppearance">@style/SpinnerText</item>
+    </style>
+
+    <style name="PopupAnimation">
+        <item name="android:windowEnterAnimation">@anim/popup_enter</item>
+        <item name="android:windowExitAnimation">@anim/popup_exit</item> <!-- Define this if you want an exit animation -->
+    </style>
+    <style name="SpinnerText" parent="Base.Widget.AppCompat.TextView.SpinnerItem">
+        <item name="android:textColor">@color/md_white_1000</item>
+    </style>
+
+    <style name="CustomTextInputStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@android:color/transparent</item>
+        <item name="boxBackgroundMode">none</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+    </style>
+
+    <style name="CustomAutoCompleteTextViewStyle" parent="Widget.MaterialComponents.TextInputEditText.OutlinedBox">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:drawablePadding">0dp</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+    </style>
+</resources>

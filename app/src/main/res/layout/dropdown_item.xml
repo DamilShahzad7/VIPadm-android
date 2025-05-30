@@ -1,0 +1,13 @@
+
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/textViewFeelings"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textAlignment="center"
+    android:background="@drawable/btrectblack"
+    android:text="TextView"
+    android:fontFamily="@font/avregular"
+    android:textColor="@color/md_black_1000"
+    android:textSize="16sp"/>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llroot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/toolbar" />
+    <LinearLayout
+        android:id="@+id/ll_edit_location"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:weightSum="10"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_edit_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            app:fontFamily="@font/medium"
+            android:drawablePadding="8dp"
+            android:gravity="center|start"
+            android:layout_marginBottom="28dp"
+            android:text="Please select location"
+            android:textColor="@color/md_white_1000"
+            android:drawableStart="@drawable/icon_location_marker"
+            android:drawableLeft="@drawable/icon_location_marker"
+            android:layout_marginStart="16dp" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="9"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/icon_edit"
+            android:layout_marginBottom="28dp"
+            />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvsubject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:fontFamily="@font/medium"
+        android:layout_marginBottom="4dp"
+        android:paddingBottom="7dp"
+        android:text="Subject :"
+        android:textColor="@color/md_white_1000" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etsubject"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/rectgrey1"
+        android:gravity="center|start"
+        android:inputType="textCapSentences"
+        android:paddingLeft="8dp"
+        android:hint="Invitation to Subject text?"
+        android:paddingRight="8dp"
+        android:textColor="@color/md_black_1000"
+        android:textSize="13sp" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_marginTop="6dp"
+        android:layout_gravity="center|end"
+        android:layout_weight="1">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvfromdate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center|start"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textColor="@color/md_white_1000"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="From Date:" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvtodate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center|start"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textColor="@color/md_white_1000"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvfromdate"
+            tools:text="To Date:" />
+
+
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/md_white_1000"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvtodate"
+            app:mcv_dateTextAppearance="@style/tv_style_calender"
+            app:mcv_headerTextAppearance="@style/tv_style_calender_header"
+            app:mcv_selectionColor="#88b6db"
+            app:mcv_showOtherDates="out_of_range"
+            app:mcv_tileHeight="@dimen/calendar_30dp"
+            app:mcv_tileWidth="@dimen/calendar40dp"
+            app:mcv_weekDayTextAppearance="@style/TextAppearance.WeekDay" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btspecific"
+            android:layout_width="0dp"
+            android:layout_height="37dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/btrectgra"
+            android:gravity="center"
+            android:text="Book specific room"
+            android:textColor="@color/md_black_1000"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calendarView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/bttodate"
+            android:layout_width="0dp"
+            android:layout_height="37dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/btrectgra"
+            android:gravity="center"
+            android:text="Select 'To Date' for invitation valid more days"
+            android:textColor="@color/md_black_1000"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btspecific" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/website"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="@dimen/marginbottom"
+        android:text="@string/site"
+        android:textColor="@color/md_white_1000"
+        android:textSize="12sp" />
+
+
+</LinearLayout>

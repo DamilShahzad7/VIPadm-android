@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fltoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:paddingTop="@dimen/paddingtop">
+
+        <TextView
+            android:id="@+id/tvback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:gravity="center"
+            android:text="Back"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/ivhome"
+            style="@style/iv_home" />
+
+        <TextView
+            android:id="@+id/tvsave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:gravity="center"
+            android:padding="@dimen/padding"
+            android:text="Done"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/tvdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fltoolbar"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:textColor="@color/md_white_1000" />
+
+    <TextView
+        android:id="@+id/tvtime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvdate"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:textColor="@color/md_white_1000" />
+
+    <TextView
+        android:id="@+id/tvroom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvtime"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:textColor="@color/md_white_1000" />
+
+    <TextView
+        android:id="@+id/tvsubject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvroom"
+        android:layout_centerInParent="true"
+        android:layout_margin="12dp"
+        android:gravity="center"
+        android:textColor="@color/md_white_1000"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvbook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvsubject"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/tvbook"
+        android:textColor="@color/md_white_1000"
+        android:textSize="12sp" />
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/ivplaceholder"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_below="@+id/tvbook"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="12dp"
+        android:adjustViewBounds="true"
+        app:failureImage="@drawable/transparant"
+        app:placeholderImage="@drawable/transparant"
+        app:progressBarImage="@drawable/transparant" />
+
+    <fragment
+        android:id="@+id/map_fragment"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tvsms"
+        android:layout_below="@+id/ivplaceholder" />
+
+
+    <TextView
+        android:id="@+id/tvsms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvcontact"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="24dp"
+        android:gravity="center|start"
+        android:text="@string/sms"
+        android:textColor="@color/md_white_1000"
+        android:textSize="11sp"
+        app:layout_widthPercent="100%" />
+
+
+    <TextView
+        android:id="@+id/tvcontact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/website"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/md_white_1000" />
+
+    <TextView
+        android:id="@+id/website"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center|bottom"
+        android:text="@string/site"
+        android:textColor="@color/md_white_1000"
+        android:textSize="12sp"
+        app:layout_marginBottomPercent="1%" />
+
+
+</androidx.percentlayout.widget.PercentRelativeLayout>

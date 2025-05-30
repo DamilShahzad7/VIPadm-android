@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <files-path
+        name="app_directory"
+        path="directory/" />
+
+    <external-path
+        name="InstructiveRide"
+        path="/storage/emulated/0/Android/data/vip.com.vipmeetings/cache/vipadm" />
+    <cache-path
+        name="cache"
+        path="/" />
+    <external-path
+        name="external_files"
+        path="." />
+</paths>

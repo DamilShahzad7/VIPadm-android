@@ -1,0 +1,28 @@
+# === Android / Gradle ===
+.gradle/                # Gradle cache
+**/build/               # all build output
+!gradle/wrapper/gradle-wrapper.jar
+gradle-wrapper.properties
+
+# Local config (do NOT commit)
+local.properties
+
+# === IDE / Editor ===
+*.iml
+.idea/                  # IntelliJ / Android Studio settings
+.idea/**               # completely ignore .idea folder
+*.ipr
+*.iws
+
+# === Android Studio captures ===
+captures/
+
+# === Native builds ===
+.externalNativeBuild/
+
+# === Libraries & releases ===
+app/libs/              # 3rd-party jars
+app/release/           # unsigned/apk outputs
+
+# === Misc files ===
+.DS_Store              # macOS Finder

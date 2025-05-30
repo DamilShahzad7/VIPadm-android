@@ -1,0 +1,16 @@
+isPrevious: true
+Build: google/sdk_gphone64_x86_64/emu64xa:14/UE1A.230829.030/10921827:userdebug/dev-keys
+Hardware: goldfish_x86_64
+Revision: 0
+Bootloader: unknown
+Radio: null
+Kernel: Linux version 6.1.23-android14-4-00257-g7e35917775b8-ab9964412 (build-user@build-host) (Android (9796371, based on r487747) clang version 17.0.0 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362), LLD 17.0.0) #1 SMP PREEMPT Mon Apr 17 20:50:58 UTC 2023
+
+[  605.592067] type=1400 audit(1747922958.776:38): avc:  granted  { execute } for  comm="run-as" name="install_server-08bc8eac" dev="dm-40" ino=327821 scontext=u:r:runas_app:s0:c192,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c192,c256,c512,c768 tclass=file app=vip.com.vipmeetings
+[  605.596975] type=1400 audit(1747922958.780:39): avc:  granted  { execute } for  comm="install_server-" path="/data/data/vip.com.vipmeetings/code_cache/install_server-08bc8eac" dev="dm-40" ino=327821 scontext=u:r:runas_app:s0:c192,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c192,c256,c512,c768 tclass=file app=vip.com.vipmeetings
+[  605.602546] audit: audit_lost=2 audit_rate_limit=5 audit_backlog_limit=64
+[  605.604570] type=1400 audit(1747922958.788:40): avc:  denied  { search } for  comm="install_server-" name="tests" dev="dm-40" ino=65540 scontext=u:r:runas_app:s0:c192,c256,c512,c768 tcontext=u:object_r:shell_test_data_file:s0 tclass=dir permissive=0 app=vip.com.vipmeetings
+[  605.605210] audit: rate limit exceeded
+[  605.611387] type=1400 audit(1747922958.788:41): avc:  denied  { search } for  comm="install_server-" name="tests" dev="dm-40" ino=65540 scontext=u:r:runas_app:s0:c192,c256,c512,c768 tcontext=u:object_r:shell_test_data_file:s0 tclass=dir permissive=0 app=vip.com.vipmeetings
+[  605.617344] type=1400 audit(1747922958.788:42): avc:  denied  { search } for  comm="install_server-" name="tests" dev="dm-40" ino=65540 scontext=u:r:runas_app:s0:c192,c256,c512,c768 tcontext=u:object_r:shell_test_data_file:s0 tclass=dir permissive=0 app=vip.com.vipmeetings
+[  607.447621] type=1400 audit(1747922960.632:44): avc:  granted  { execute } for  comm="re-initialized>" path="/data/data/vip.com.vipmeetings/code_cache/startup_agents/08bc8eac-agent.so" dev="dm-40" ino=336537 scontext=u:r:untrusted_app:s0:c192,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c192,c256,c512,c768 tclass=file app=vip.com.vipmeetings

@@ -1,0 +1,41 @@
+isPrevious: true
+Build: google/sdk_gphone64_x86_64/emu64xa:14/UE1A.230829.030/10921827:userdebug/dev-keys
+Hardware: goldfish_x86_64
+Revision: 0
+Bootloader: unknown
+Radio: null
+Kernel: Linux version 6.1.23-android14-4-00257-g7e35917775b8-ab9964412 (build-user@build-host) (Android (9796371, based on r487747) clang version 17.0.0 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362), LLD 17.0.0) #1 SMP PREEMPT Mon Apr 17 20:50:58 UTC 2023
+
+hing_limit_critical=*) from (/system/etc/init/lmkd.rc:44)
+[  400.019650] init: processing action (lmkd.reinit=1) from (/system/etc/init/lmkd.rc:10)
+[  400.024798] init: starting service 'exec 24 (/system/bin/lmkd --reinit)'...
+[  400.076688] init: ... started service 'exec 24 (/system/bin/lmkd --reinit)' has pid 5470
+[  400.078804] init: Command 'exec_background /system/bin/lmkd --reinit' action=lmkd.reinit=1 (/system/etc/init/lmkd.rc:11) took 57ms and succeeded
+[  400.268346] init: Service 'exec 24 (/system/bin/lmkd --reinit)' (pid 5470) exited with status 0 oneshot service took 0.237000 seconds in background
+[  400.273001] init: Sending signal 9 to service 'exec 24 (/system/bin/lmkd --reinit)' (pid 5470) process group...
+[  400.277895] libprocessgroup: Successfully killed process cgroup uid 0 pid 5470 in 0ms
+[  405.783566] servicemanager: Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest.
+[  406.156079] servicemanager: Notifying artd they don't (previously: do) have clients when we now have no record of a client
+[  406.158100] servicemanager: Unregistering artd
+[  406.158777] BpBinder: onLastStrongRef automatically unlinking death recipients: 
+[  406.196302] init: Service 'artd' (pid 5462) exited with status 0 oneshot service took 6.771000 seconds in background
+[  406.204328] init: Sending signal 9 to service 'artd' (pid 5462) process group...
+[  406.209590] libprocessgroup: Successfully killed process cgroup uid 1082 pid 5462 in 0ms
+[  575.644227] logd: logdr: UID=2000 GID=2000 PID=5752 b tail=0 logMask=99 pid=0 start=0ns deadline=0ns
+[  575.814675] init: Untracked pid 5435 exited with status 0
+[  575.815794] init: Untracked pid 5435 did not have an associated service entry and will not be reaped
+[  576.834803] init: Untracked pid 5434 received signal 1
+[  576.835612] init: Untracked pid 5434 did not have an associated service entry and will not be reaped
+[  605.592067] type=1400 audit(1747922958.776:38): avc:  granted  { execute } for  comm="run-as" name="install_server-08bc8eac" dev="dm-40" ino=327821 scontext=u:r:runas_app:s0:c192,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c192,c256,c512,c768 tclass=file app=vip.com.vipmeetings
+[  605.596975] type=1400 audit(1747922958.780:39): avc:  granted  { execute } for  comm="install_server-" path="/data/data/vip.com.vipmeetings/code_cache/install_server-08bc8eac" dev="dm-40" ino=327821 scontext=u:r:runas_app:s0:c192,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c192,c256,c512,c768 tclass=file app=vip.com.vipmeetings
+[  605.602546] audit: audit_lost=2 audit_rate_limit=5 audit_backlog_limit=64
+[  605.604570] type=1400 audit(1747922958.788:40): avc:  denied  { search } for  comm="install_server-" name="tests" dev="dm-40" ino=65540 scontext=u:r:runas_app:s0:c192,c256,c512,c768 tcontext=u:object_r:shell_test_data_file:s0 tclass=dir permissive=0 app=vip.com.vipmeetings
+[  605.605210] audit: rate limit exceeded
+[  605.611387] type=1400 audit(1747922958.788:41): avc:  denied  { search } for  comm="install_server-" name="tests" dev="dm-40" ino=65540 scontext=u:r:runas_app:s0:c192,c256,c512,c768 tcontext=u:object_r:shell_test_data_file:s0 tclass=dir permissive=0 app=vip.com.vipmeetings
+[  605.617344] type=1400 audit(1747922958.788:42): avc:  denied  { search } for  comm="install_server-" name="tests" dev="dm-40" ino=65540 scontext=u:r:runas_app:s0:c192,c256,c512,c768 tcontext=u:object_r:shell_test_data_file:s0 tclass=dir permissive=0 app=vip.com.vipmeetings
+[  607.447621] type=1400 audit(1747922960.632:44): avc:  granted  { execute } for  comm="re-initialized>" path="/data/data/vip.com.vipmeetings/code_cache/startup_agents/08bc8eac-agent.so" dev="dm-40" ino=336537 scontext=u:r:untrusted_app:s0:c192,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c192,c256,c512,c768 tclass=file app=vip.com.vipmeetings
+[  609.461834] servicemanager: Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest.
+[  613.105700] healthd: battery l=100 v=5000 t=25.0 h=2 st=4 c=900000 fc=3000000 cc=10 chg=
+
+Boot info:
+Last boot reason: reboot

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center|bottom"
+    android:layout_margin="8dp"
+    android:background="@drawable/dialogmargin"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/llwork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectwhite1"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvatwork"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="18dp"
+            android:text="At work"
+            android:textColor="@color/color_redd"
+            android:textSize="15sp"
+            android:textStyle="normal" />
+
+        <View
+            android:id="@+id/v1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey" />
+
+        <TextView
+            android:id="@+id/tvnotatwork"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="18dp"
+            android:text="Not at work"
+            android:textColor="#3e8ada"
+            android:textSize="15sp"
+            android:textStyle="normal" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvcancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llwork"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rectwhite"
+        android:gravity="center"
+        android:padding="14dp"
+        android:text="Cancel"
+        android:textColor="#3e8ada"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
