@@ -26,3 +26,4 @@ app/release/           # unsigned/apk outputs
 
 # === Misc files ===
 .DS_Store              # macOS Finder
+bugreport/FS/data/misc/wmtrace/*.winscope
