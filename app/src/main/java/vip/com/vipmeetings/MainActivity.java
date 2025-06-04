@@ -104,6 +104,7 @@ public class MainActivity extends BaseActivity implements
 
     private static final int MY_PERMISSIONS_REQUEST_READ_SMS = 100;
 
+
     // SMSBroadCastReceiver smsBroadCastReceiver;
     String otpReceived = "";
 

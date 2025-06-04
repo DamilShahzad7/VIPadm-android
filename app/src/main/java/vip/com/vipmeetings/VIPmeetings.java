@@ -211,9 +211,6 @@ public class VIPmeetings extends MultiDexApplication implements LifecycleObserve
             PushService.PushBinder myBinder = (PushService.PushBinder) service;
             pushService = myBinder.getPushService();
             mServiceBound = true;
-            Log.d("VIPmeetings", "PushService bound; initializing…");
-            pushService.initializeData();
-
         }
     };
 

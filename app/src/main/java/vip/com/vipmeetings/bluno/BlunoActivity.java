@@ -163,6 +163,7 @@ public class BlunoActivity extends BlunoLibrary {
     LocationManager manager;
 
     private void registerGattReceiver() {
+        Log.d("BLUNO-GATT", "→ registerGattReceiver() called");
         IntentFilter filter = makeGattUpdateIntentFilter();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             // This receiver is only for our own process:
@@ -173,6 +174,7 @@ public class BlunoActivity extends BlunoLibrary {
             // pre-API 33, use the old two-arg call
             registerReceiver(mGattUpdateReceiver, filter);
         }
+        Log.d("BLUNO-GATT", "→ registerGattReceiver() FINISHED");
     }
 
     @Override
@@ -180,6 +182,13 @@ public class BlunoActivity extends BlunoLibrary {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bluno);
         ButterKnife.bind(this);
+        // ───► 1) Register the GATT receiver unconditionally, right away:
+        registerGattReceiver();
+        Log.d("BLUNO-GATT", "→ registerGattReceiver() finished");
+        onCreateProcess();       // binds to BluetoothLeService
+        serialBegin(115200);     // configures UART to 115200
+
+
 
         // Initialize location, connectivity and preferences
         manager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
@@ -213,9 +222,7 @@ public class BlunoActivity extends BlunoLibrary {
                     @Override
                     public void OnSuccess() {
                         Toast.makeText(BlunoActivity.this, "Permission Granted", Toast.LENGTH_SHORT).show();
-                        onCreateProcess();
-                        serialBegin(115200);
-                        registerGattReceiver();
+
                         blunoProcess();
                     }
                     @Override
@@ -227,7 +234,7 @@ public class BlunoActivity extends BlunoLibrary {
                     if (isServicesOK() && checkPermissionsAll()) {
                         onCreateProcess();
                         serialBegin(115200);
-                        registerGattReceiver();
+                        //registerGattReceiver();
                         blunoProcess();
                     }
                 } catch (Exception ignored) { }
@@ -253,7 +260,7 @@ public class BlunoActivity extends BlunoLibrary {
                 // Permissions granted → resume BLE setup
                 onCreateProcess();
                 serialBegin(115200);
-                registerGattReceiver();
+                //registerGattReceiver();
                 blunoProcess();
             } else {
                 Toast.makeText(
@@ -454,7 +461,7 @@ public class BlunoActivity extends BlunoLibrary {
 
                     onCreateProcess();
                     serialBegin(115200);
-                    registerGattReceiver();
+                    //registerGattReceiver();
                     blunoProcess();
                 }
                 //Above Code Added by Praveen Ends For - Multiple Blunos Connection on Android 12 - SDK 31
@@ -485,13 +492,13 @@ public class BlunoActivity extends BlunoLibrary {
             @Override
             public void run() {
                 isConnect=true;
-                // onConnect();//Code Commented by Praveen  For - Multiple Blunos Connection on Android 12 - SDK 31
+                onConnect();//Code Commented by Praveen  For - Multiple Blunos Connection on Android 12 - SDK 31
                 //Added  by Praveen Starts For - Multiple Blunos Connection on Android 12 - SDK 31
                 if (isServicesOK()) {
 
                     onCreateProcess();
                     serialBegin(115200);
-                    registerGattReceiver();
+                    //registerGattReceiver();
                     blunoProcess();
                 }
                 //Above Code Added by Praveen Ends For - Multiple Blunos Connection on Android 12 - SDK 31
@@ -1004,6 +1011,7 @@ public class BlunoActivity extends BlunoLibrary {
     protected void onDestroy() {
 
         try {
+            unregisterReceiver(mGattUpdateReceiver);
 
             onDestroyProcess();
             //mConnectionState = connectionStateEnum.isDisconnecting;
@@ -1218,7 +1226,7 @@ public class BlunoActivity extends BlunoLibrary {
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
     public void onDestroyProcess() {
         try {
-            unregisterReceiver(mGattUpdateReceiver);
+            //unregisterReceiver(mGattUpdateReceiver);
             unbindService(mServiceConnection);
             if (mBluetoothLeService != null) {
                 mBluetoothLeService.disconnect();

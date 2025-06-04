@@ -1,6 +1,4 @@
 package vip.com.vipmeetings.bluno;
-import android.util.Log;
-
 
 public class PlainProtocol {
 
@@ -213,7 +211,6 @@ public class PlainProtocol {
 		  }
 
 		  sendFrame();
-		  Log.d("BLUNO", "⇒ PlainProtocol frame: " + mSendingFrame.toString());
 		  return mSendingFrame.toString();
 	  };
 
@@ -236,7 +233,6 @@ public class PlainProtocol {
 		  }
 
 		  sendFrame();
-		  Log.d("BLUNO", "⇒ PlainProtocol frame w/addr: " + mSendingFrame.toString());
 		  return mSendingFrame.toString();
 	  };
 

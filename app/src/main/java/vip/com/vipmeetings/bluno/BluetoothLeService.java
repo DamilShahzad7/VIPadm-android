@@ -32,7 +32,6 @@ import android.os.Binder;
 import android.os.Build;
 import android.os.IBinder;
 import android.util.Log;
-import android.bluetooth.le.*;
 
 import androidx.annotation.RequiresApi;
 
@@ -97,180 +96,116 @@ public class BluetoothLeService extends Service {
         @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
         @Override
         public void onConnectionStateChange(BluetoothGatt gatt, int status, int newState) {
-            String intentAction;
-            System.out.println("BluetoothGattCallback----onConnectionStateChange"+newState);
             if (newState == BluetoothProfile.STATE_CONNECTED) {
-                intentAction = ACTION_GATT_CONNECTED;
+                Log.d("BLE-SVC", "→ GATT_CALLBACK: STATE_CONNECTED (status=" + status + ")");
                 mConnectionState = STATE_CONNECTED;
-                broadcastUpdate(intentAction);
-                Log.e(TAG, "Connected to GATT server.");
-                // Attempts to discover services after successful connection.
-                if(mBluetoothGatt.discoverServices())
-                {
-                    Log.e(TAG, "Attempting to start service discovery:");
+                broadcastUpdate(ACTION_GATT_CONNECTED);
 
+                // Immediately start service discovery
+                Log.d("BLE-SVC", "→ GATT_CALLBACK: calling discoverServices()");
+                if (mBluetoothGatt.discoverServices()) {
+                    Log.d("BLE-SVC", "→ discoverServices(): initiated successfully");
+                } else {
+                    Log.w("BLE-SVC", "→ discoverServices(): failed to start");
                 }
-                else{
-                    Log.e(TAG, "Attempting to start service discovery:not success");
-
-                }
-
 
             } else if (newState == BluetoothProfile.STATE_DISCONNECTED) {
-                intentAction = ACTION_GATT_DISCONNECTED;
+                Log.d("BLE-SVC", "→ GATT_CALLBACK: STATE_DISCONNECTED (status=" + status + ")");
                 mConnectionState = STATE_DISCONNECTED;
-                Log.e(TAG, "Disconnected from GATT server.");
-                broadcastUpdate(intentAction);
+                broadcastUpdate(ACTION_GATT_DISCONNECTED);
             }
         }
 
         @Override
         public void onServicesDiscovered(BluetoothGatt gatt, int status) {
-        	System.out.println("onServicesDiscovered "+status);
+            Log.d("BLE-SVC", "→ GATT_CALLBACK: onServicesDiscovered (status=" + status + ")");
+
             if (status == BluetoothGatt.GATT_SUCCESS) {
                 broadcastUpdate(ACTION_GATT_SERVICES_DISCOVERED);
             } else {
-                Log.e(TAG, "onServicesDiscovered received: " + status);
+                Log.w("BLE-SVC", "→ GATT_CALLBACK: onServicesDiscovered failed, status=" + status);
             }
         }
 
         @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
         @Override
-        public void onCharacteristicWrite(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic, int status)
-        {
+        public void onCharacteristicWrite(BluetoothGatt gatt,
+                                          BluetoothGattCharacteristic characteristic,
+                                          int status) {
+            Log.d("BLE-SVC", "→ GATT_CALLBACK: onCharacteristicWrite uuid=" +
+                    characteristic.getUuid() + " | status=" + status);
 
-        	//this block should be synchronized to prevent the function overloading
-			synchronized(this)
-			{
-				//CharacteristicWrite success
-	        	if(status == BluetoothGatt.GATT_SUCCESS)
-	        	{
-	        		System.out.println("onCharacteristicWrite success:"+ new String(characteristic.getValue()));
-            		if(mCharacteristicRingBuffer.isEmpty())
-            		{
-    	        		mIsWritingCharacteristic = false;
-            		}
-            		else
-	            	{
-	            		BluetoothGattCharacteristicHelper bluetoothGattCharacteristicHelper = mCharacteristicRingBuffer.next();
-	            		if(bluetoothGattCharacteristicHelper.mCharacteristicValue.length() > MAX_CHARACTERISTIC_LENGTH)
-	            		{
-	            	        try {
-		            			bluetoothGattCharacteristicHelper.mCharacteristic.setValue(bluetoothGattCharacteristicHelper.mCharacteristicValue.substring(0, MAX_CHARACTERISTIC_LENGTH).getBytes("ISO-8859-1"));
-
-	            	        } catch (UnsupportedEncodingException e) {
-	            	            // this should never happen because "US-ASCII" is hard-coded.
-	            	            throw new IllegalStateException(e);
-	            	        }
-
-
-	            	        if(mBluetoothGatt.writeCharacteristic(bluetoothGattCharacteristicHelper.mCharacteristic))
-	            	        {
-	            	        	System.out.println("writeCharacteristic init "+new String(bluetoothGattCharacteristicHelper.mCharacteristic.getValue())+ ":success");
-	            	        }else{
-	            	        	System.out.println("writeCharacteristic init "+new String(bluetoothGattCharacteristicHelper.mCharacteristic.getValue())+ ":failure");
-	            	        }
-	            			bluetoothGattCharacteristicHelper.mCharacteristicValue = bluetoothGattCharacteristicHelper.mCharacteristicValue.substring(MAX_CHARACTERISTIC_LENGTH);
-	            		}
-	            		else
-	            		{
-	            	        try {
-	            	        	bluetoothGattCharacteristicHelper.mCharacteristic.setValue(bluetoothGattCharacteristicHelper.mCharacteristicValue.getBytes("ISO-8859-1"));
-	            	        } catch (UnsupportedEncodingException e) {
-	            	            // this should never happen because "US-ASCII" is hard-coded.
-	            	            throw new IllegalStateException(e);
-	            	        }
-
-	            	        if(mBluetoothGatt.writeCharacteristic(bluetoothGattCharacteristicHelper.mCharacteristic))
-	            	        {
-	            	        	System.out.println("writeCharacteristic init "+new String(bluetoothGattCharacteristicHelper.mCharacteristic.getValue())+ ":success");
-	            	        }else{
-	            	        	System.out.println("writeCharacteristic init "+new String(bluetoothGattCharacteristicHelper.mCharacteristic.getValue())+ ":failure");
-	            	        }
-	            			bluetoothGattCharacteristicHelper.mCharacteristicValue = "";
-
-//	            			System.out.print("before pop:");
-//	            			System.out.println(mCharacteristicRingBuffer.size());
-	            			mCharacteristicRingBuffer.pop();
-//	            			System.out.print("after pop:");
-//	            			System.out.println(mCharacteristicRingBuffer.size());
-	            		}
-	            	}
-	        	}
-	        	//WRITE a NEW CHARACTERISTIC
-	        	else if(status == WRITE_NEW_CHARACTERISTIC)
-	        	{
-	        		if((!mCharacteristicRingBuffer.isEmpty()) && mIsWritingCharacteristic==false)
-	            	{
-	            		BluetoothGattCharacteristicHelper bluetoothGattCharacteristicHelper = mCharacteristicRingBuffer.next();
-	            		if(bluetoothGattCharacteristicHelper.mCharacteristicValue.length() > MAX_CHARACTERISTIC_LENGTH)
-	            		{
-
-	            	        try {
-		            			bluetoothGattCharacteristicHelper.mCharacteristic.setValue(bluetoothGattCharacteristicHelper.mCharacteristicValue.substring(0, MAX_CHARACTERISTIC_LENGTH).getBytes("ISO-8859-1"));
-	            	        } catch (UnsupportedEncodingException e) {
-	            	            // this should never happen because "US-ASCII" is hard-coded.
-	            	            throw new IllegalStateException(e);
-	            	        }
-
-	            	        if(mBluetoothGatt.writeCharacteristic(bluetoothGattCharacteristicHelper.mCharacteristic))
-	            	        {
-	            	        	System.out.println("writeCharacteristic init "+new String(bluetoothGattCharacteristicHelper.mCharacteristic.getValue())+ ":success");
-	            	        }else{
-	            	        	System.out.println("writeCharacteristic init "+new String(bluetoothGattCharacteristicHelper.mCharacteristic.getValue())+ ":failure");
-	            	        }
-	            			bluetoothGattCharacteristicHelper.mCharacteristicValue = bluetoothGattCharacteristicHelper.mCharacteristicValue.substring(MAX_CHARACTERISTIC_LENGTH);
-	            		}
-	            		else
-	            		{
-	            	        try {
-		            			bluetoothGattCharacteristicHelper.mCharacteristic.setValue(bluetoothGattCharacteristicHelper.mCharacteristicValue.getBytes("ISO-8859-1"));
-	            	        } catch (UnsupportedEncodingException e) {
-	            	            // this should never happen because "US-ASCII" is hard-coded.
-	            	            throw new IllegalStateException(e);
-	            	        }
-
-
-	            	        if(mBluetoothGatt.writeCharacteristic(bluetoothGattCharacteristicHelper.mCharacteristic))
-	            	        {
-	            	        	System.out.println("writeCharacteristic init "+new String(bluetoothGattCharacteristicHelper.mCharacteristic.getValue())+ ":success");
-//	            	        	System.out.println((byte)bluetoothGattCharacteristicHelper.mCharacteristic.getValue()[0]);
-//	            	        	System.out.println((byte)bluetoothGattCharacteristicHelper.mCharacteristic.getValue()[1]);
-//	            	        	System.out.println((byte)bluetoothGattCharacteristicHelper.mCharacteristic.getValue()[2]);
-//	            	        	System.out.println((byte)bluetoothGattCharacteristicHelper.mCharacteristic.getValue()[3]);
-//	            	        	System.out.println((byte)bluetoothGattCharacteristicHelper.mCharacteristic.getValue()[4]);
-//	            	        	System.out.println((byte)bluetoothGattCharacteristicHelper.mCharacteristic.getValue()[5]);
-
-	            	        }else{
-	            	        	System.out.println("writeCharacteristic init "+new String(bluetoothGattCharacteristicHelper.mCharacteristic.getValue())+ ":failure");
-	            	        }
-	            			bluetoothGattCharacteristicHelper.mCharacteristicValue = "";
-
-//		            			System.out.print("before pop:");
-//		            			System.out.println(mCharacteristicRingBuffer.size());
-		            			mCharacteristicRingBuffer.pop();
-//		            			System.out.print("after pop:");
-//		            			System.out.println(mCharacteristicRingBuffer.size());
-	            		}
-	            	}
-
-    	        	mIsWritingCharacteristic = true;
-
-    	        	//clear the buffer to prevent the lock of the mIsWritingCharacteristic
-    	        	if(mCharacteristicRingBuffer.isFull())
-    	        	{
-    	        		mCharacteristicRingBuffer.clear();
-        	        	mIsWritingCharacteristic = false;
-    	        	}
-	        	}
-	        	else
-					//CharacteristicWrite fail
-	        	{
-	        		mCharacteristicRingBuffer.clear();
-	        		System.out.println("onCharacteristicWrite fail:"+ new String(characteristic.getValue()));
-	        		System.out.println(status);
-	        	}
-			}
+            synchronized(this) {
+                if (status == BluetoothGatt.GATT_SUCCESS) {
+                    // Proceed with next write from ring buffer (or finish)
+                    if (mCharacteristicRingBuffer.isEmpty()) {
+                        mIsWritingCharacteristic = false;
+                    } else {
+                        // Pop next and write it
+                        BluetoothGattCharacteristicHelper helper = mCharacteristicRingBuffer.next();
+                        String toSend = helper.mCharacteristicValue;
+                        if (toSend.length() > MAX_CHARACTERISTIC_LENGTH) {
+                            String part = toSend.substring(0, MAX_CHARACTERISTIC_LENGTH);
+                            try {
+                                helper.mCharacteristic.setValue(part.getBytes("ISO-8859-1"));
+                            } catch (UnsupportedEncodingException e) {
+                                throw new IllegalStateException(e);
+                            }
+                            mBluetoothGatt.writeCharacteristic(helper.mCharacteristic);
+                            Log.d("BLE-SVC", "→ writeCharacteristic (partial) uuid=" +
+                                    helper.mCharacteristic.getUuid() + " data=" + part);
+                            helper.mCharacteristicValue = toSend.substring(MAX_CHARACTERISTIC_LENGTH);
+                        } else {
+                            try {
+                                helper.mCharacteristic.setValue(toSend.getBytes("ISO-8859-1"));
+                            } catch (UnsupportedEncodingException e) {
+                                throw new IllegalStateException(e);
+                            }
+                            mBluetoothGatt.writeCharacteristic(helper.mCharacteristic);
+                            Log.d("BLE-SVC", "→ writeCharacteristic (final) uuid=" +
+                                    helper.mCharacteristic.getUuid() + " data=" + toSend);
+                            helper.mCharacteristicValue = "";
+                            mCharacteristicRingBuffer.pop();
+                        }
+                    }
+                } else if (status == WRITE_NEW_CHARACTERISTIC) {
+                    mIsWritingCharacteristic = true;
+                    if (!mCharacteristicRingBuffer.isEmpty()) {
+                        BluetoothGattCharacteristicHelper helper = mCharacteristicRingBuffer.next();
+                        String toSend = helper.mCharacteristicValue;
+                        if (toSend.length() > MAX_CHARACTERISTIC_LENGTH) {
+                            String part = toSend.substring(0, MAX_CHARACTERISTIC_LENGTH);
+                            try {
+                                helper.mCharacteristic.setValue(part.getBytes("ISO-8859-1"));
+                            } catch (UnsupportedEncodingException e) {
+                                throw new IllegalStateException(e);
+                            }
+                            mBluetoothGatt.writeCharacteristic(helper.mCharacteristic);
+                            Log.d("BLE-SVC", "→ writeCharacteristic (partial) uuid=" +
+                                    helper.mCharacteristic.getUuid() + " data=" + part);
+                            helper.mCharacteristicValue = toSend.substring(MAX_CHARACTERISTIC_LENGTH);
+                        } else {
+                            try {
+                                helper.mCharacteristic.setValue(toSend.getBytes("ISO-8859-1"));
+                            } catch (UnsupportedEncodingException e) {
+                                throw new IllegalStateException(e);
+                            }
+                            mBluetoothGatt.writeCharacteristic(helper.mCharacteristic);
+                            Log.d("BLE-SVC", "→ writeCharacteristic (final) uuid=" +
+                                    helper.mCharacteristic.getUuid() + " data=" + toSend);
+                            helper.mCharacteristicValue = "";
+                            mCharacteristicRingBuffer.pop();
+                        }
+                    }
+                    if (mCharacteristicRingBuffer.isFull()) {
+                        mCharacteristicRingBuffer.clear();
+                        mIsWritingCharacteristic = false;
+                    }
+                } else {
+                    mCharacteristicRingBuffer.clear();
+                    Log.w("BLE-SVC", "→ onCharacteristicWrite failed status=" + status);
+                }
+            }
         }
 
         @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
@@ -278,8 +213,9 @@ public class BluetoothLeService extends Service {
         public void onCharacteristicRead(BluetoothGatt gatt,
                                          BluetoothGattCharacteristic characteristic,
                                          int status) {
+            Log.d("BLE-SVC", "→ GATT_CALLBACK: onCharacteristicRead uuid=" +
+                    characteristic.getUuid() + " | status=" + status);
             if (status == BluetoothGatt.GATT_SUCCESS) {
-            	System.out.println("onCharacteristicRead  "+characteristic.getUuid().toString());
                 broadcastUpdate(ACTION_DATA_AVAILABLE, characteristic);
             }
         }
@@ -288,31 +224,44 @@ public class BluetoothLeService extends Service {
         public void  onDescriptorWrite(BluetoothGatt gatt,
         								BluetoothGattDescriptor characteristic,
         								int status){
-        	System.out.println("onDescriptorWrite  "+characteristic.getUuid().toString()+" "+status);
+            Log.d("BLE-SVC", "→ GATT_CALLBACK: onDescriptorWrite uuid=" +
+                    characteristic.getUuid() + " | status=" + status);
         }
         @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
         @Override
         public void onCharacteristicChanged(BluetoothGatt gatt,
                                             BluetoothGattCharacteristic characteristic) {
-        	System.out.println("onCharacteristicChanged  "+new String(characteristic.getValue()));
+            Log.d("BLE-SVC", "→ GATT_CALLBACK: onCharacteristicChanged uuid=" +
+                    characteristic.getUuid() + " | value=" +
+                    new String(characteristic.getValue()));
             broadcastUpdate(ACTION_DATA_AVAILABLE, characteristic);
         }
     };
 
     private void broadcastUpdate(final String action) {
+        Log.d("BLE‐SVC→BC", "About to send broadcast: " + action);
         final Intent intent = new Intent(action);
+        intent.setPackage(getPackageName());
         sendBroadcast(intent);
+        Log.d("BLE-SVC→BC", "Sent broadcast: " + action);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
     private void broadcastUpdate(final String action,
                                  final BluetoothGattCharacteristic characteristic) {
         final Intent intent = new Intent(action);
+        intent.setPackage(getPackageName());
         System.out.println("BluetoothLeService broadcastUpdate");
             final byte[] data = characteristic.getValue();
             if (data != null && data.length > 0) {
+                String asString = new String(data);
                 intent.putExtra(EXTRA_DATA, new String(data));
+                Log.d("BLE-SVC", "→ broadcastUpdate: " + action + "  | data=" + asString);
         		sendBroadcast(intent);
+            }
+            else {
+                Log.d("BLE-SVC", "→ broadcastUpdate: " + action + "  | no data");
+                sendBroadcast(intent);
             }
     }
 
@@ -378,9 +327,10 @@ public class BluetoothLeService extends Service {
      */
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
     public boolean connect(final String address) {
-    	System.out.println("BluetoothLeService connect"+address+mBluetoothGatt);
+        Log.d("BLE-SVC", "→ connect(address=" + address + ")  | mBluetoothGatt was=" + mBluetoothGatt);
+
         if (mBluetoothAdapter == null || address == null) {
-            Log.w(TAG, "BluetoothAdapter not initialized or unspecified address.");
+            Log.w("BLE-SVC", "→ connect() failed: adapter not initialized or address null");
             return false;
         }
 
@@ -400,7 +350,7 @@ public class BluetoothLeService extends Service {
 
          BluetoothDevice device = mBluetoothAdapter.getRemoteDevice(address);
         if (device == null) {
-            Log.w(TAG, "Device not found.  Unable to connect.");
+            Log.w("BLE-SVC", "→ connect() failed: device not found " + address);
             return false;
         }
         // We want to directly connect to the device, so we are setting the autoConnect
@@ -410,7 +360,7 @@ public class BluetoothLeService extends Service {
 		{
 			mBluetoothGatt = device.connectGatt(this, false, mGattCallback);
 		}
-        Log.e(TAG, "Trying to create a new connection.");
+        Log.d("BLE-SVC", "→ connect(): mBluetoothGatt=" + mBluetoothGatt);
         mBluetoothDeviceAddress = address;
         mConnectionState = STATE_CONNECTING;
         return true;

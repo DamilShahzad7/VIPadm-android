@@ -119,6 +119,7 @@ public  abstract class BlunoLibrary extends BlunoBaseActivity implements
 
     private int mBaudrate = 115200;    //set the default baud rate to 115200
     private String mPassword = "AT+PASSWOR=DFRobot\r\n";
+    private boolean mServiceIsReady = false;
 
 
     private String mBaudrateBuffer = "AT+CURRUART=" + mBaudrate + "\r\n";
@@ -723,14 +724,22 @@ public  abstract class BlunoLibrary extends BlunoBaseActivity implements
                 @Override
                 public void onScanResult(int cbType, ScanResult result) {
                     ScanRecord record = result.getScanRecord();
-                    String name = record != null ? record.getDeviceName() : null;
+                    String rawName = (record != null) ? record.getDeviceName() : null;
                     String addr = result.getDevice().getAddress();
-                    Log.d(TAG, String.format("ScanResult: name=%s addr=%s rssi=%d", name, addr, result.getRssi()));
+                    int rssi = result.getRssi();
+                    Log.d(TAG, String.format("ScanResult: name=%s addr=%s rssi=%d", rawName, addr, rssi));
 
-                    if ("Bluno".equalsIgnoreCase(name)) {
-                        Log.d(TAG, ">>> Bluno found: connecting to " + addr);
+                    if (rawName != null && rawName.toLowerCase().startsWith("bluno")) {
+                        Log.d(TAG, ">>> Bluno found: connecting to " + addr
+                                + "  | serviceReady=" + mServiceIsReady
+                                + "  | mBluetoothLeService=" + (mBluetoothLeService!=null));
                         bluetoothLeScanner.stopScan(this);
-                        mBluetoothLeService.connect(result.getDevice().getAddress());
+                        if (mServiceIsReady && mBluetoothLeService != null) {
+                            boolean ok = mBluetoothLeService.connect(addr);
+                            Log.d(TAG, "→ mBluetoothLeService.connect(...) returned " + ok);
+                        } else {
+                            Log.w(TAG, "Cannot connect because service is not ready!");
+                        }
                     }
                 }
 
@@ -835,6 +844,10 @@ public  abstract class BlunoLibrary extends BlunoBaseActivity implements
                 IpAddress.e("Unable to initialize Bluetooth");
                 finish();
             }
+            else {
+                // mark service as ready
+                mServiceIsReady = true;
+                Log.d("BLUNO-SERVICE", "BluetoothLeService.initialize() succeeded"); }
         }
 
         @Override
