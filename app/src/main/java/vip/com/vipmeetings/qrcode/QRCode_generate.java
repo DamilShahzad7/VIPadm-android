@@ -108,6 +108,10 @@ import vip.com.vipmeetings.response.GetEvacuationResult;
 import vip.com.vipmeetings.response.GetUpdatePINResponse;
 import vip.com.vipmeetings.utilities.Constants;
 import vip.com.vipmeetings.utilities.CustomMaterialAutoCompleteTextView;
+import android.text.InputType;
+import android.provider.MediaStore;
+import com.google.gson.Gson;
+
 
 public class QRCode_generate extends BaseActivity implements TextView.OnEditorActionListener {
 
@@ -151,6 +155,8 @@ public class QRCode_generate extends BaseActivity implements TextView.OnEditorAc
     LinearLayout llSetPin;
     @BindView(R.id.tiaccess)
     TextInputLayout tiaccess;
+    @BindView(R.id.ivMore)
+    ImageView ivMore;
 
     String qrcode;
     int width, height;
@@ -158,7 +164,7 @@ public class QRCode_generate extends BaseActivity implements TextView.OnEditorAc
     MultiFormatWriter multiFormatWriter;
     BarcodeEncoder barcodeEncoder;
     public MainApi mainApi;
-     Boolean checkInEvacuationInformationStatus = false;
+    Boolean checkInEvacuationInformationStatus = false;
     ArrayAdapter<String> adapter;
     ProgressDialog progressDialog;
     @SuppressLint("ClickableViewAccessibility")
@@ -167,6 +173,48 @@ public class QRCode_generate extends BaseActivity implements TextView.OnEditorAc
         super.onCreate(savedInstanceState);
         setContentView(R.layout.qrcode);
         ButterKnife.bind(this);
+        llSetPin.setVisibility(View.GONE);
+        // --- wire up the three-dots “more” popup menu ---
+        ivMore.setOnClickListener(anchor -> {
+            PopupMenu popup = new PopupMenu(QRCode_generate.this, anchor);
+            popup.getMenuInflater().inflate(R.menu.popup_menu, popup.getMenu());
+
+            // replace placeholders:
+            String livePin = et_setPin.getText().toString();
+            popup.getMenu()
+                    .findItem(R.id.action_update_pin)
+                    .setTitle("Update PIN: " + livePin);
+
+            String liveCount = insideUsersCount.getText().toString();
+            popup.getMenu()
+                    .findItem(R.id.action_people_inside)
+                    .setTitle(liveCount);
+
+            popup.setOnMenuItemClickListener(item -> {
+                switch (item.getItemId()) {
+                    case R.id.action_update_photo:
+                        showPhotoOptionsDialog();
+                        return true;
+
+
+                    case R.id.action_update_pin:
+                        showPinUpdateDialog();
+                        return true;
+
+                    case R.id.action_people_inside:
+                        getInHouseContactsCount();
+                        Toast.makeText(this, insideUsersCount.getText(), Toast.LENGTH_SHORT).show();
+                        return true;
+
+                    default:
+                        return false;
+                }
+            });
+
+
+            popup.show();
+        });
+
         employee = getEmp();
         barcodeEncoder = new BarcodeEncoder();
         session = new SessionManager(getApplicationContext());
@@ -313,6 +361,98 @@ public class QRCode_generate extends BaseActivity implements TextView.OnEditorAc
 
     }
 
+    private static final int REQUEST_PICK_PHOTO = 37;
+    private static final int REQUEST_CAPTURE_PHOTO    = 38;
+
+    private void showPhotoOptionsDialog() {
+        final CharSequence[] options = { "Camera", "Photo Album", /*"Delete Photo"*/ };
+
+        new AlertDialog.Builder(this)
+                .setTitle("Update Photo")
+                .setItems(options, (dialog, which) -> {
+                    switch (which) {
+                        case 0:  // Camera
+                            Intent takePicture = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                            if (takePicture.resolveActivity(getPackageManager()) != null) {
+                                startActivityForResult(takePicture, REQUEST_CAPTURE_PHOTO);
+                            }
+                            break;
+
+                        case 1:  // Photo Album
+                            Intent pickPhoto = new Intent(Intent.ACTION_PICK,
+                                    MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                            startActivityForResult(pickPhoto , REQUEST_PICK_PHOTO);
+                            break;
+
+                        /*case 2:  // Delete
+                            img_result.setImageURI((Uri) null);           // clear the DraweeView
+                            simpleDraweeView.setImageURI((Uri) null);
+                            // 2) clear it in your model
+                            employee.setPHOTO(null);
+
+                            // persist
+                            String json = new Gson().toJson(employee);
+                            storeEmp(json);
+
+                            Toast.makeText(this, "Photo deleted", Toast.LENGTH_SHORT).show();
+                            // Optional: notify server that photo was deleted
+                            break;*/
+                    }
+                })
+                .show();
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode != RESULT_OK || data == null) return;
+
+        if (requestCode == REQUEST_PICK_PHOTO) {
+            Uri selectedImage = data.getData();
+            simpleDraweeView.setImageURI(selectedImage);
+            // upload new profile photo if needed
+            // 1) update your model
+            employee.setPHOTO(selectedImage.toString());
+
+            // 2) serialize & store it (you already have storeEmp(json) in comments)
+            String json = new Gson().toJson(employee);
+            storeEmp(json);
+
+
+        } else if (requestCode == REQUEST_CAPTURE_PHOTO) {
+            Bundle extras = data.getExtras();
+            Bitmap photoBitmap = (Bitmap) extras.get("data");
+            simpleDraweeView.setImageBitmap(photoBitmap);
+            // optionally save the bitmap to a file / upload
+        }
+    }
+
+
+    private void showPinUpdateDialog() {
+        final AppCompatEditText input = new AppCompatEditText(this);
+        input.setInputType(InputType.TYPE_CLASS_NUMBER);
+        input.setText(et_setPin.getText().toString());
+
+        new AlertDialog.Builder(this)
+                .setTitle("Update PIN")
+                .setView(input)
+                .setPositiveButton("OK", (dialog, which) -> {
+                    String newPin = input.getText().toString().trim();
+                    if (!newPin.isEmpty()) {
+                        et_setPin.setText(newPin);
+                        UpdatePIN(newPin);              // your existing web-service call
+                        Toast.makeText(this,
+                                "PIN updated to " + newPin,
+                                Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .setNegativeButton("Cancel", null)
+                .show();
+    }
+
+
     private void UpdatePIN(String updatedPIN) {
         setOKHTTPAfterLogin();
         setRetrofit(getApp().getTcpIp());
@@ -331,7 +471,9 @@ public class QRCode_generate extends BaseActivity implements TextView.OnEditorAc
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(this::onGetUpdatePIN, this::onError);
     }
+
     private void onGetUpdatePIN(SoapGetUpdatePINResponseEnvelope soapGetUpdatePINResponseEnvelope) {
+        llSetPin.setVisibility(View.GONE);
         showPD();
         GetUpdatePINResponseBody getUpdatePINResponseBody = soapGetUpdatePINResponseEnvelope.getBody();
         if (getUpdatePINResponseBody != null
@@ -345,6 +487,7 @@ public class QRCode_generate extends BaseActivity implements TextView.OnEditorAc
                 }else{
                     llSetPin.setVisibility(View.VISIBLE);
                 }
+                llSetPin.setVisibility(View.GONE);
                 Toast.makeText(getApplicationContext(),"Updated PIN successfully..", Toast.LENGTH_LONG).show();
             }
             hideSoft();
@@ -455,6 +598,7 @@ public class QRCode_generate extends BaseActivity implements TextView.OnEditorAc
             }else {
                 showSetPIN();
             }
+            hideSetPIN();
             if (hasInTime) {
                 if (!hasOutTime) {
                     showCheckOutButton();
@@ -481,7 +625,7 @@ public class QRCode_generate extends BaseActivity implements TextView.OnEditorAc
     }
     private  void showSetPIN(){
         // code to show setPin
-        et_setPin.setVisibility(View.VISIBLE);
+
     }
     private  void hideSetPIN(){
         // code to hide setPin

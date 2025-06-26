@@ -14,16 +14,20 @@
     <string name="unknown_service">Unknown service</string>
     <string name="title">The door opener you always bring with you</string>
     <string name="url">www.VIPdoor.eu</string>
-    <string name="version">18/07/2024 &amp; V: 2.42</string>
-    <string name="ver">V: 2.42</string>
+    <string name="version">3/06/2025 &amp; V: 2.46</string>
+    <string name="ver">V: 2.45</string>
     <string name="app_name">VIPadm</string>
     <string name="otperror">Enter valid otp</string>
     <string name="started">Declare area emptied</string>
     <string name="notclear">Area not cleared yet</string>
-    <string name="entermessage">Enter message</string>
+    <string name="entermessage">Enter message</string>x
     <string name="declarearea">Declare area emptied</string>
     <string name="site">www.vipadm.com</string>
     <string name="undo">Undo the clearance</string>
+    <string name="more">More</string>
+    <string name="update_photo">Update Photo</string>
+    <string name="update_pin">Update PIN: 0000</string>
+    <string name="people_inside">People Inside: 0</string>
 
     <string name="apifor">AIzaSyBgcLK4fHV740iurTP7eLUBO-fktuoNENw</string>
 

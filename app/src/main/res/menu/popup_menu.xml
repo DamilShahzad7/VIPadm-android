@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:id="@+id/one"
-        android:title="One"/>
 
+    <!-- 1) Update Photo -->
     <item
-        android:id="@+id/two"
-        android:title="Two"/>
+        android:id="@+id/action_update_photo"
+        android:title="@string/update_photo" />
 
+    <!-- 2) Update PIN (we'll overwrite the “0000” placeholder at runtime) -->
     <item
-        android:id="@+id/three"
-        android:title="Three"/>
+        android:id="@+id/action_update_pin"
+        android:title="@string/update_pin" />
+
+    <!-- 3) People Inside  (we'll overwrite the “0” placeholder at runtime) -->
+    <item
+        android:id="@+id/action_people_inside"
+        android:title="@string/people_inside" />
+
 </menu>

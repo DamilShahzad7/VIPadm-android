@@ -218,13 +218,14 @@ public class MainActivity extends BaseActivity implements
     }
 
     private void sendOTP() {
-        // Force every OTP to go to this address:
-        String targetEmail = "shahzaddamil@gmail.com";
 
-        logSend(IpAddress.ENTEREMAIL, IpAddress.EMAIL, targetEmail);
-        logSend("OTP REQUESTING", "OTPCALLWITHEMAIL", "SUCCESS_1" + targetEmail);
-        setFabricEmail(targetEmail);
-        onMail(targetEmail);
+        logSend(IpAddress.ENTEREMAIL, IpAddress.EMAIL,
+                etemail.getText().toString().trim());
+        logSend("OTP REQUESTING", "OTPCALLWITHEMAIL",
+                "SUCCESS_1" + etemail.getText().toString());
+        setFabricEmail(etemail.getText().toString().trim());
+        onMail(etemail.getText().toString().trim());
+
     }
 
 
